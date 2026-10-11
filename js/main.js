@@ -40,6 +40,24 @@
   document.querySelectorAll('[data-mail]').forEach(function (a) { a.href = 'mailto:' + S.email; a.textContent = S.email; });
   document.querySelectorAll('[data-phone-text]').forEach(function (a) { a.textContent = S.phoneDisplay; });
 
+  /* ---------- "Enquire now" buttons: preselect program and jump to form ---------- */
+  document.querySelectorAll('[data-program]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var p = btn.getAttribute('data-program');
+      var form = document.querySelector('#lead form');
+      var sel = form && form.elements['program'];
+      if (sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].text === p) { sel.selectedIndex = i; break; }
+        }
+      }
+      var box = document.getElementById('lead');
+      if (box) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      var nm = form && form.elements['name']; if (nm) setTimeout(function () { nm.focus(); }, 500);
+    });
+  });
+
   /* ---------- lead forms ---------- */
   document.querySelectorAll('form.lead-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
