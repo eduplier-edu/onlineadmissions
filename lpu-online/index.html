@@ -547,12 +547,20 @@ footer{background:#1a1718;color:#d8d2d3;font-size:.9rem}
   <div class="disc"><b>Disclaimer:</b> This website is operated by an independent admission guidance partner and is not the official website of Lovely Professional University. The LPU name, logo and trademarks belong to Lovely Professional University and are used only to identify the programs on which we offer guidance. Programs, fees, eligibility and recognition are subject to change; please confirm final details on the official university website before applying.<br><br>© 2026 All rights reserved.</div>
 </footer>
 
-<div class="sticky"><a class="c" href="tel:+919315594429">📞 Call Now</a><a class="w2 wa" href="#">💬 WhatsApp</a><a class="f2" href="#lead">Free Counselling</a></div>
+<div class="sticky">
+  <a class="c" href="tel:+919315594429">📞 Call Now</a>
+  <a class="w2 wa" href="#">💬 WhatsApp</a>
+  <a class="f2" href="#lead">Free Counselling</a>
+</div>
 
 <script>
 var NUM="919315594429";
 var base="https://wa.me/"+NUM+"?text=";
-document.querySelectorAll(".wa,#wa2").forEach(function(a){a.href=base+encodeURIComponent("Hi, I'd like free counselling for LPU Online programs.");a.target="_blank";a.rel="noopener"});
+document.querySelectorAll(".wa,#wa2").forEach(function(a){
+  a.href=base+encodeURIComponent("Hi, I'd like free counselling for LPU Online programs.");
+  a.target="_blank";
+  a.rel="noopener";
+});
 document.getElementById("lf").addEventListener("submit",function(e){
   e.preventDefault();
   var d=new FormData(e.target);
