@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -90,12 +90,25 @@ form .btn{width:100%;padding:14px}
 .feat-content h3{font-size:1.6rem;color:var(--navy);margin:8px 0 12px}
 .feat-content p{color:var(--mute);margin-bottom:16px}
 
-.lvl{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:700px){.lvl{grid-template-columns:1fr}}
-.lvl h3{margin:0 0 12px;color:var(--navy)}
-.lvl ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.lvl li{display:flex;gap:10px;align-items:baseline}
-.lvl li b{background:var(--navy);color:#fff;font-size:.78rem;border-radius:6px;padding:2px 9px;min-width:52px;text-align:center}
+/* Enhanced Program Cards */
+.program-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(max-width:768px){.program-grid{grid-template-columns:1fr}}
+.prog-category-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.05);display:flex;flex-direction:column}
+.prog-category-header{position:relative;height:160px;overflow:hidden}
+.prog-category-header img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.prog-category-card:hover .prog-category-header img{transform:scale(1.05)}
+.prog-header-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,31,32,.3) 0%,rgba(35,31,32,.85) 100%);display:flex;align-items:flex-end;padding:16px 20px}
+.prog-header-overlay h3{margin:0;color:#fff;font-size:1.3rem;display:flex;align-items:center;gap:8px}
+.prog-list{padding:20px;display:grid;gap:14px;flex:1}
+.prog-item{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg);border:1px solid var(--line);border-radius:12px;transition:all .2s ease}
+.prog-item:hover{border-color:var(--accent);background:#fff;transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.04)}
+.prog-info{display:flex;align-items:center;gap:12px}
+.prog-badge{background:var(--navy);color:#fff;font-weight:700;font-size:.82rem;padding:6px 10px;border-radius:8px;min-width:54px;text-align:center}
+.prog-details b{display:block;font-size:.95rem;color:var(--navy)}
+.prog-details span{font-size:.78rem;color:var(--mute)}
+.prog-apply-link{font-size:.85rem;font-weight:700;color:var(--accent);display:inline-flex;align-items:center;gap:4px}
+.prog-apply-link:hover{color:var(--accent2)}
+
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .chips span{background:#ffedd5;color:var(--navy);font-size:.85rem;font-weight:600;padding:6px 14px;border-radius:99px}
 .elig{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -275,26 +288,104 @@ footer{background:#1a1718;color:#d8d2d3;font-size:.9rem}
     <h2>LPU Online programs we guide you on</h2>
     <p>Not sure which fits you? Our counsellor will suggest the right program for your profile.</p>
   </div>
-  <div class="lvl">
-    <div class="card">
-      <h3>🎓 Undergraduate (UG)</h3>
-      <ul>
-        <li><b>BBA</b>Bachelor of Business Administration</li>
-        <li><b>BCA</b>Bachelor of Computer Applications</li>
-        <li><b>BA</b>Bachelor of Arts</li>
-      </ul>
+
+  <div class="program-grid">
+    <!-- Undergraduate Card with Banner Image -->
+    <div class="prog-category-card">
+      <div class="prog-category-header">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80" alt="LPU Online UG Programs" loading="lazy">
+        <div class="prog-header-overlay">
+          <h3>🎓 Undergraduate (UG) Programs</h3>
+        </div>
+      </div>
+      <div class="prog-list">
+        <div class="prog-item">
+          <div class="prog-info">
+            <span class="prog-badge">BBA</span>
+            <div class="prog-details">
+              <b>Bachelor of Business Administration</b>
+              <span>3 Years • 10+2 Any Stream</span>
+            </div>
+          </div>
+          <a class="prog-apply-link" href="#lead">Enquire →</a>
+        </div>
+        <div class="prog-item">
+          <div class="prog-info">
+            <span class="prog-badge">BCA</span>
+            <div class="prog-details">
+              <b>Bachelor of Computer Applications</b>
+              <span>3 Years • Tech &amp; Coding Focus</span>
+            </div>
+          </div>
+          <a class="prog-apply-link" href="#lead">Enquire →</a>
+        </div>
+        <div class="prog-item">
+          <div class="prog-info">
+            <span class="prog-badge">BA</span>
+            <div class="prog-details">
+              <b>Bachelor of Arts</b>
+              <span>3 Years • Humanities &amp; Liberal Arts</span>
+            </div>
+          </div>
+          <a class="prog-apply-link" href="#lead">Enquire →</a>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>🏅 Postgraduate (PG)</h3>
-      <ul>
-        <li><b>MBA</b>Master of Business Administration</li>
-        <li><b>MCA</b>Master of Computer Applications</li>
-        <li><b>MA</b>Master of Arts</li>
-        <li><b>MSc</b>Master of Science</li>
-      </ul>
+
+    <!-- Postgraduate Card with Banner Image -->
+    <div class="prog-category-card">
+      <div class="prog-category-header">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80" alt="LPU Online PG Programs" loading="lazy">
+        <div class="prog-header-overlay">
+          <h3>🏅 Postgraduate (PG) Programs</h3>
+        </div>
+      </div>
+      <div class="prog-list">
+        <div class="prog-item">
+          <div class="prog-info">
+            <span class="prog-badge">MBA</span>
+            <div class="prog-details">
+              <b>Master of Business Administration</b>
+              <span>2 Years • 6 In-Demand Specializations</span>
+            </div>
+          </div>
+          <a class="prog-apply-link" href="#lead">Enquire →</a>
+        </div>
+        <div class="prog-item">
+          <div class="prog-info">
+            <span class="prog-badge">MCA</span>
+            <div class="prog-details">
+              <b>Master of Computer Applications</b>
+              <span>2 Years • Full-Stack &amp; Data Track</span>
+            </div>
+          </div>
+          <a class="prog-apply-link" href="#lead">Enquire →</a>
+        </div>
+        <div class="prog-item">
+          <div class="prog-info">
+            <span class="prog-badge">MA</span>
+            <div class="prog-details">
+              <b>Master of Arts</b>
+              <span>2 Years • English, History &amp; More</span>
+            </div>
+          </div>
+          <a class="prog-apply-link" href="#lead">Enquire →</a>
+        </div>
+        <div class="prog-item">
+          <div class="prog-info">
+            <span class="prog-badge">MSc</span>
+            <div class="prog-details">
+              <b>Master of Science</b>
+              <span>2 Years • Advanced Analytics &amp; Maths</span>
+            </div>
+          </div>
+          <a class="prog-apply-link" href="#lead">Enquire →</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card" style="margin-top:20px">
+
+  <div class="card" style="margin-top:24px">
     <h3>Popular MBA specializations</h3>
     <p>Specializations can vary by session. Your counsellor confirms what is currently offered.</p>
     <div class="chips">
@@ -425,421 +516,3 @@ document.querySelectorAll("img.lg").forEach(function(i){
 </script>
 </body>
 </html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LPU Online 2026 – Online MBA, MCA, BBA, BCA &amp; More | Admissions Open</title>
-<meta name="description" content="Explore LPU Online UG &amp; PG programs. Compare eligibility, fees and specializations, and get free one-to-one admission guidance.">
-<meta name="theme-color" content="#231f20">
-<link rel="canonical" href="https://onlineadmissions.online/lpu-online/">
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
-<link rel="apple-touch-icon" href="/lpu-apple-touch-icon.png?v=2">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LPU Online 2026 | Admissions Open">
-<meta property="og:description" content="Free one-to-one guidance for LPU Online UG & PG programs.">
-<meta property="og:image" content="https://onlineadmissions.online/lpu-logo.png">
-<meta property="og:url" content="https://onlineadmissions.online/lpu-online/">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<style>
-:root{--navy:#231f20;--dark2:#3b3335;--accent:#ee7d00;--accent2:#b45f00;--green:#16a34a;--bg:#faf7f4;--card:#fff;--ink:#231f20;--mute:#5e5658;--line:#ebe3dc}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;padding-bottom:64px}
-a{color:inherit;text-decoration:none}
-.w{max-width:1160px;margin:auto;padding:0 20px}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.top{background:#ee7d00;color:#231f20;font-size:.82rem}
-.top .w{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
-header{background:#fff;border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.brand img{height:50px;width:auto;display:block}
-.bar{display:flex;align-items:center;gap:22px;padding:10px 0}
-nav{margin-left:auto;display:flex;gap:20px;align-items:center;font-size:.9rem;font-weight:500;color:var(--navy)}
-nav a:hover{color:var(--accent2)}
-.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;background:var(--accent);color:var(--navy);padding:12px 22px;border-radius:10px;transition:background .2s ease}
-.btn:hover{background:#ff9a1f}
-.btn.o{background:transparent;border:2px solid #fff;color:#fff}
-.btn.o:hover{background:#fff;color:var(--navy)}
-@media(max-width:900px){nav a:not(.btn){display:none}.bar{justify-content:space-between}nav{margin-left:0}}
-
-.hero{background:linear-gradient(135deg,var(--navy),var(--dark2));color:#fff;padding:52px 0 60px}
-.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
-@media(max-width:900px){.hg{grid-template-columns:1fr}}
-.pill{display:inline-block;background:rgba(255,255,255,.18);color:var(--accent);font-weight:600;font-size:.82rem;padding:5px 14px;border-radius:99px;margin-bottom:14px}
-.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;letter-spacing:-.02em}
-.hero h1 span{color:var(--accent)}
-.hero p{margin:0 0 18px;color:#e6e1e2;max-width:52ch}
-.ticks{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:8px}
-.ticks li::before{content:"✓";color:var(--accent);font-weight:800;margin-right:10px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-
-/* Hero Media Card */
-.hero-visual{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,.35);margin:16px 0 22px;border:1px solid rgba(255,255,255,.12)}
-.hero-visual img{width:100%;height:260px;object-fit:cover;display:block}
-.hero-visual .badge-overlay{position:absolute;bottom:12px;left:12px;right:12px;background:rgba(35,31,32,.9);backdrop-filter:blur(8px);padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;gap:12px}
-.badge-overlay b{color:var(--accent);font-size:1.15rem;line-height:1}
-.badge-overlay span{font-size:.82rem;color:#fff;line-height:1.3}
-
-.formc{background:#fff;color:var(--ink);border-radius:18px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
-.formc h2{margin:0 0 4px;font-size:1.3rem;color:var(--navy)}
-.formc p{margin:0 0 14px;color:var(--mute);font-size:.9rem}
-form{display:grid;gap:10px}
-form input,form select{font:inherit;font-size:.95rem;padding:12px 14px;border:1px solid var(--line);border-radius:10px;width:100%;background:#fff}
-form .btn{width:100%;padding:14px}
-.safe{font-size:.78rem;color:var(--mute);text-align:center}
-
-.trust{background:#fff;border-bottom:1px solid var(--line)}
-.trust .w{display:flex;gap:12px 28px;justify-content:center;flex-wrap:wrap;padding-top:16px;padding-bottom:16px;font-weight:600;font-size:.9rem;color:var(--navy)}
-.sec{padding:60px 0 0}
-.sh{text-align:center;max-width:680px;margin:0 auto 30px}
-.sh span{color:var(--accent2);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
-.sh h2{margin:4px 0 8px;font-size:clamp(1.5rem,3.5vw,2.1rem);color:var(--navy);line-height:1.25}
-.sh p{margin:0;color:var(--mute)}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-@media(max-width:980px){.g3{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.g3,.g4{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
-.card .ic{font-size:1.8rem}
-.card h3{margin:8px 0 6px;font-size:1.1rem;color:var(--navy)}
-.card p{margin:0;color:var(--mute);font-size:.93rem}
-.step b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--accent);font-weight:800;margin-bottom:10px}
-
-/* Brand Showcase Feature Rows */
-.brand-feature{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:40px}
-.brand-feature.reverse{direction:rtl}
-.brand-feature.reverse > *{direction:ltr}
-@media(max-width:850px){.brand-feature,.brand-feature.reverse{grid-template-columns:1fr;direction:ltr;gap:24px}}
-.feat-media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);border:1px solid var(--line)}
-.feat-media img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .4s ease}
-.feat-media:hover img{transform:scale(1.03)}
-.feat-content h3{font-size:1.6rem;color:var(--navy);margin:8px 0 12px}
-.feat-content p{color:var(--mute);margin-bottom:16px}
-
-.lvl{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:700px){.lvl{grid-template-columns:1fr}}
-.lvl h3{margin:0 0 12px;color:var(--navy)}
-.lvl ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.lvl li{display:flex;gap:10px;align-items:baseline}
-.lvl li b{background:var(--navy);color:#fff;font-size:.78rem;border-radius:6px;padding:2px 9px;min-width:52px;text-align:center}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chips span{background:#ffedd5;color:var(--navy);font-size:.85rem;font-weight:600;padding:6px 14px;border-radius:99px}
-.elig{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:700px){.elig{grid-template-columns:1fr}}
-.elig ul{margin:10px 0 0;padding-left:20px;color:var(--mute);font-size:.95rem}
-.elig li{margin-bottom:6px}
-.fee .tag{display:inline-block;background:#e8f7ee;color:var(--green);font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:99px}
-.fee .btn{margin-top:14px;width:100%;text-align:center}
-details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:600;color:var(--navy)}
-details[open] summary{color:var(--accent2);margin-bottom:8px}
-details p{margin:0;color:var(--mute);font-size:.95rem}
-.final{margin-top:60px;background:linear-gradient(135deg,var(--navy),var(--dark2));color:#fff;text-align:center;padding:48px 20px}
-.final h2{margin:0 0 8px;font-size:1.8rem}
-.final p{margin:0 auto 20px;max-width:56ch;color:#e6e1e2}
-.final .cta{justify-content:center}
-footer{background:#1a1718;color:#d8d2d3;font-size:.9rem}
-.disc{border-top:1px solid #3a3436;padding:18px 20px;max-width:1160px;margin:auto;font-size:.78rem;line-height:1.6}
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:8px;padding:8px 12px;background:var(--navy);box-shadow:0 -4px 16px rgba(0,0,0,.25)}
-.sticky a{flex:1;text-align:center;font-weight:700;padding:11px;border-radius:10px;font-size:.95rem}
-.sticky .c{background:#fff;color:var(--navy)}
-.sticky .w2{background:#25d366;color:#fff}
-.sticky .f2{background:var(--accent);color:var(--navy)}
-
-@media(min-width:900px){.sticky{left:auto;right:18px;bottom:18px;border-radius:14px;width:auto}.sticky .c,.sticky .f2{display:none}.sticky .w2{padding:12px 22px}body{padding-bottom:0}}
-</style>
-</head>
-<body>
-
-<div class="top">
-  <div class="w">
-    <span>🎓 LPU Online: free one-to-one admission guidance for online UG &amp; PG degrees</span>
-    <span>Call / WhatsApp: <a href="tel:+919315594429"><b>+91 93155 94429</b></a></span>
-  </div>
-</div>
-
-<header>
-  <div class="w bar">
-    <a class="brand" href="/lpu-online/">
-      <img class="lg" src="/lpu-logo.png" alt="LPU Online – Same Degree, Now Online" width="192" height="50">
-    </a>
-    <nav aria-label="Main">
-      <a href="/#universities">Universities</a>
-      <a href="#advantage">Advantage</a>
-      <a href="#programs">Programs</a>
-      <a href="#eligibility">Eligibility</a>
-      <a href="#admission">Admission</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn" href="#lead">Free Counselling</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="w hg">
-    <div>
-      <span class="pill">LPU Online • Admissions Open</span>
-      <h1>Study <span>LPU Online</span> Programs from Anywhere</h1>
-      <p>Compare Lovely Professional University's online UG &amp; PG programs, understand eligibility and fees, and get the right program for your profile, free.</p>
-      
-      <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="Students learning together" width="600" height="260">
-        <div class="badge-overlay">
-          <b>#1</b>
-          <span>Ranked among India's Top Universities with UGC-DEB Entitled Online Degrees</span>
-        </div>
-      </div>
-
-      <ul class="ticks">
-        <li>UGC-DEB entitled university with NAAC A++ accreditation</li>
-        <li>Flexible online learning for students and working professionals</li>
-        <li>Free one-to-one guidance and complete admission help</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="#lead">Get Free Counselling →</a>
-        <a class="btn o" href="#programs">View Programs</a>
-      </div>
-    </div>
-
-    <div class="formc" id="lead">
-      <h2>Get Free Counselling</h2>
-      <p>Talk to an admission expert. 100% free. No spam.</p>
-      <form id="lf">
-        <input name="name" placeholder="Full name" required autocomplete="name">
-        <input name="mobile" type="tel" placeholder="Mobile number" required autocomplete="tel" pattern="[0-9+ ]{10,15}">
-        <input name="email" type="email" placeholder="Email (optional)" autocomplete="email">
-        <select name="program" required aria-label="Program">
-          <option value="">Program you are interested in</option>
-          <optgroup label="Undergraduate">
-            <option>BBA</option>
-            <option>BCA</option>
-            <option>BA</option>
-          </optgroup>
-          <optgroup label="Postgraduate">
-            <option>MBA</option>
-            <option>MCA</option>
-            <option>MA</option>
-            <option>MSc</option>
-          </optgroup>
-          <option>Not sure – need guidance</option>
-        </select>
-        <button class="btn" type="submit">Get Free Counselling →</button>
-        <div class="safe">🔒 Your details are safe. By submitting you agree to be contacted by call/WhatsApp/SMS and accept our <a href="/privacy-policy.html" style="text-decoration:underline">Privacy Policy</a>.</div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<div class="trust">
-  <div class="w">
-    <span>✅ UGC-DEB Entitled</span>
-    <span>🏛️ NAAC A++ Accredited</span>
-    <span>💻 100% Online Learning</span>
-    <span>🤝 Free Expert Guidance</span>
-  </div>
-</div>
-
-<main class="w">
-
-<section class="sec" id="why">
-  <div class="sh">
-    <span>Why LPU Online</span>
-    <h2>Reasons to choose LPU Online</h2>
-    <p>A well-known university brand with flexible learning designed around your schedule.</p>
-  </div>
-  <div class="g3">
-    <div class="card"><div class="ic">🏛️</div><h3>Recognised university</h3><p>Lovely Professional University is entitled by UGC-DEB to offer online degree programs and holds NAAC A++ accreditation.</p></div>
-    <div class="card"><div class="ic">🕒</div><h3>Flexible learning</h3><p>Learn through online sessions and recorded lectures, so you can study alongside a job or other commitments.</p></div>
-    <div class="card"><div class="ic">📚</div><h3>Wide program choice</h3><p>Choose from popular UG and PG programs and specializations across management, computing, arts and science.</p></div>
-    <div class="card"><div class="ic">🎯</div><h3>Career-focused curriculum</h3><p>Programs are built around practical skills, case studies and projects relevant to today's industry roles.</p></div>
-    <div class="card"><div class="ic">💬</div><h3>Learner support</h3><p>Access a digital learning platform and academic support throughout your program.</p></div>
-    <div class="card"><div class="ic">💳</div><h3>Easy payment options</h3><p>Fee payment options such as semester-wise and EMI may be available. Your counsellor shares the latest details.</p></div>
-  </div>
-</section>
-
-<section class="sec" id="advantage">
-  <div class="sh">
-    <span>The LPU Advantage</span>
-    <h2>Degree from a World-Class University</h2>
-    <p>Get the prestige and recognition of a top-tier Indian institution with complete digital flexibility.</p>
-  </div>
-
-  <div class="brand-feature">
-    <div class="feat-media">
-      <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="LPU 600+ Acre Campus" loading="lazy">
-    </div>
-    <div class="feat-content">
-      <span class="pill" style="background:#ffedd5;color:var(--accent2)">Vibrant Legacy</span>
-      <h3>600+ Acre Sprawling Campus</h3>
-      <p>Even as an online learner, your degree is awarded by Lovely Professional University—home to over 30,000 students from across 50+ countries with top NIRF rankings.</p>
-      <ul class="ticks">
-        <li>Same degree status as on-campus programs under UGC regulations</li>
-        <li>Annual convocation on campus with distinguished guests</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="brand-feature reverse">
-    <div class="feat-media">
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="LPU e-Connect Digital Learning" loading="lazy">
-    </div>
-    <div class="feat-content">
-      <span class="pill" style="background:#ffedd5;color:var(--accent2)">Tech-Driven</span>
-      <h3>Advanced LMS &amp; Live Interactive Masterclasses</h3>
-      <p>Study anywhere via LPU e-Connect. Attend weekend live interactive sessions, watch recorded lectures on demand, and submit assignments seamlessly from your laptop or phone.</p>
-      <ul class="ticks">
-        <li>24/7 access to digital e-books and study repositories</li>
-        <li>Discussion forums with professors and industry practitioners</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="programs">
-  <div class="sh">
-    <span>Programs</span>
-    <h2>LPU Online programs we guide you on</h2>
-    <p>Not sure which fits you? Our counsellor will suggest the right program for your profile.</p>
-  </div>
-  <div class="lvl">
-    <div class="card">
-      <h3>🎓 Undergraduate (UG)</h3>
-      <ul>
-        <li><b>BBA</b>Bachelor of Business Administration</li>
-        <li><b>BCA</b>Bachelor of Computer Applications</li>
-        <li><b>BA</b>Bachelor of Arts</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>🏅 Postgraduate (PG)</h3>
-      <ul>
-        <li><b>MBA</b>Master of Business Administration</li>
-        <li><b>MCA</b>Master of Computer Applications</li>
-        <li><b>MA</b>Master of Arts</li>
-        <li><b>MSc</b>Master of Science</li>
-      </ul>
-    </div>
-  </div>
-  <div class="card" style="margin-top:20px">
-    <h3>Popular MBA specializations</h3>
-    <p>Specializations can vary by session. Your counsellor confirms what is currently offered.</p>
-    <div class="chips">
-      <span>Finance</span>
-      <span>Marketing</span>
-      <span>Human Resource Management</span>
-      <span>Operations</span>
-      <span>Data Science &amp; Analytics</span>
-      <span>Logistics &amp; Supply Chain</span>
-    </div>
-    <div class="cta" style="margin-top:18px">
-      <a class="btn" href="#lead" style="background:var(--navy);color:#fff">Enquire About a Program →</a>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="eligibility">
-  <div class="sh">
-    <span>Eligibility</span>
-    <h2>Who can apply?</h2>
-  </div>
-  <div class="elig">
-    <div class="card">
-      <h3>General eligibility</h3>
-      <ul>
-        <li>Fresh graduates and working professionals</li>
-        <li>Entrepreneurs who want to build business and management skills</li>
-        <li>Learners aiming for a career in management, IT, finance, marketing or operations</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Academic requirements</h3>
-      <ul>
-        <li>UG programs: 10+2 from a recognised board</li>
-        <li>PG programs: a bachelor's degree from a recognised university</li>
-        <li>Minimum marks and program-specific rules apply; your counsellor confirms the current criteria</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="admission">
-  <div class="sh">
-    <span>How to enrol</span>
-    <h2>Admission process</h2>
-    <p>Four simple steps, with our help at every stage.</p>
-  </div>
-  <div class="g4">
-    <div class="card step"><b>1</b><h3>Share your profile</h3><p>Fill the short form or message us on WhatsApp with your qualification and goal.</p></div>
-    <div class="card step"><b>2</b><h3>Free expert call</h3><p>Our counsellor understands your needs, budget and career plan.</p></div>
-    <div class="card step"><b>3</b><h3>Choose your program</h3><p>Get the program and specialization that match your profile.</p></div>
-    <div class="card step"><b>4</b><h3>Apply with support</h3><p>We help with documents, application and admission formalities.</p></div>
-  </div>
-</section>
-
-<section class="sec" id="fees">
-  <div class="sh">
-    <span>Fees</span>
-    <h2>Fee structure &amp; payment options</h2>
-    <p>Fees differ by program and can change. Get the latest, accurate fee details for your program.</p>
-  </div>
-  <div class="g3">
-    <div class="card fee"><span class="tag">Pay once</span><h3>One-time payment</h3><p>Pay the full program fee upfront where the university offers a benefit for doing so.</p><a class="btn" href="#lead">Get Latest Fees</a></div>
-    <div class="card fee"><span class="tag">Flexible</span><h3>Semester / annual fee</h3><p>Spread the fee across semesters or years to suit your budget.</p><a class="btn" href="#lead">Get Latest Fees</a></div>
-    <div class="card fee"><span class="tag">Easy EMI</span><h3>EMI options</h3><p>Monthly instalment options may be available through partner financing. Terms apply.</p><a class="btn" href="#lead">Get Latest Fees</a></div>
-  </div>
-</section>
-
-<section class="sec" id="faq">
-  <div class="sh">
-    <span>FAQ</span>
-    <h2>Frequently asked questions</h2>
-  </div>
-  <div style="max-width:820px;margin:auto">
-    <details><summary>Is the counselling really free?</summary><p>Yes. Our one-to-one guidance is free for students. We help you compare programs, shortlist the best fit and complete the admission process.</p></details>
-    <details><summary>Is the LPU Online degree valid?</summary><p>Lovely Professional University is UGC-DEB entitled to offer online programs. Validity can depend on the program and your purpose (jobs, higher studies, government exams), so please confirm on the official UGC and LPU websites. We guide you before you decide.</p></details>
-    <details><summary>What is the eligibility for LPU Online programs?</summary><p>UG programs generally need 10+2, and PG programs need a bachelor's degree from a recognised university. Marks criteria and program-specific rules apply, and your counsellor shares the current requirements.</p></details>
-    <details><summary>What are the fees?</summary><p>Fees differ by program and may change. Share your details and we will send you the latest fee structure and payment options.</p></details>
-    <details><summary>Can I study while working?</summary><p>Yes. Online programs are designed to be flexible, with online sessions and recorded lectures, so many students study alongside a job.</p></details>
-    <details><summary>Which documents are needed for admission?</summary><p>Generally: previous marksheets and certificates, ID proof, photograph and address proof. The exact list varies by program, and your counsellor will share it.</p></details>
-    <details><summary>How do I apply?</summary><p>Fill the counselling form on this page or message us on WhatsApp. Our counsellor will guide you through shortlisting, documents and the application.</p></details>
-  </div>
-</section>
-</main>
-
-<section class="final">
-  <h2>Not sure which LPU Online program is right for you?</h2>
-  <p>Get free one-to-one guidance based on your profile today.</p>
-  <div class="cta">
-    <a class="btn" href="#lead">Get Free Counselling</a>
-    <a class="btn o" id="wa2" href="#">💬 Chat on WhatsApp</a>
-  </div>
-</section>
-
-<footer>
-  <div class="disc"><b>Disclaimer:</b> This website is operated by an independent admission guidance partner and is not the official website of Lovely Professional University. The LPU name, logo and trademarks belong to Lovely Professional University and are used only to identify the programs on which we offer guidance. Programs, fees, eligibility and recognition are subject to change; please confirm final details on the official university website before applying.<br><br>© 2026 All rights reserved.</div>
-</footer>
-
-<div class="sticky">
-  <a class="c" href="tel:+919315594429">📞 Call Now</a>
-  <a class="w2 wa" href="#">💬 WhatsApp</a>
-  <a class="f2" href="#lead">Free Counselling</a>
-</div>
-
-<script>
-var NUM="919315594429";
-var base="https://wa.me/"+NUM+"?text=";
-document.querySelectorAll(".wa,#wa2").forEach(function(a){
-  a.href=base+encodeURIComponent("Hi, I'd like free counselling for LPU Online programs.");
-  a.target="_blank";
-  a.rel="noopener";
-});
-document.getElementById("lf").addEventListener("submit",function(e){
-  e.preventDefault();
-  var d=new FormData(e.target);
-  var t="Hi, I'd like free counselling for LPU Online.\nName: "+d.get("name")+"\nMobile: "+d.get("mobile")+"\nEmail: "+(d.get("email")||"-")+"\nProgram: "+d.get("program");
-  window.open(base+encodeURIComponent(t),"_blank");
-  e.target.reset();
-});
-</script>
-<script>
-var EMB="data:image/png;base64,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
