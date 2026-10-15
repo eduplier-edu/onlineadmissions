@@ -2,7 +2,7 @@
   'use strict';
 
   // ====== CHANGE THIS: your Google Apps Script Web App URL (ends with /exec) ======
-  var ENDPOINT = 'PASTE_YOUR_WEB_APP_URL_HERE';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyfuYYj-fYGA0kHOhSIXoxOeKp0b6Fr1BspYiVOhT7T46GdsA1qF9-Kw7oSLj4bMbFP/exec';
   // =================================================================================
 
   var pageLoadedAt = Date.now();
