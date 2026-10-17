@@ -263,6 +263,21 @@ src="https://www.facebook.com/tr?id=1477934860907929&ev=PageView&noscript=1"
         <optgroup label="Postgraduate"><option>MBA</option><option>MCA</option><option>MA</option><option>MSc</option></optgroup>
         <optgroup label="Undergraduate"><option>BBA</option><option>BCA</option><option>BA</option></optgroup>
         <option>Not sure – need guidance</option>
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+  var params = new URLSearchParams(window.location.search);
+  var source = params.get("utm_source") || "";
+
+  setTimeout(function () {
+    var inputs = document.querySelectorAll(
+      'input[name="utm_source"], input[name="form_fields[utm_source]"], input[id*="utm_source"]'
+    );
+    inputs.forEach(function (input) {
+      input.value = source;
+    });
+  }, 1000);
+});
+</script>
       </select>
       <button class="btn-submit" type="submit">Submit for Free Counselling →</button>
       <div class="safe">🔒 Your details are 100% safe. We will connect with you via Call or WhatsApp.</div>
