@@ -6,7 +6,19 @@
   // =================================================================================
 
   var pageLoadedAt = Date.now();
+  // UTM capture: URL se padho aur session me save karo
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign'];
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    UTM_KEYS.forEach(function (k) {
+      var v = params.get(k);
+      if (v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
+    });
+  })();
 
+  function getUtm(k) {
+    try { return sessionStorage.getItem(k) || ''; } catch (e) { return ''; }
+  }
   var UNIVERSITY_BY_PATH = {
     '/amity-university-online/': 'Amity University Online',
     '/lpu-online/': 'LPU Online',
@@ -95,6 +107,7 @@
     data.append('program', program);
     data.append('university', university);
     data.append('page', path);
+        UTM_KEYS.forEach(function (k) { data.append(k, getUtm(k)); });
     data.append('website', '');
 
     fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: data })
