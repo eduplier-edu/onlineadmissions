@@ -258,12 +258,14 @@ src="https://www.facebook.com/tr?id=1477934860907929&ev=PageView&noscript=1"
       <input name="name" placeholder="Full name" required autocomplete="name">
       <input name="mobile" type="tel" placeholder="Mobile number" required autocomplete="tel" pattern="[0-9+ ]{10,15}">
       <input name="email" type="email" placeholder="Email (optional)" autocomplete="email">
+          <input name="email" type="email" placeholder="Email (optional)" autocomplete="email">
+<input type="hidden" name="utm_source">
+<input type="hidden" name="utm_medium">
+<input type="hidden" name="utm_campaign">
       <select name="program" required aria-label="Program">
         <option value="" selected>Program you are interested in</option>
         <optgroup label="Postgraduate"><option>MBA</option><option>MCA</option><option>MA</option><option>MSc</option></optgroup>
         <optgroup label="Undergraduate"><option>BBA</option><option>BCA</option><option>BA</option></optgroup>
-        <option>Not sure – need guidance</option>
-        <script>
 document.addEventListener("DOMContentLoaded", function () {
   var params = new URLSearchParams(window.location.search);
   var source = params.get("utm_source") || "";
@@ -459,6 +461,26 @@ document.querySelectorAll("img.lg").forEach(function(i){
   i.onerror=f;
   if(i.complete&&i.naturalWidth===0)f();
 });
+</script>
+  <script>
+(function () {
+  var keys = ["utm_source", "utm_medium", "utm_campaign"];
+  var params = new URLSearchParams(window.location.search);
+  var f = document.getElementById("lf");
+  if (!f) return;
+
+  keys.forEach(function (k) {
+    var v = params.get(k);
+    if (v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
+    var stored = "";
+    try { stored = sessionStorage.getItem(k) || ""; } catch (e) {}
+    var input = f.querySelector('input[name="' + k + '"]');
+    if (input) {
+      input.value = v || stored;
+      input.defaultValue = input.value; // form reset ke baad bhi value rahe
+    }
+  });
+})();
 </script>
   <script src="/js/lead.js"></script>
 </body>
