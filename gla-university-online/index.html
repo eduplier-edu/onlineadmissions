@@ -77,6 +77,15 @@
     <!-- Top Gold & Green Bar -->
     <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-xs md:text-sm py-2 px-4 sm:px-6">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+        <!-- Alumni Offer Pill -->
+        <div class="flex items-center gap-2">
+          <div class="bg-amber-400 text-brand-950 px-3 py-0.5 rounded-full font-bold flex items-center gap-1.5 shadow-sm">
+            <span class="text-xs">★ Alumni Offer</span>
+            <span class="hidden sm:inline">|</span>
+            <span class="text-red-700">40% Alumni Discount</span>
+            <span>+</span>
+            <span class="text-green-900">20% Sibling Discount</span>
+          </div>
         </div>
 
         <!-- Contact & Portal Quick Links -->
@@ -84,16 +93,14 @@
           <a href="mailto:onlineadmissions@gla.ac.in" class="hover:text-amber-300 transition-colors hidden lg:flex items-center gap-1.5">
             <i class="fa-regular fa-envelope text-brand-200"></i> onlineadmissions@gla.ac.in
           </a>
-          <a href="tel:+919315594429" class="bg-brand-700/60 hover:bg-brand-700 px-2.5 py-1 rounded border border-brand-500/40 font-semibold flex items-center gap-1.5 transition">
-            <i class="fa-solid fa-phone text-amber-300"></i> +91-9315594429
+          <a href="tel:+919568536853" class="bg-brand-700/60 hover:bg-brand-700 px-2.5 py-1 rounded border border-brand-500/40 font-semibold flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-phone text-amber-300"></i> +91-9568536853
           </a>
-          <!-- CTA & Mobile Menu Toggle -->
-        <div class="flex items-center gap-3">
-          <a href="#hero-section" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-700 to-brand-800 text-white font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg shadow hover:shadow-lg hover:from-brand-800 hover:to-brand-900 transition">
-            <i class="fa-solid fa-paper-plane text-amber-300"></i>Apply Now
+          <a href="#apply-now" class="bg-white hover:bg-gray-100 text-brand-900 font-bold px-3 py-1 rounded transition shadow-sm">
+            Apply Now
           </a>
-          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-brand-900 hover:bg-brand-50" aria-label="Toggle Menu">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <button onclick="toggleModal('loginModal')" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-3 py-1 rounded transition">
+            Student Login
           </button>
         </div>
       </div>
@@ -1056,6 +1063,62 @@
     </div>
   </section>
 
+  <!-- ========================================================================= -->
+  <!-- FINAL CTA SECTION                                                         -->
+  <!-- ========================================================================= -->
+  <section class="py-14 bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-center border-t border-brand-700/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-4">
+      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+        Ready to take the next step in your career?
+      </h2>
+      <p class="text-sm sm:text-base text-gray-200 font-medium">
+        Get free one-to-one guidance for Session 2027–2028 today.
+      </p>
+      <div class="pt-2">
+        <a href="#hero-section" class="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-brand-950 font-extrabold text-sm px-7 py-3 rounded-xl shadow-lg transition transform active:scale-95">
+          Get Free Counselling <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER & DISCLAIMER SECTION                                               -->
+  <!-- ========================================================================= -->
+  <footer id="contact" class="bg-brand-deep text-white py-10 border-t-2 border-brand-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="bg-black/30 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-sm text-center md:text-left">
+        <div class="flex items-center gap-2.5 mb-3 text-amber-400 text-xs font-bold uppercase tracking-wider justify-center md:justify-start">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Important Notice & Disclaimer</span>
+        </div>
+        <p class="text-xs sm:text-[13px] text-gray-300 leading-relaxed font-normal">
+          <strong class="text-white">OnlineAdmissions (onlineadmissions.online)</strong> is an independent education counselling and admission assistance service. We are not the official website of any university and are not owned by or affiliated with the universities named on this site, unless an authorised partnership is stated. University names, logos and trademarks belong to their respective owners and are used only to identify the programs on which we offer guidance. Programs, fees, eligibility and recognition are subject to change; please confirm final details on the official university website before applying.
+        </p>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
+        <p>© 2026 OnlineAdmissions. All rights reserved.</p>
+        <div class="flex gap-5 text-gray-400">
+          <a href="#" class="hover:text-amber-300 transition">Privacy Policy</a>
+          <a href="#" class="hover:text-amber-300 transition">Terms of Service</a>
+          <a href="#hero-section" class="hover:text-amber-300 transition">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (Correctly sized & constrained) -->
+  <a href="https://wa.me/919315594429" target="_blank" rel="noopener noreferrer" 
+     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 hover:scale-110 group focus:outline-none focus:ring-4 focus:ring-emerald-400"
+     aria-label="Chat with our Admission Counselor on WhatsApp">
+    <!-- Pulse Glow Ping Ring -->
+    <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none group-hover:hidden"></span>
+    <!-- Constrained WhatsApp SVG Icon -->
+    <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 448 512" aria-hidden="true">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+  </a>
 
   <!-- APPLICATION SUCCESS NOTIFICATION MODAL -->
   <div id="successModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
@@ -1105,26 +1168,94 @@
     </div>
   </div>
 
-  <section class="final">
-  <h2>Ready to take the next step in your career?</h2>
-  <p>Get free one-to-one guidance for Session 2027–2028 today.</p>
-  <a class="btn" href="#lead">Get Free Counselling →</a>
-</section>
+  <!-- ========================================================================= -->
+  <!-- FINAL CTA SECTION (Styled to match Green & White theme)                  -->
+  <!-- ========================================================================= -->
+  <section class="py-16 bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-center px-4 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto relative z-10 space-y-4">
+      <span class="inline-block px-4 py-1 rounded-full bg-amber-400 text-brand-950 font-bold text-xs uppercase tracking-wider shadow">
+        Session 2026–2027 Admissions
+      </span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+        Ready to take the next step in your career?
+      </h2>
+      <p class="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto">
+        Get free one-to-one academic guidance and dedicated career counselling today.
+      </p>
+      <div class="pt-4">
+        <a href="#hero-section" class="inline-flex items-center gap-2 px-8 py-3.5 bg-amber-400 hover:bg-amber-300 text-brand-950 font-extrabold text-sm sm:text-base rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-0.5">
+          <span>Get Free Counselling</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="disc"><b>Disclaimer:</b> We act solely as an information partner and do not conduct or facilitate admissions to LPU. For admissions, please visit the official LPU website or contact the university directly. LPU University holds full rights to request changes or removal of any non-relevant content. Images used are for illustrative purposes only and do not directly represent the respective colleges or universities.
+  <!-- ========================================================================= -->
+  <!-- FOOTER & DISCLAIMER (Properly enclosed and styled)                       -->
+  <!-- ========================================================================= -->
+  <footer class="bg-neutral-900 text-gray-400 py-12 border-t-4 border-brand-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
+      <!-- Quick Contact Row -->
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pb-6 border-b border-neutral-800 text-xs">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-brand-800 flex items-center justify-center text-amber-400 font-bold">
+            <i class="fa-solid fa-graduation-cap text-lg"></i>
+          </div>
+          <div>
+            <span class="text-base font-black text-white tracking-wide">GLA <span class="text-amber-400">ONLINE</span></span>
+            <p class="text-[11px] text-gray-400">#GharSeGlobal • NAAC A+ Grade Accredited</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-gray-300">
+          <a href="tel:+919315594429" class="hover:text-amber-400 flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-phone text-brand-500"></i> +91-9315594429
+          </a>
+          <a href="mailto:onlineadmissions@gla.ac.in" class="hover:text-amber-400 flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-envelope text-brand-500"></i> onlineadmissions@gla.ac.in
+          </a>
+        </div>
+      </div>
 
-As an Authorized Enrollment Partner (AEP) of LPU Online, we display and showcase program information of LPU Online. Admission, program delivery, and examination are solely managed by LPU Online, and as an AEEP, we have no role to play in it.<br>© 2026 OnlineAdmissions. All rights reserved.</div>
-</footer>
+      <!-- Disclaimer Text Box -->
+      <div class="bg-neutral-950/70 p-5 rounded-xl border border-neutral-800/80 text-[11px] leading-relaxed text-gray-400">
+        <p class="mb-2">
+          <strong class="text-gray-200">Disclaimer:</strong> We act solely as an information and counseling partner and do not independently conduct university examinations or award degrees. For official admissions, students may also visit the official GLA University portal or contact the campus directly. GLA University reserves all rights regarding program eligibility, fee structures, curriculum updates, and examination conduct.
+        </p>
+        <p>
+          As an Authorized Enrollment & Information Partner of GLA Online, we display and showcase academic program details for student assistance. Admissions, degree conferring, examination scheduling, and LMS access are solely managed by GLA University.
+        </p>
+      </div>
 
-<a href="#" class="whatsapp-float wa" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-</a>
+      <!-- Copyright Bar -->
+      <div class="pt-4 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-2">
+        <p>© 2026 OnlineAdmissions / GLA Online. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition">Mandatory Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-
-<a href="#" class="whatsapp-float wa" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-</a>
+  <!-- ========================================================================= -->
+  <!-- FLOATING WHATSAPP BUTTON (Properly sized & constrained)                   -->
+  <!-- ========================================================================= -->
+  <a href="https://wa.me/919315594429?text=Hello%20GLA%20Online%2C%20I%20would%20like%20to%20know%20more%20about%20admissions." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group" 
+     aria-label="Chat on WhatsApp">
+    <!-- Pulse Ring Effect -->
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping group-hover:hidden"></span>
+    <!-- WhatsApp Icon SVG constrained to exactly 28x28px -->
+    <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 448 512" aria-hidden="true">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+  </a>
 
   <!-- JAVASCRIPT CONTROLLERS -->
   <script>
