@@ -3,1047 +3,1261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GLA Online University - UG &amp; PG Admission 2026 Online</title>
-  <meta name="description" content="Apply to GLA Online University for UGC-DEB entitled Online MBA, MCA, BBA, BCA, and B.Com (Hons). Experience flexible weekend exams, NAAC A+ learning, and placement support.">
-  <link rel="canonical" href="https://onlineadmissions.online/gla-university-online/">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="https://www.gla.ac.in/favicon.ico">
-  <link rel="shortcut icon" href="https://www.gla.ac.in/favicon.ico">
-
-  <!-- Fonts -->
+  <title>GLA Online University | #GharSeGlobal</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              forest: '#1b4332',
+              deep: '#0f291e',
+              gold: '#f59e0b',
+              accentGold: '#ffc107',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
 
   <style>
-    :root {
-      --gla-red: #A31920;
-      --gla-red-dark: #821016;
-      --gla-navy: #0B1C33;
-      --gla-blue: #0066CC;
-      --gla-gold: #F5A623;
-      --gla-gold-soft: #FFF9EE;
-      --text-main: #1E293B;
-      --text-muted: #52647C;
-      --bg-slate: #F8FAFC;
-      --white: #FFFFFF;
-      --border: #E2E8F0;
-      --radius: 12px;
-      --shadow-sm: 0 4px 12px rgba(11, 28, 51, 0.05);
-      --shadow-md: 0 12px 30px -8px rgba(11, 28, 51, 0.12);
+    /* Custom Scrollbar and UI Enhancements */
+    html {
+      scroll-behavior: smooth;
     }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: var(--text-main);
-      background-color: var(--bg-slate);
-      line-height: 1.6;
+    ::-webkit-scrollbar {
+      width: 8px;
     }
-
-    h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; color: var(--gla-navy); line-height: 1.2; margin: 0; }
-    p { margin: 0; }
-    a { text-decoration: none; color: inherit; }
-    .wrap { width: min(1280px, 100% - 2.5rem); margin-inline: auto; }
-
-    /* Top Strip (Matches glaonline.com announcement strip) */
-    .top-strip {
-      background: var(--gla-navy);
-      color: #E2E8F0;
-      font-size: 0.84rem;
-      padding: 0.45rem 0;
-      border-bottom: 2px solid var(--gla-red);
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
     }
-    .top-strip .wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .top-strip .strip-tag {
-      background: var(--gla-red);
-      color: var(--white);
-      padding: 0.15rem 0.6rem;
+    ::-webkit-scrollbar-thumb {
+      background: #1b4332;
       border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.78rem;
-      margin-right: 0.4rem;
     }
-    .top-strip a { color: var(--gla-gold); font-weight: 700; }
-
-    /* Header */
-    .header {
-      background: var(--white);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: var(--shadow-sm);
+    .slide-transition {
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .header .wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      min-height: 76px;
-      gap: 1rem;
+    .glass-form {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 20px 45px -10px rgba(15, 41, 30, 0.25);
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-    .brand-logo {
-      height: 48px;
-      width: auto;
-      display: block;
-    }
-    .brand-caption {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-      border-left: 2px solid var(--border);
-      padding-left: 0.85rem;
-    }
-    .brand-caption strong {
-      font-size: 1.25rem;
-      font-family: 'Outfit', sans-serif;
-      color: var(--gla-red);
-      letter-spacing: -0.01em;
-    }
-    .brand-caption span {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--gla-navy);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.4rem;
-    }
-    .nav-links a {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--gla-red); }
-
-    .header-cta {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-    .phone-btn {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--gla-navy);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .btn-apply {
-      background: var(--gla-red);
-      color: var(--white);
-      padding: 0.65rem 1.4rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn-apply:hover {
-      background: var(--gla-red-dark);
-      transform: translateY(-2px);
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, #09172B 0%, #0F2748 55%, #A31920 100%);
-      color: var(--white);
-      padding: clamp(2.8rem, 5.5vw, 4.6rem) 0;
-      position: relative;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 2.8rem;
-      align-items: center;
-    }
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 1.2rem;
-    }
-    .badge {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--gla-gold);
-    }
-    .hero h1 {
-      color: var(--white);
-      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
-      margin-bottom: 1.2rem;
-    }
-    .hero h1 span { color: var(--gla-gold); }
-    .hero p.lead {
-      font-size: 1.08rem;
-      color: rgba(255, 255, 255, 0.88);
-      margin-bottom: 1.8rem;
-      max-width: 36em;
-    }
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      text-align: center;
-    }
-    .hm-box strong {
-      font-size: 1.8rem;
-      font-family: 'Outfit', sans-serif;
-      color: var(--gla-gold);
-      display: block;
-      line-height: 1;
-      margin-bottom: 0.2rem;
-    }
-    .hm-box span { font-size: 0.78rem; color: rgba(255, 255, 255, 0.8); }
-
-    /* Enquiry Form Card */
-    .form-card {
-      background: var(--white);
-      color: var(--text-main);
-      border-radius: 18px;
-      padding: 2.2rem 2rem;
-      box-shadow: var(--shadow-md);
-      border-top: 5px solid var(--gla-red);
-    }
-    .form-card h3 { font-size: 1.4rem; margin-bottom: 0.25rem; }
-    .form-card p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.2rem; }
-    .form-group { margin-bottom: 0.85rem; }
-    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--gla-navy); margin-bottom: 0.25rem; }
-    .form-group input, .form-group select {
-      width: 100%;
-      padding: 0.72rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.92rem;
-      outline: none;
-      font-family: inherit;
-    }
-    .form-group input:focus, .form-group select:focus { border-color: var(--gla-red); }
-    .form-submit-btn {
-      width: 100%;
-      background: var(--gla-red);
-      color: var(--white);
-      border: none;
-      padding: 0.85rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 0.6rem;
-      transition: background 0.2s;
-    }
-    .form-submit-btn:hover { background: var(--gla-red-dark); }
-
-    /* Accreditations & Recognitions Bar */
-    .accred-section {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 0;
-    }
-    .accred-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
-    }
-    .accred-card {
-      padding: 1.2rem;
-      border-radius: var(--radius);
-      background: var(--bg-slate);
-      border: 1px solid var(--border);
-    }
-    .accred-card b {
-      display: block;
-      font-size: 1.3rem;
-      color: var(--gla-red);
-      font-family: 'Outfit', sans-serif;
-    }
-    .accred-card span {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    /* Section Headings */
-    .section { padding: clamp(3.5rem, 6vw, 5rem) 0; }
-    .sec-head {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 3rem;
-    }
-    .sec-head span {
-      font-size: 0.84rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gla-red);
-    }
-    .sec-head h2 { font-size: clamp(2rem, 3.5vw, 2.7rem); margin-top: 0.3rem; }
-    .sec-head p { margin-top: 0.75rem; color: var(--text-muted); font-size: 1.05rem; }
-
-    /* Features Grid (Matches "GLA Online Features" on glaonline.com) */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.6rem;
-    }
-    .feat-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.8rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .feat-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
-      background: var(--gla-gold-soft);
-      color: #925805;
-      display: grid;
-      place-items: center;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .feat-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
-    .feat-card p { font-size: 0.88rem; color: var(--text-muted); }
-
-    /* #GharSeGlobal Banner */
-    .gharse-banner {
-      background: linear-gradient(135deg, var(--gla-navy) 0%, #153359 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 3rem;
-      margin: 3.5rem 0 1rem;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 2rem;
-      align-items: center;
-    }
-    .gharse-banner h3 {
-      font-size: 2.2rem;
-      color: var(--gla-gold);
-      margin-bottom: 0.6rem;
-    }
-    .gharse-banner p { font-size: 1.05rem; opacity: 0.9; }
-
-    /* Programs Grid */
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1.8rem;
-    }
-    .p-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.8rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .p-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--gla-red);
-    }
-    .p-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.8rem;
-    }
-    .p-badge {
-      background: #FFEAEB;
-      color: var(--gla-red);
-      font-weight: 800;
-      font-size: 0.75rem;
-      padding: 0.25rem 0.65rem;
-      border-radius: 6px;
-    }
-    .p-card h3 { font-size: 1.45rem; margin-bottom: 0.4rem; }
-    .p-card p.sub { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.2rem; }
-    .p-specs {
-      background: var(--bg-slate);
-      border-radius: 8px;
-      padding: 0.85rem;
-      margin-bottom: 1.3rem;
-      font-size: 0.84rem;
-      color: var(--text-main);
-    }
-    .p-specs b { display: block; color: var(--gla-navy); margin-bottom: 0.2rem; }
-    .p-details-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1.4rem;
-      display: grid;
-      gap: 0.45rem;
-      font-size: 0.88rem;
-    }
-    .p-details-list li { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border); padding-bottom: 0.35rem; }
-    .p-details-list li span { color: var(--text-muted); }
-    .p-details-list li strong { color: var(--gla-navy); }
-    .p-cta {
-      width: 100%;
-      text-align: center;
-      background: var(--gla-navy);
-      color: var(--white);
-      padding: 0.75rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      transition: background 0.2s;
-    }
-    .p-card:hover .p-cta { background: var(--gla-red); }
-
-    /* Placement Section */
-    .placement-section {
-      background: var(--white);
-      border-block: 1px solid var(--border);
-    }
-    .placement-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .pl-card {
-      background: var(--gla-navy);
-      color: var(--white);
-      border-radius: var(--radius);
-      padding: 1.8rem 1rem;
-    }
-    .pl-card strong {
-      font-size: 2.3rem;
-      font-family: 'Outfit', sans-serif;
-      color: var(--gla-gold);
-      display: block;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-    .pl-card span { font-size: 0.88rem; opacity: 0.9; }
-
-    .recruiter-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-    .rec-box {
-      background: var(--bg-slate);
-      border: 1px solid var(--border);
-      padding: 0.65rem 1.6rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--gla-navy);
-    }
-
-    /* FAQ Section */
-    .faq-list {
-      max-width: 820px;
-      margin: 0 auto;
-      display: grid;
-      gap: 1rem;
-    }
-    .faq-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.3rem 1.6rem;
-    }
-    .faq-card h4 { font-size: 1.1rem; color: var(--gla-red); margin-bottom: 0.4rem; }
-    .faq-card p { font-size: 0.92rem; color: var(--text-muted); }
-
-    /* Bottom CTA Strip */
-    .cta-banner {
-      background: linear-gradient(135deg, var(--gla-navy) 0%, var(--gla-red) 100%);
-      color: var(--white);
-      padding: 4.5rem 0;
-      text-align: center;
-    }
-    .cta-banner h2 { color: var(--white); font-size: 2.4rem; margin-bottom: 0.8rem; }
-    .cta-banner p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 2rem; max-width: 620px; margin-inline: auto; }
-    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .btn-gold {
-      background: var(--gla-gold);
-      color: var(--gla-navy);
-      font-weight: 800;
-      padding: 0.85rem 1.8rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-    }
-    .btn-gold:hover { background: #d49514; }
-    .btn-outline {
-      border: 2px solid var(--white);
-      color: var(--white);
-      font-weight: 700;
-      padding: 0.85rem 1.8rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-    }
-
-    /* Footer */
-    .footer {
-      background: #061120;
-      color: #94A3B8;
-      padding: 3.5rem 0 1.5rem;
-      font-size: 0.88rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 2.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .footer h4 { color: var(--white); font-size: 1.05rem; margin-bottom: 1rem; }
-    .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
-    .footer a:hover { color: var(--gla-gold); }
-    .footer-disc {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 1.5rem;
-      font-size: 0.8rem;
-      line-height: 1.6;
-    }
-
-    /* Sticky Call Bar & WhatsApp */
-    .sticky-bar {
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
-      z-index: 90;
-      background: var(--gla-navy);
-      color: var(--white);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.2rem;
-      padding: 0.75rem 1rem;
-      border-top: 2px solid var(--gla-gold);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .sticky-bar a.btn-mini {
-      background: var(--gla-gold);
-      color: var(--gla-navy);
-      padding: 0.4rem 1.1rem;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 0.85rem;
-    }
-    .wa-float {
-      position: fixed;
-      right: 20px;
-      bottom: 75px;
-      z-index: 95;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: #25D366;
-      display: grid;
-      place-items: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-    .wa-float:hover { transform: scale(1.08); }
-    .wa-float svg { width: 30px; height: 30px; fill: #fff; }
-
-    @media (max-width: 992px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .gharse-banner { grid-template-columns: 1fr; }
-      .placement-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-    }
-    @media (max-width: 600px) {
-      .hero-metrics { grid-template-columns: repeat(2, 1fr); }
-      .placement-grid { grid-template-columns: 1fr; }
+    .hero-glow {
+      box-shadow: 0 0 50px rgba(34, 197, 94, 0.2);
     }
   </style>
 </head>
-<body>
+<body class="font-sans antialiased text-gray-800 bg-[#fbfdfa] selection:bg-brand-600 selection:text-white">
 
-  <!-- Top Announcement Strip (Matches Alumni Discount Banner on glaonline.com) -->
-  <div class="top-strip">
-    <div class="wrap">
-      <div>
-        <span class="strip-tag">★ ALUMNI &amp; SIBLING BENEFITS</span>
-        <span>40% Alumni Concession + 20% Sibling Concession Available for 2026 Batch</span>
-      </div>
-      <div>
-        Helpline: <a href="tel:9315594429">📞 9315594429</a> | <a href="https://wa.me/919315594429?text=Hi%2C%20I%20am%20interested%20in%20GLA%20Online%20Admissions." target="_blank" rel="noopener">💬 WhatsApp</a>
-      </div>
-    </div>
-  </div>
+  <!-- TOP ANNOUNCEMENT BAR & INFO -->
+  <header class="w-full sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <!-- Top Gold & Green Bar -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-xs md:text-sm py-2 px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+        <!-- Alumni Offer Pill -->
+        <div class="flex items-center gap-2">
+          <div class="bg-amber-400 text-brand-950 px-3 py-0.5 rounded-full font-bold flex items-center gap-1.5 shadow-sm">
+            <span class="text-xs">★ Alumni Offer</span>
+            <span class="hidden sm:inline">|</span>
+            <span class="text-red-700">40% Alumni Discount</span>
+            <span>+</span>
+            <span class="text-green-900">20% Sibling Discount</span>
+          </div>
+        </div>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="wrap">
-      <div class="brand">
-        <img class="brand-logo" src="https://www.gla.ac.in/images/gla-logo.png" alt="GLA Online University Logo" onerror="this.src='https://noida.gla.ac.in/assets/images/logo.png'">
-        <div class="brand-caption">
-          <strong>GLA ONLINE</strong>
-          <span>CENTRE FOR DISTANCE &amp; ONLINE EDUCATION</span>
+        <!-- Contact & Portal Quick Links -->
+        <div class="flex items-center gap-4 text-xs">
+          <a href="mailto:onlineadmissions@gla.ac.in" class="hover:text-amber-300 transition-colors hidden lg:flex items-center gap-1.5">
+            <i class="fa-regular fa-envelope text-brand-200"></i> onlineadmissions@gla.ac.in
+          </a>
+          <a href="tel:+919568536853" class="bg-brand-700/60 hover:bg-brand-700 px-2.5 py-1 rounded border border-brand-500/40 font-semibold flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-phone text-amber-300"></i> +91-9568536853
+          </a>
+          <a href="#apply-now" class="bg-white hover:bg-gray-100 text-brand-900 font-bold px-3 py-1 rounded transition shadow-sm">
+            Apply Now
+          </a>
+          <button onclick="toggleModal('loginModal')" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-3 py-1 rounded transition">
+            Student Login
+          </button>
         </div>
       </div>
+    </div>
 
-      <nav class="nav-links">
-        <a href="#about">About GLA Online</a>
-        <a href="#features">Features</a>
-        <a href="#programs">Programs</a>
-        <a href="#placements">Placements</a>
-        <a href="#faqs">FAQs</a>
-      </nav>
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+      <div class="flex justify-between items-center">
+        <!-- University Logo Brand -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-amber-400 shadow-md border-2 border-brand-600">
+            <i class="fa-solid fa-graduation-cap text-2xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-black tracking-tight text-brand-900">GLA</span>
+              <span class="bg-brand-800 text-white text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">ONLINE</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-1.5 py-0.2 border border-emerald-200 rounded">
+                NAAC A+ GRADE ACCREDITED
+              </span>
+              <span class="text-xs font-semibold italic text-brand-700 hidden sm:inline">#GharSeGlobal</span>
+            </div>
+          </div>
+        </a>
 
-      <div class="header-cta">
-        <a class="phone-btn" href="tel:9315594429">📞 9315594429</a>
-        <a class="btn-apply" href="#apply">Apply Now</a>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-gray-700">
+          <a href="#hero-section" class="hover:text-brand-700 transition">Home</a>
+          <a href="#stats-section" class="hover:text-brand-700 transition">About Us</a>
+          <a href="#accreditations-section" class="hover:text-brand-700 transition">Rankings</a>
+          <a href="#features-section" class="hover:text-brand-700 transition">Features</a>
+          <a href="#programs-section" class="hover:text-brand-700 transition">Programs</a>
+          <a href="#placements-section" class="hover:text-brand-700 transition">Placements</a>
+          <a href="#contact" class="hover:text-brand-700 transition">Contact</a>
+        </nav>
+
+        <!-- CTA & Mobile Menu Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#hero-section" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-700 to-brand-800 text-white font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg shadow hover:shadow-lg hover:from-brand-800 hover:to-brand-900 transition">
+            <i class="fa-solid fa-paper-plane text-amber-300"></i> Request Call
+          </a>
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-brand-900 hover:bg-brand-50" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
       </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3 font-semibold text-gray-700">
+      <a href="#hero-section" class="block py-1 hover:text-brand-700">Home</a>
+      <a href="#stats-section" class="block py-1 hover:text-brand-700">About Us</a>
+      <a href="#accreditations-section" class="block py-1 hover:text-brand-700">Rankings & Accreditations</a>
+      <a href="#features-section" class="block py-1 hover:text-brand-700">Features</a>
+      <a href="#programs-section" class="block py-1 hover:text-brand-700">Programs</a>
+      <a href="#placements-section" class="block py-1 hover:text-brand-700">Placements</a>
+      <a href="#contact" class="block py-1 hover:text-brand-700">Contact Us</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="hero-badges">
-          <span class="badge">UGC-DEB Entitled</span>
-          <span class="badge">NAAC A+ Accredited</span>
-          <span class="badge">QS Ranked #244 Southern Asia</span>
-        </div>
-        <h1>Great Learning Assurance: <span>Learning Beyond Boundaries</span></h1>
-        <p class="lead">Pursue prestigious online degrees from GLA Online University. 100% remote online proctored exams, industry-integrated curriculum, self-paced LMS study, and comprehensive corporate placement support.</p>
 
-        <div class="hero-metrics">
-          <div class="hm-box">
-            <strong>28+</strong>
-            <span>Years of Legacy</span>
-          </div>
-          <div class="hm-box">
-            <strong>51K+</strong>
-            <span>Global Alumni</span>
-          </div>
-          <div class="hm-box">
-            <strong>500+</strong>
-            <span>Hiring Partners</span>
-          </div>
-          <div class="hm-box">
-            <strong>24K+</strong>
-            <span>Active Students</span>
+  <!-- ========================================================================= -->
+  <!-- SECTION 1: HERO SECTION WITH THE 4 HERO SLIDES & OVERLAY ENQUIRY FORM     -->
+  <!-- ========================================================================= -->
+  <section id="hero-section" class="relative min-h-[640px] lg:min-h-[720px] bg-brand-deep text-white overflow-hidden flex items-center">
+    
+    <!-- CAROUSEL WRAPPER (First section contains these 4 images / thematic slides) -->
+    <div class="absolute inset-0 w-full h-full" id="heroCarousel">
+
+      <!-- SLIDE 1: Microsoft GenAI Campus & NIRF 2025 (Image 1 reference) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-700 bg-cover bg-center flex items-center"
+           style="background-image: linear-gradient(to right, rgba(15, 41, 30, 0.95) 0%, rgba(20, 83, 45, 0.85) 50%, rgba(10, 25, 18, 0.75) 100%), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80');">
+        <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs sm:text-sm font-semibold tracking-wide">
+              <i class="fa-solid fa-crown text-amber-400"></i> Institution Ranking 2025
+            </div>
+            <div class="space-y-2">
+              <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-white tracking-tight">
+                India's <span class="text-amber-400 underline decoration-emerald-500">1<sup>st</sup></span> <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200">
+                  Microsoft GenAI Campus
+                </span>
+              </h2>
+              <p class="text-gray-200 text-base sm:text-lg max-w-xl font-medium pt-2">
+                Empowering next-generation learners through state-of-the-art Generative AI curriculum and world-class institutional excellence.
+              </p>
+            </div>
+
+            <!-- Ranking Pill Badges inside Slide 1 -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-2xl">
+              <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
+                <span class="text-xs text-emerald-300 uppercase font-bold block">QS Asia 2026</span>
+                <span class="text-2xl font-black text-amber-400">#244</span>
+                <span class="text-[11px] text-gray-300 block">Southern Asia</span>
+              </div>
+              <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
+                <span class="text-xs text-emerald-300 uppercase font-bold block">Overall Asia</span>
+                <span class="text-xl font-black text-white">#781-790</span>
+                <span class="text-[11px] text-gray-300 block">QS World</span>
+              </div>
+              <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
+                <span class="text-xs text-emerald-300 uppercase font-bold block">NIRF 2025</span>
+                <span class="text-2xl font-black text-amber-400">Top 125</span>
+                <span class="text-[11px] text-gray-300 block">Management</span>
+              </div>
+              <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
+                <span class="text-xs text-emerald-300 uppercase font-bold block">NIRF 2025</span>
+                <span class="text-2xl font-black text-white">Top 150</span>
+                <span class="text-[11px] text-gray-300 block">University</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Quick Lead Card -->
-      <div class="form-card" id="apply">
-        <h3>Admission Query (2026 Intake)</h3>
-        <p>Get syllabus, tuition fees, and no-cost EMI details directly on call.</p>
+      <!-- SLIDE 2: From Learning to Earning (Image 2 reference) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-700 bg-cover bg-center flex items-center"
+           style="background-image: linear-gradient(to right, rgba(11, 46, 74, 0.94) 0%, rgba(13, 71, 56, 0.88) 60%, rgba(5, 25, 30, 0.8) 100%), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80');">
+        <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="bg-amber-400/20 text-amber-300 border border-amber-400/40 text-xs sm:text-sm font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full inline-block">
+              <i class="fa-solid fa-briefcase mr-1.5"></i> Career & Placement Hub
+            </span>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight">
+              From <span class="text-white">Learning</span> to <br/>
+              <span class="text-amber-400">Earning</span>
+            </h2>
+            <p class="text-gray-200 text-lg font-medium">
+              GLA Online — Where Skills Meet Opportunities with <span class="text-amber-300 font-bold underline">100% Placement Assistance</span>!
+            </p>
 
-        <form action="#" method="POST" id="glaOnlineForm">
-          <div class="form-group">
-            <label for="uName">Full Name</label>
-            <input type="text" id="uName" name="name" placeholder="Enter student name" required>
+            <!-- Cards Highlight (3k+ Partners, 51k+ Success) -->
+            <div class="flex flex-wrap gap-4 pt-1">
+              <div class="bg-white text-brand-900 rounded-xl p-4 shadow-lg border-2 border-emerald-500/20 w-36 sm:w-44 transform -rotate-1 hover:rotate-0 transition">
+                <p class="text-3xl font-extrabold text-brand-800">3K+</p>
+                <p class="text-xs font-bold text-gray-600 uppercase tracking-wider mt-1">Hiring Partners</p>
+              </div>
+              <div class="bg-white text-brand-900 rounded-xl p-4 shadow-lg border-2 border-emerald-500/20 w-36 sm:w-44 transform rotate-2 hover:rotate-0 transition">
+                <p class="text-3xl font-extrabold text-brand-800">51K+</p>
+                <p class="text-xs font-bold text-gray-600 uppercase tracking-wider mt-1">Success Stories</p>
+              </div>
+            </div>
+
+            <!-- Recruiter Logo chips -->
+            <div class="pt-2">
+              <p class="text-xs font-semibold text-gray-300 uppercase tracking-widest mb-2">Our Top Recruiters:</p>
+              <div class="flex flex-wrap gap-2 text-xs font-bold text-gray-800">
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Amazon</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Microsoft</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Accenture</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Wipro</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">IBM</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Cognizant</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Tata Power</span>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="uPhone">Mobile Number</label>
-            <input type="tel" id="uPhone" name="phone" placeholder="10-digit mobile number" required>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: Become a GLAdiator (Image 3 reference) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-700 bg-cover bg-center flex items-center"
+           style="background-image: linear-gradient(to right, rgba(20, 40, 30, 0.95) 0%, rgba(27, 67, 50, 0.88) 55%, rgba(10, 20, 15, 0.75) 100%), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=80');">
+        <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 text-xs sm:text-sm font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full inline-block">
+              <i class="fa-solid fa-shield-halved mr-1.5 text-amber-400"></i> Unleash Your True Potential
+            </span>
+            <div class="space-y-1">
+              <p class="text-xl sm:text-2xl font-light tracking-wide text-gray-200">Be extraordinary,</p>
+              <h2 class="text-4xl sm:text-6xl font-black leading-tight text-white">
+                Become a <br/>
+                <span class="text-amber-400 tracking-tight">GLAdiator!</span>
+              </h2>
+            </div>
+            <p class="text-gray-200 text-base sm:text-lg max-w-xl font-medium">
+              Learn at your convenience. Shine everywhere with GLA Online's elite mentor network, global exposure and flexible degree programs.
+            </p>
+
+            <!-- 51k+ Alumni & 50+ Faculty -->
+            <div class="grid grid-cols-2 gap-4 max-w-md pt-2">
+              <div class="border-l-4 border-amber-400 pl-4 py-1">
+                <span class="text-3xl sm:text-4xl font-extrabold text-amber-400">51K+</span>
+                <span class="block text-xs uppercase font-bold text-gray-300 tracking-wider">Alumni Community</span>
+              </div>
+              <div class="border-l-4 border-emerald-400 pl-4 py-1">
+                <span class="text-3xl sm:text-4xl font-extrabold text-white">50+</span>
+                <span class="block text-xs uppercase font-bold text-gray-300 tracking-wider">Experienced Faculty</span>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="uEmail">Email Address</label>
-            <input type="email" id="uEmail" name="email" placeholder="name@domain.com" required>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: Institutional Ranking 2025 Highlight (Image 4 reference) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-700 bg-cover bg-center flex items-center"
+           style="background-image: linear-gradient(to right, rgba(16, 55, 38, 0.95) 0%, rgba(20, 83, 45, 0.88) 55%, rgba(10, 30, 20, 0.8) 100%), url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=80');">
+        <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="bg-amber-400 text-brand-950 text-xs sm:text-sm font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full inline-block shadow-sm">
+              <i class="fa-solid fa-award mr-1"></i> Global & National Benchmark
+            </span>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-white">
+              NIRF & QS World <br/>
+              <span class="text-amber-400">RANKING 2025</span>
+            </h2>
+            <p class="text-gray-200 text-base sm:text-lg max-w-xl font-medium">
+              Ranked among India's top academic powerhouses with accredited management and engineering degrees tailored for professionals.
+            </p>
+
+            <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg">
+              <div class="bg-brand-900/80 border border-emerald-500/40 p-3 rounded-xl text-center">
+                <span class="text-amber-400 text-2xl font-black">Top 125</span>
+                <span class="text-[11px] block text-gray-200 font-semibold mt-1">Management NIRF</span>
+              </div>
+              <div class="bg-brand-900/80 border border-emerald-500/40 p-3 rounded-xl text-center">
+                <span class="text-white text-2xl font-black">Top 150</span>
+                <span class="text-[11px] block text-gray-200 font-semibold mt-1">University NIRF</span>
+              </div>
+              <div class="bg-brand-900/80 border border-emerald-500/40 p-3 rounded-xl text-center">
+                <span class="text-emerald-300 text-2xl font-black">Top 200</span>
+                <span class="text-[11px] block text-gray-200 font-semibold mt-1">Engineering NIRF</span>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="uCourse">Select Online Program</label>
-            <select id="uCourse" name="course" required>
-              <option value="" disabled selected>Choose Course</option>
-              <option value="Online MBA">Online MBA (Master of Business Administration)</option>
-              <option value="Online MCA">Online MCA (Master of Computer Applications)</option>
-              <option value="Online BBA">Online BBA (Bachelor of Business Administration)</option>
-              <option value="Online BCA">Online BCA (Bachelor of Computer Applications)</option>
-              <option value="Online B.Com (Hons)">Online B.Com (Hons.)</option>
-            </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FLOATING ENQUIRY FORM OVERLAY (Present right side of the first section in all 4 screenshots) -->
+    <div class="relative z-30 max-w-7xl mx-auto w-full px-4 sm:px-6 pointer-events-none py-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12">
+        <div class="lg:col-span-7"></div>
+        <div class="lg:col-span-5 pointer-events-auto">
+          <div class="glass-form rounded-2xl p-6 sm:p-7 border border-white/60 shadow-2xl">
+            <div class="border-b border-gray-200 pb-3 mb-4">
+              <h3 class="text-xl font-extrabold text-brand-900 flex items-center justify-between">
+                <span>Admissions Open 2025-26</span>
+                <span class="text-[10px] bg-green-100 text-green-800 font-bold px-2 py-0.5 rounded">FAST TRACK</span>
+              </h3>
+              <p class="text-xs text-gray-600 mt-1">Fill the form to get specialized career counselling & brochure</p>
+            </div>
+
+            <form id="heroLeadForm" onsubmit="handleFormSubmit(event)" class="space-y-3 text-sm">
+              <div>
+                <input type="text" required placeholder="Full Name" 
+                       class="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-700 focus:bg-white transition">
+              </div>
+
+              <div>
+                <input type="email" required placeholder="Email Address" 
+                       class="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-700 focus:bg-white transition">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <input type="tel" required placeholder="Mobile Number" pattern="[0-9]{10}" title="Please enter 10 digits"
+                       class="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-700 focus:bg-white transition">
+                <input type="tel" placeholder="Alternate Mobile" 
+                       class="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-700 focus:bg-white transition">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <select required class="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-700 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-700">
+                  <option value="" disabled selected>Select State</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Delhi">Delhi NCR</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Other">Other State</option>
+                </select>
+                <select required class="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-700 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-700">
+                  <option value="" disabled selected>Select District</option>
+                  <option value="Mathura">Mathura</option>
+                  <option value="Agra">Agra</option>
+                  <option value="Noida">Noida / Gr. Noida</option>
+                  <option value="Lucknow">Lucknow</option>
+                  <option value="Other">Other District</option>
+                </select>
+              </div>
+
+              <div>
+                <select required class="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-700 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-700 font-medium">
+                  <option value="" disabled selected>Select Program</option>
+                  <option value="MBA">Master of Business Administration (MBA)</option>
+                  <option value="MCA">Master of Computer Applications (MCA)</option>
+                  <option value="BBA">Bachelor of Business Administration (BBA)</option>
+                  <option value="BCA">Bachelor of Computer Applications (BCA)</option>
+                  <option value="BCOM">Bachelor of Commerce (Hons.) (B.Com)</option>
+                </select>
+              </div>
+
+              <div class="flex items-start gap-2 pt-1 text-xs text-gray-600">
+                <input type="checkbox" id="consent" required checked class="mt-1 rounded text-brand-700 focus:ring-brand-600">
+                <label for="consent" class="select-none leading-tight">
+                  I allow GLA Online to contact me via Call, Email, or WhatsApp regarding admissions.
+                </label>
+              </div>
+
+              <button type="submit" class="w-full py-3 px-4 bg-brand-700 hover:bg-brand-800 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform active:scale-98 flex items-center justify-center gap-2">
+                <span>Submit Application</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            </form>
           </div>
-          <button type="submit" class="form-submit-btn">Submit &amp; Download Brochure</button>
-        </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls (Slide navigation dots & arrows) -->
+    <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+      <button onclick="prevSlide()" class="text-white hover:text-amber-400 p-1 transition" aria-label="Previous Slide">
+        <i class="fa-solid fa-chevron-left text-sm"></i>
+      </button>
+      <div class="flex gap-2" id="carouselDots">
+        <button onclick="goToSlide(0)" class="w-3 h-3 rounded-full bg-amber-400 transition" aria-label="Slide 1"></button>
+        <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-white/50 transition" aria-label="Slide 2"></button>
+        <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-white/50 transition" aria-label="Slide 3"></button>
+        <button onclick="goToSlide(3)" class="w-3 h-3 rounded-full bg-white/50 transition" aria-label="Slide 4"></button>
+      </div>
+      <button onclick="nextSlide()" class="text-white hover:text-amber-400 p-1 transition" aria-label="Next Slide">
+        <i class="fa-solid fa-chevron-right text-sm"></i>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 2: GREAT LEARNING ASSURANCE & LEGACY (Corresponds to Image 5)      -->
+  <!-- ========================================================================= -->
+  <section id="stats-section" class="py-16 bg-[#f4f7f4] border-b border-gray-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 text-brand-800 font-extrabold text-sm uppercase tracking-widest bg-brand-100/70 px-3.5 py-1 rounded-full mb-3">
+          <span class="text-brand-900 font-black">G</span>reat 
+          <span class="text-brand-900 font-black">L</span>earning 
+          <span class="text-brand-900 font-black">A</span>ssurance
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">
+          Learning Beyond Boundaries!
+        </h2>
+        <div class="w-20 h-1 bg-amber-400 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- 4 Pillars Stat Counter Grid (Exact replica of Image 5) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-gray-300">
+        <div class="px-4 py-2">
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">29+</p>
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Years of Legacy</p>
+        </div>
+        <div class="px-4 py-2 pt-6 md:pt-2">
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">54K+</p>
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Alumni</p>
+        </div>
+        <div class="px-4 py-2 pt-6 md:pt-2">
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">3K+</p>
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Recruiters</p>
+        </div>
+        <div class="px-4 py-2 pt-6 md:pt-2">
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">25K+</p>
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Students Enrolled</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Accreditations & Recognitions Bar -->
-  <section class="accred-section" id="about">
-    <div class="wrap accred-grid">
-      <div class="accred-card">
-        <b>UGC-DEB</b>
-        <span>Government Entitled</span>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 3: ACCREDITATIONS & RANKINGS (Corresponds to Image 6)              -->
+  <!-- ========================================================================= -->
+  <section id="accreditations-section" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <span class="text-xs font-bold text-brand-700 uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+          Global Benchmarks
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-950 mt-3 tracking-tight">
+          Accreditations & Rankings
+        </h2>
+        <p class="text-gray-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
+          Recognized by premier global and national accreditation agencies for exceptional academic standards.
+        </p>
       </div>
-      <div class="accred-card">
-        <b>NAAC A+</b>
-        <span>Score 3.46 CGPA</span>
+
+      <!-- 3 Key Ranking Cards (QS, THE, NIRF) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- QS World University Card -->
+        <div class="bg-[#fcfdfc] rounded-2xl p-8 border border-gray-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-14 flex items-center mb-6">
+              <span class="bg-amber-100 text-amber-800 font-extrabold text-xl px-4 py-1.5 rounded-lg border border-amber-300">
+                QS
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-brand-800 transition">
+              QS World University Rankings 2026
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Ranked <strong class="text-brand-800">#244</strong> in Southern Asia <br/>
+              Ranked <strong class="text-brand-800">#781–790</strong> in Asia Overall
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">QS Asia 2026</span>
+            <span class="text-amber-500 font-semibold text-xs flex items-center gap-1">
+              Verified Rating <i class="fa-solid fa-check-circle"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Times Higher Education (THE) Card -->
+        <div class="bg-[#fcfdfc] rounded-2xl p-8 border border-gray-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-14 flex items-center mb-6">
+              <span class="bg-rose-100 text-rose-800 font-extrabold text-xl px-4 py-1.5 rounded-lg border border-rose-300">
+                THE
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-brand-800 transition">
+              The World University Rankings 2026
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Ranked <strong class="text-brand-800">351–400</strong> in Asia <br/>
+              Ranked <strong class="text-brand-800">501–600</strong> in Engineering <br/>
+              Ranked <strong class="text-brand-800">601–800</strong> in Business and Economics
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">THE World Rank</span>
+            <span class="text-rose-600 font-semibold text-xs flex items-center gap-1">
+              Global Standard <i class="fa-solid fa-globe"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- NIRF Ranking Card -->
+        <div class="bg-[#fcfdfc] rounded-2xl p-8 border border-gray-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-14 flex items-center mb-6">
+              <span class="bg-blue-100 text-blue-800 font-black text-xl px-4 py-1.5 rounded-lg border border-blue-300">
+                nirf
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-brand-800 transition">
+              NIRF Ranking 2025
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Ranked in the <strong class="text-brand-800">101–125 Band</strong> among Management Institutes in India <br/>
+              Ranked in the <strong class="text-brand-800">151–200 Band</strong> Overall
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">MoE, Govt of India</span>
+            <span class="text-blue-600 font-semibold text-xs flex items-center gap-1">
+              Top Ranked <i class="fa-solid fa-certificate"></i>
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="accred-card">
-        <b>AICTE</b>
-        <span>Approved Tech Programs</span>
-      </div>
-      <div class="accred-card">
-        <b>IACBE (USA)</b>
-        <span>International Business Accreditation</span>
-      </div>
-      <div class="accred-card">
-        <b>WES Recognized</b>
-        <span>Globally Accepted Abroad</span>
+
+      <!-- Trust Bar (UGC, AICTE, NAAC A+, NIRF) -->
+      <div class="mt-14 pt-8 border-t border-gray-200 flex flex-wrap items-center justify-around gap-6 opacity-80">
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
+          <i class="fa-solid fa-medal text-brand-700 text-lg"></i> NAAC 'A+' Accredited
+        </div>
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
+          <i class="fa-solid fa-building-columns text-brand-700 text-lg"></i> UGC Entitled Degrees
+        </div>
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
+          <i class="fa-solid fa-graduation-cap text-brand-700 text-lg"></i> AICTE Approved Programs
+        </div>
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
+          <i class="fa-solid fa-earth-americas text-brand-700 text-lg"></i> WES Recognized Globally
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Features (Direct from glaonline.com "Unlock Your Future") -->
-  <section class="section" id="features">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>GLA Online Features</span>
-        <h2>Unlock Your Future with Flexible Learning</h2>
-        <p>A digital learning ecosystem built for busy working executives and students wanting quality higher education from home.</p>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 4: GLA ONLINE FEATURES (Corresponds to Image 7)                   -->
+  <!-- ========================================================================= -->
+  <section id="features-section" class="py-20 bg-brand-forest text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <span class="text-xs font-bold text-amber-300 uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-white/20">
+          GLA Online Features
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black mt-3 text-white tracking-tight">
+          Unlock Your Future with GLA Online
+        </h2>
+        <p class="text-emerald-100 max-w-2xl mx-auto mt-2 text-sm sm:text-base">
+          Tailored learning designed to fit your busy lifestyle without compromising academic rigor.
+        </p>
       </div>
 
-      <div class="features-grid">
-        <div class="feat-card">
-          <div class="feat-icon">💰</div>
-          <h3>Cost-Effective Education</h3>
-          <p>Affordable per-semester tuition fees with zero-interest monthly EMI options to support your degree without financial stress.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🎯</div>
-          <h3>Industry-Integrated Curriculum</h3>
-          <p>Subjects crafted with industry feedback, integrating live projects, real-world case simulations, and modern business tools.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">💻</div>
-          <h3>Interactive Classrooms</h3>
-          <p>Live doubt-clearing sessions, EDGE masterclasses with corporate leaders, and collaborative discussion forums on our LMS.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">⏱️</div>
-          <h3>Self-Paced Learning</h3>
-          <p>24/7 access to high-definition video lectures, e-libraries, and study modules to learn on your own schedule.</p>
-        </div>
-      </div>
-
-      <!-- #GharSeGlobal Banner -->
-      <div class="gharse-banner">
-        <div>
-          <h3>#GharSeGlobal</h3>
-          <p>You don't have to leave home to access world-class higher education, global certifications, and top corporate exposure! Earn your degree from anywhere across India.</p>
-        </div>
-        <div style="text-align:center;">
-          <a class="btn-gold" href="#apply">Apply Online Today</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academic Programs Offered on glaonline.com -->
-  <section class="section" id="programs" style="background:var(--white);">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>Programs Offered</span>
-        <h2>Explore GLA Online Degrees</h2>
-        <p>Choose from career-defining postgraduate and undergraduate programs entitled by the University Grants Commission.</p>
-      </div>
-
-      <div class="program-grid">
+      <!-- Features 6 Cards Grid (Exact items from Image 7) -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
         
-        <!-- Online MBA -->
-        <div class="p-card">
-          <div>
-            <div class="p-header">
-              <span class="p-badge">Postgraduate • 2 Years</span>
-              <span style="font-size:0.85rem; font-weight:700; color:var(--gla-red);">UGC-DEB</span>
-            </div>
-            <h3>Online MBA</h3>
-            <p class="sub">Master of Business Administration with industry-led specializations.</p>
-            <div class="p-specs">
-              <b>Specializations Available:</b>
-              Banking &amp; Financial Services, Business Analytics, Operations Management, Supply Chain Management, Finance, Human Resource Management, IT Management, Marketing Management.
-            </div>
-            <ul class="p-details-list">
-              <li><span>Eligibility:</span> <strong>Graduation (Any Stream)</strong></li>
-              <li><span>Exams:</span> <strong>100% Online Proctored</strong></li>
-              <li><span>Payment:</span> <strong>Flexible Monthly EMIs</strong></li>
-            </ul>
+        <!-- Feature 1: Cost-Effective -->
+        <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80');">
+            <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
           </div>
-          <a class="p-cta" href="#apply">Enquire Fees &amp; Details</a>
+          <div class="p-4 relative -mt-10">
+            <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
+            <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
+              Cost-Effective
+            </h4>
+            <p class="text-xs text-gray-300 mt-1">Affordable fee structure with easy EMI options.</p>
+          </div>
         </div>
 
-        <!-- Online MCA -->
-        <div class="p-card">
-          <div>
-            <div class="p-header">
-              <span class="p-badge">Postgraduate • 2 Years</span>
-              <span style="font-size:0.85rem; font-weight:700; color:var(--gla-red);">AICTE Approved</span>
-            </div>
-            <h3>Online MCA</h3>
-            <p class="sub">Master of Computer Applications for software engineering and data careers.</p>
-            <div class="p-specs">
-              <b>Curriculum Highlights:</b>
-              Full Stack Web Engineering, Cloud Architecture, Artificial Intelligence, Machine Learning, and Database Management Systems.
-            </div>
-            <ul class="p-details-list">
-              <li><span>Eligibility:</span> <strong>BCA / B.Sc / Math in 10+2 or Grad</strong></li>
-              <li><span>Exams:</span> <strong>Remote Proctored on Weekends</strong></li>
-              <li><span>Career Support:</span> <strong>Dedicated Virtual Job Drives</strong></li>
-            </ul>
+        <!-- Feature 2: Diverse Course Options -->
+        <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80');">
+            <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
           </div>
-          <a class="p-cta" href="#apply">Enquire Fees &amp; Details</a>
+          <div class="p-4 relative -mt-10">
+            <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
+            <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
+              Diverse Course Options
+            </h4>
+            <p class="text-xs text-gray-300 mt-1">UG & PG domains in IT, Management & Commerce.</p>
+          </div>
         </div>
 
-        <!-- Online BBA -->
-        <div class="p-card">
-          <div>
-            <div class="p-header">
-              <span class="p-badge">Undergraduate • 3 Years</span>
-              <span style="font-size:0.85rem; font-weight:700; color:var(--gla-red);">UGC-DEB</span>
-            </div>
-            <h3>Online BBA</h3>
-            <p class="sub">Bachelor of Business Administration designed for upcoming managers.</p>
-            <div class="p-specs">
-              <b>Specializations Available:</b>
-              Financial Management, Human Resource Management, Marketing Management, Business Logistics &amp; Supply Chain Management.
-            </div>
-            <ul class="p-details-list">
-              <li><span>Eligibility:</span> <strong>10+2 from Recognized Board</strong></li>
-              <li><span>Exams:</span> <strong>Online from Home</strong></li>
-              <li><span>Fee Plans:</span> <strong>Budget Friendly Semester Installments</strong></li>
-            </ul>
+        <!-- Feature 3: Interactive -->
+        <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80');">
+            <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
           </div>
-          <a class="p-cta" href="#apply">Enquire Fees &amp; Details</a>
+          <div class="p-4 relative -mt-10">
+            <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
+            <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
+              Interactive Learning
+            </h4>
+            <p class="text-xs text-gray-300 mt-1">Live weekend faculty sessions and doubt forums.</p>
+          </div>
         </div>
 
-        <!-- Online BCA -->
-        <div class="p-card">
-          <div>
-            <div class="p-header">
-              <span class="p-badge">Undergraduate • 3 Years</span>
-              <span style="font-size:0.85rem; font-weight:700; color:var(--gla-red);">Tech Focused</span>
-            </div>
-            <h3>Online BCA</h3>
-            <p class="sub">Bachelor of Computer Applications covering core software foundations.</p>
-            <div class="p-specs">
-              <b>Key Learning Areas:</b>
-              Programming in C, C++, Java, Python, Web Technologies, Data Structures, Operating Systems, and Network Security.
-            </div>
-            <ul class="p-details-list">
-              <li><span>Eligibility:</span> <strong>10+2 from any Recognized Board</strong></li>
-              <li><span>Exams:</span> <strong>100% Online</strong></li>
-              <li><span>Projects:</span> <strong>Practical Capstone Submissions</strong></li>
-            </ul>
+        <!-- Feature 4: Industry-Integrated Curriculum -->
+        <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80');">
+            <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
           </div>
-          <a class="p-cta" href="#apply">Enquire Fees &amp; Details</a>
+          <div class="p-4 relative -mt-10">
+            <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
+            <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
+              Industry-Integrated
+            </h4>
+            <p class="text-xs text-gray-300 mt-1">Curated with Microsoft & top tech giants.</p>
+          </div>
         </div>
 
-        <!-- Online B.Com (Hons.) -->
-        <div class="p-card">
-          <div>
-            <div class="p-header">
-              <span class="p-badge">Undergraduate • 3 Years</span>
-              <span style="font-size:0.85rem; font-weight:700; color:var(--gla-red);">Commerce</span>
-            </div>
-            <h3>Online B.Com (Hons.)</h3>
-            <p class="sub">Bachelor of Commerce (Honours) for accounting, finance, and auditing careers.</p>
-            <div class="p-specs">
-              <b>Core Focus:</b>
-              Corporate Accounting, Financial Reporting, Tax Laws, Business Auditing, and Banking Frameworks.
-            </div>
-            <ul class="p-details-list">
-              <li><span>Eligibility:</span> <strong>10+2 (Commerce / Allied stream)</strong></li>
-              <li><span>Exams:</span> <strong>Remote Proctored</strong></li>
-              <li><span>Career Scope:</span> <strong>Ideal alongside CA/CMA preparation</strong></li>
-            </ul>
+        <!-- Feature 5: Self-Paced -->
+        <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80');">
+            <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
           </div>
-          <a class="p-cta" href="#apply">Enquire Fees &amp; Details</a>
+          <div class="p-4 relative -mt-10">
+            <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
+            <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
+              Self-Paced
+            </h4>
+            <p class="text-xs text-gray-300 mt-1">Learn from anywhere, anytime on your own schedule.</p>
+          </div>
+        </div>
+
+        <!-- Feature 6: Assured Career Transformation -->
+        <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');">
+            <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
+          </div>
+          <div class="p-4 relative -mt-10">
+            <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
+            <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
+              Career Transformation
+            </h4>
+            <p class="text-xs text-gray-300 mt-1">Mock interviews, resume clinics & placement cell.</p>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Placement Records (Numbers from glaonline.com) -->
-  <section class="section placement-section" id="placements">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>Corporate Outcomes</span>
-        <h2>Top Companies Hiring at GLA Online</h2>
-        <p>GLA Online learners gain direct exposure to job opportunities across leading multinational companies.</p>
-      </div>
 
-      <div class="placement-grid">
-        <div class="pl-card">
-          <strong>60 LPA</strong>
-          <span>Highest CTC Offered by Microsoft</span>
+  <!-- ========================================================================= -->
+  <!-- SECTION 5: LEARNING STATS TILES (Corresponds to Image 8)                  -->
+  <!-- ========================================================================= -->
+  <section class="py-16 bg-[#eef3ee]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <!-- 4 Green Stat Blocks with Yellow/Gold numbers (Exact replica of Image 8) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Tile 1 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">6K+</p>
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
+            Hours of Learning Materials
+          </p>
         </div>
-        <div class="pl-card">
-          <strong>86%</strong>
-          <span>Last 5-Year Average Placement</span>
-        </div>
-        <div class="pl-card">
-          <strong>6.3 LPA</strong>
-          <span>Average Package over last 5 Years</span>
-        </div>
-        <div class="pl-card">
-          <strong>500+</strong>
-          <span>Global Recruiters</span>
-        </div>
-      </div>
 
-      <div style="text-align:center; margin-bottom:1.5rem;">
-        <h4 style="font-size:1.15rem; color:var(--gla-navy);">Our Top Recruiters</h4>
-      </div>
-      <div class="recruiter-row">
-        <div class="rec-box">Microsoft</div>
-        <div class="rec-box">Amazon</div>
-        <div class="rec-box">IBM</div>
-        <div class="rec-box">Capgemini</div>
-        <div class="rec-box">Bosch</div>
-        <div class="rec-box">Facebook</div>
-        <div class="rec-box">TCS</div>
-        <div class="rec-box">Deloitte</div>
-        <div class="rec-box">Accenture</div>
+        <!-- Tile 2 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">24/7</p>
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
+            Study Materials Access
+          </p>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">25K+</p>
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
+            Active Learners
+          </p>
+        </div>
+
+        <!-- Tile 4 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">800+</p>
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
+            Real-World Projects
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FAQs -->
-  <section class="section" id="faqs">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>Student Queries</span>
-        <h2>Frequently Asked Questions</h2>
-      </div>
 
-      <div class="faq-list">
-        <div class="faq-card">
-          <h4>Are GLA Online degrees entitled by UGC-DEB?</h4>
-          <p>Yes. GLA University Online degree programs are entitled by the UGC Distance Education Bureau (DEB). Degrees are recognized on par with regular on-campus qualifications for government exams (UPSC/SSC) and private corporate jobs.</p>
+  <!-- ========================================================================= -->
+  <!-- SECTION 6: PROGRAMS OFFERED (Corresponds to Image 9)                      -->
+  <!-- ========================================================================= -->
+  <section id="programs-section" class="py-20 bg-brand-forest text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
+        <!-- Section Header Column -->
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-amber-400 text-xs font-black uppercase tracking-widest block">
+            PROGRAMS
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black leading-tight text-white">
+            There’s a Path for Everyone, <span class="text-amber-400">Explore Yours</span>
+          </h2>
+          <p class="text-gray-300 text-sm sm:text-base">
+            UGC-entitled degrees with world-class faculty support, live interactive sessions, and direct placement opportunities.
+          </p>
+
+          <!-- Category Selectors (PG / UG toggles) -->
+          <div class="space-y-3 pt-4">
+            <button onclick="filterPrograms('all')" class="program-tab w-full flex items-center justify-between p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition text-left active-tab" data-target="all">
+              <div>
+                <span class="text-base font-bold block text-white">All Programs</span>
+                <span class="text-xs text-gray-300">View complete degree catalog</span>
+              </div>
+              <i class="fa-solid fa-chevron-right text-amber-400"></i>
+            </button>
+            <button onclick="filterPrograms('pg')" class="program-tab w-full flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 transition text-left" data-target="pg">
+              <div>
+                <span class="text-base font-bold block text-white">Postgraduate Programs</span>
+                <span class="text-xs text-gray-300">MBA, MCA (2 Years)</span>
+              </div>
+              <i class="fa-solid fa-plus text-amber-400"></i>
+            </button>
+            <button onclick="filterPrograms('ug')" class="program-tab w-full flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 transition text-left" data-target="ug">
+              <div>
+                <span class="text-base font-bold block text-white">Undergraduate Programs</span>
+                <span class="text-xs text-gray-300">BBA, BCA, B.Com (Hons.) (3 Years)</span>
+              </div>
+              <i class="fa-solid fa-plus text-amber-400"></i>
+            </button>
+          </div>
         </div>
-        <div class="faq-card">
-          <h4>How do I appear for examinations?</h4>
-          <p>All term-end semester examinations are conducted 100% online through secure AI-based web proctoring. You can take them from home on a laptop or desktop computer with a functional webcam.</p>
-        </div>
-        <div class="faq-card">
-          <h4>Can I pay my tuition fees in monthly installments?</h4>
-          <p>Yes. Zero-cost and low-interest monthly EMI facilities are available through educational loan partners, making degree payments manageable.</p>
-        </div>
-        <div class="faq-card">
-          <h4>How do I apply for the current 2026 academic intake?</h4>
-          <p>Fill out the admission enquiry form above or connect directly with our academic desk at <strong>9315594429</strong> for step-by-step guidance.</p>
+
+        <!-- Program Cards Grid (Exact programs from Image 9) -->
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5" id="programCardsContainer">
+            
+            <!-- Program 1: BBA -->
+            <div class="program-card ug relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/30 group hover:shadow-2xl transition duration-300">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-black/40 to-transparent"></div>
+                <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">UG • 3 Years</span>
+              </div>
+              <div class="p-5">
+                <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Business Administration (BBA)</h4>
+                <p class="text-xs text-gray-300 mt-2 line-clamp-2">Master foundational business strategies, analytics, and leadership in modern commerce.</p>
+                <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
+                  <span class="text-xs font-semibold text-emerald-300">Eligibility: 10+2 Passed</span>
+                  <a href="#hero-section" class="text-amber-400 hover:text-white text-xs font-bold flex items-center gap-1">Apply <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Program 2: MCA -->
+            <div class="program-card pg relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/30 group hover:shadow-2xl transition duration-300">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-black/40 to-transparent"></div>
+                <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">PG • 2 Years</span>
+              </div>
+              <div class="p-5">
+                <p class="text-xs text-amber-400 font-bold uppercase">Master of</p>
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Computer Applications (MCA)</h4>
+                <p class="text-xs text-gray-300 mt-2 line-clamp-2">Specializations in AI, Cloud Computing, Full-Stack Development and Big Data.</p>
+                <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
+                  <span class="text-xs font-semibold text-emerald-300">Eligibility: BCA / Graduation</span>
+                  <a href="#hero-section" class="text-amber-400 hover:text-white text-xs font-bold flex items-center gap-1">Apply <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Program 3: MBA -->
+            <div class="program-card pg relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/30 group hover:shadow-2xl transition duration-300">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-black/40 to-transparent"></div>
+                <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">PG • 2 Years</span>
+              </div>
+              <div class="p-5">
+                <p class="text-xs text-amber-400 font-bold uppercase">Master of</p>
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Business Administration (MBA)</h4>
+                <p class="text-xs text-gray-300 mt-2 line-clamp-2">Dual specializations in Marketing, Finance, HR, Operations, and Business Analytics.</p>
+                <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
+                  <span class="text-xs font-semibold text-emerald-300">Eligibility: Graduation (50%)</span>
+                  <a href="#hero-section" class="text-amber-400 hover:text-white text-xs font-bold flex items-center gap-1">Apply <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Program 4: BCA -->
+            <div class="program-card ug relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/30 group hover:shadow-2xl transition duration-300">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-black/40 to-transparent"></div>
+                <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">UG • 3 Years</span>
+              </div>
+              <div class="p-5">
+                <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Computer Applications (BCA)</h4>
+                <p class="text-xs text-gray-300 mt-2 line-clamp-2">Develop practical coding, software engineering, and web development skills.</p>
+                <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
+                  <span class="text-xs font-semibold text-emerald-300">Eligibility: 10+2 with Maths</span>
+                  <a href="#hero-section" class="text-amber-400 hover:text-white text-xs font-bold flex items-center gap-1">Apply <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Program 5: B.Com (Hons.) -->
+            <div class="program-card ug relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/30 group hover:shadow-2xl transition duration-300 sm:col-span-2">
+              <div class="h-40 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-black/40 to-transparent"></div>
+                <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">UG • 3 Years</span>
+              </div>
+              <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>
+                  <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Commerce (Hons.) (B.Com)</h4>
+                  <p class="text-xs text-gray-300 mt-1">Specialized finance, accounting, taxation, and international trade curriculum.</p>
+                </div>
+                <a href="#hero-section" class="bg-amber-400 hover:bg-amber-300 text-brand-950 font-extrabold text-xs px-5 py-2.5 rounded-lg whitespace-nowrap self-start sm:self-center transition shadow">
+                  Explore & Apply
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="cta-banner">
-    <div class="wrap">
-      <h2>Elevate Your Career with GLA Online</h2>
-      <p>Enroll for the 2026 intake. Speak with an academic advisor today to check eligibility and fee concession opportunities.</p>
-      <div class="cta-btns">
-        <a class="btn-gold" href="tel:9315594429">📞 Call 9315594429</a>
-        <a class="btn-outline" href="https://wa.me/919315594429?text=Hi%2C%20I%20am%20interested%20in%20GLA%20Online%20degree%20admission." target="_blank" rel="noopener">Chat on WhatsApp</a>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 7: PLACEMENTS & SUCCESS STORIES (Corresponds to Image 10)         -->
+  <!-- ========================================================================= -->
+  <section id="placements-section" class="py-20 bg-white relative overflow-hidden">
+    <!-- Confetti / decorative soft circles -->
+    <div class="absolute top-10 left-10 w-20 h-20 bg-amber-200/40 rounded-full blur-2xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-green-200/40 rounded-full blur-2xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold text-brand-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+          Placements
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-brand-950 mt-3 tracking-tight">
+          Top Companies Hiring at GLA Online
+        </h2>
+        <p class="text-gray-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
+          Our graduates are hired by Fortune 500 multinationals with remarkable packages.
+        </p>
       </div>
+
+      <!-- Spotlight Hero: Piyush Verma Feature (Replicating Image 10 central feature) -->
+      <div class="relative max-w-4xl mx-auto bg-gradient-to-b from-[#f3f9f4] to-white rounded-3xl p-8 border border-emerald-100 shadow-xl mb-14 text-center">
+        <!-- Floating Recruiter Badges around the student -->
+        <div class="hidden md:block absolute top-6 left-8 bg-white px-3.5 py-1.5 rounded-full shadow-md border border-gray-100 text-xs font-bold text-gray-800">
+          <i class="fa-brands fa-amazon text-amber-500 mr-1"></i> Amazon
+        </div>
+        <div class="hidden md:block absolute top-20 left-4 bg-white px-3.5 py-1.5 rounded-full shadow-md border border-gray-100 text-xs font-bold text-blue-600">
+          <i class="fa-brands fa-facebook mr-1"></i> Meta / Facebook
+        </div>
+        <div class="hidden md:block absolute bottom-8 left-12 bg-white px-3.5 py-1.5 rounded-full shadow-md border border-gray-100 text-xs font-bold text-blue-800">
+          <i class="fa-solid fa-server mr-1"></i> IBM
+        </div>
+        <div class="hidden md:block absolute top-6 right-8 bg-white px-3.5 py-1.5 rounded-full shadow-md border border-gray-100 text-xs font-bold text-amber-700">
+          <i class="fa-solid fa-industry mr-1"></i> ITC Limited
+        </div>
+        <div class="hidden md:block absolute top-20 right-4 bg-white px-3.5 py-1.5 rounded-full shadow-md border border-gray-100 text-xs font-bold text-red-600">
+          <i class="fa-solid fa-microchip mr-1"></i> BOSCH
+        </div>
+        <div class="hidden md:block absolute bottom-8 right-12 bg-white px-3.5 py-1.5 rounded-full shadow-md border border-gray-100 text-xs font-bold text-blue-500">
+          <i class="fa-brands fa-microsoft mr-1"></i> Microsoft
+        </div>
+
+        <!-- Student Photo & Label -->
+        <div class="relative inline-block mx-auto mb-4">
+          <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-brand-700 shadow-xl mx-auto bg-gray-200">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" 
+                 alt="Piyush Verma - Placed Student" 
+                 class="w-full h-full object-cover">
+          </div>
+          <span class="absolute bottom-0 right-2 bg-brand-800 text-white text-xs font-bold p-1.5 rounded-full shadow border-2 border-white">
+            <i class="fa-solid fa-briefcase"></i>
+          </span>
+        </div>
+
+        <h3 class="text-2xl font-black text-brand-950 uppercase tracking-wide">PIYUSH VERMA</h3>
+        <p class="text-sm font-semibold text-brand-700">B.Tech. CSE — Batch 2026</p>
+        <div class="mt-2 inline-flex items-center gap-1.5 bg-emerald-100 text-brand-900 text-xs font-bold px-3 py-1 rounded-full">
+          <span>Offered package at Microsoft</span>
+        </div>
+      </div>
+
+      <!-- 4 Green Placement Stat Tiles (Exact replica of Image 10 bottom row) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Tile 1 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-7 text-center shadow-lg border-2 border-brand-700 flex flex-col justify-between">
+          <p class="text-4xl sm:text-5xl font-black text-amber-400">₹60 <span class="text-2xl font-bold">LPA</span></p>
+          <p class="text-xs sm:text-sm font-bold text-gray-100 mt-3 leading-snug">
+            Offered to our GLAdiator by Microsoft
+          </p>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-7 text-center shadow-lg border-2 border-brand-700 flex flex-col justify-between">
+          <p class="text-4xl sm:text-5xl font-black text-amber-400">90%</p>
+          <p class="text-xs sm:text-sm font-bold text-gray-100 mt-3 leading-snug">
+            GLAdiators Got Placed in 2025
+          </p>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-7 text-center shadow-lg border-2 border-brand-700 flex flex-col justify-between">
+          <p class="text-4xl sm:text-5xl font-black text-amber-400">₹6.3 <span class="text-2xl font-bold">LPA</span></p>
+          <p class="text-xs sm:text-sm font-bold text-gray-100 mt-3 leading-snug">
+            Average Package over last 5 Years
+          </p>
+        </div>
+
+        <!-- Tile 4 -->
+        <div class="bg-brand-800 text-white rounded-2xl p-7 text-center shadow-lg border-2 border-brand-700 flex flex-col justify-between">
+          <p class="text-4xl sm:text-5xl font-black text-amber-400">86%</p>
+          <p class="text-xs sm:text-sm font-bold text-gray-100 mt-3 leading-snug">
+            Last 5-Year Average Placement
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Recruiter Logos Strip -->
+      <div class="mt-14 p-6 bg-gray-50 rounded-2xl border border-gray-200 text-center">
+        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Hiring Network Over 3,000+ Corporate Giants</p>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-gray-700 font-extrabold text-sm sm:text-base">
+          <span class="hover:text-brand-700 transition">wipro)</span>
+          <span class="hover:text-brand-700 transition">HCL</span>
+          <span class="hover:text-brand-700 transition">IBM</span>
+          <span class="hover:text-brand-700 transition">amazon</span>
+          <span class="hover:text-brand-700 transition">accenture</span>
+          <span class="hover:text-brand-700 transition">genpact</span>
+          <span class="hover:text-brand-700 transition">cognizant</span>
+          <span class="hover:text-brand-700 transition">AIR INDIA</span>
+          <span class="hover:text-brand-700 transition">TATA POWER</span>
+          <span class="hover:text-brand-700 transition">Schneider</span>
+          <span class="hover:text-brand-700 transition">EY</span>
+          <span class="hover:text-brand-700 transition">LARSEN & TOUBRO</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-grid">
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
+  <footer id="contact" class="bg-brand-deep text-white pt-16 pb-12 border-t-4 border-amber-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Col 1: University Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-white text-brand-900 flex items-center justify-center font-bold text-xl">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <span class="text-2xl font-black tracking-tight">GLA <span class="text-amber-400">ONLINE</span></span>
+              <p class="text-xs text-emerald-300">Accredited With A+ Grade by NAAC</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed max-w-sm">
+            GLA Online University is committed to delivering premium, flexible, and career-advancing online degrees in Engineering, Management, and Computer Applications.
+          </p>
+          <div class="flex space-x-3 text-sm pt-2">
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-amber-400 hover:text-brand-950 flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-amber-400 hover:text-brand-950 flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-amber-400 hover:text-brand-950 flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-amber-400 hover:text-brand-950 flex items-center justify-center transition"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Programs -->
         <div>
-          <div class="brand" style="margin-bottom:1.2rem;">
-            <img class="brand-logo" src="https://www.gla.ac.in/images/gla-logo.png" alt="GLA Logo" style="filter: brightness(0) invert(1);">
-            <div class="brand-caption" style="border-left-color: rgba(255,255,255,0.2);">
-              <strong style="color:var(--white);">GLA ONLINE</strong>
-              <span style="color:#CBD5E1;">ADMISSION GUIDANCE DESK</span>
-            </div>
-          </div>
-          <p>Official informational &amp; admission counseling portal for UGC-DEB entitled online degree programs from GLA University.</p>
-          <p style="margin-top:0.8rem; color:var(--gla-gold); font-weight:700;">📞 Admission Helpline: 9315594429</p>
-        </div>
-
-        <div>
-          <h4>Online Programs</h4>
-          <ul>
-            <li><a href="#programs">Online MBA (All Specializations)</a></li>
-            <li><a href="#programs">Online MCA</a></li>
-            <li><a href="#programs">Online BBA</a></li>
-            <li><a href="#programs">Online BCA</a></li>
-            <li><a href="#programs">Online B.Com (Hons.)</a></li>
+          <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Programs</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="#programs-section" class="hover:text-white transition">Online MBA Program</a></li>
+            <li><a href="#programs-section" class="hover:text-white transition">Online MCA Program</a></li>
+            <li><a href="#programs-section" class="hover:text-white transition">Online BBA Program</a></li>
+            <li><a href="#programs-section" class="hover:text-white transition">Online BCA Program</a></li>
+            <li><a href="#programs-section" class="hover:text-white transition">Online B.Com (Hons.)</a></li>
           </ul>
         </div>
 
+        <!-- Col 3: Quick Links -->
         <div>
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="tel:9315594429">Call Admission Desk</a></li>
-            <li><a href="https://wa.me/919315594429" target="_blank" rel="noopener">WhatsApp Support</a></li>
-            <li><a href="#about">UGC-DEB &amp; NAAC A+ Status</a></li>
-            <li><a href="#placements">Placements &amp; Recruiters</a></li>
-            <li><a href="#apply">Apply Online Form</a></li>
+          <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="#stats-section" class="hover:text-white transition">About GLA University</a></li>
+            <li><a href="#accreditations-section" class="hover:text-white transition">Rankings & Awards</a></li>
+            <li><a href="#placements-section" class="hover:text-white transition">Placement Records</a></li>
+            <li><a href="#features-section" class="hover:text-white transition">Admission Process</a></li>
+            <li><a href="#hero-section" class="hover:text-white transition">Alumni Discount Scheme</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Contact & Campus -->
+        <div>
+          <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Campus Address</h4>
+          <address class="not-italic text-xs text-gray-300 space-y-2.5">
+            <p><i class="fa-solid fa-location-dot text-amber-400 mr-1.5"></i> 17 Km Stone, NH-19, Mathura-Delhi Road, Mathura, UP - 281406</p>
+            <p><i class="fa-solid fa-phone text-amber-400 mr-1.5"></i> +91-9568536853</p>
+            <p><i class="fa-solid fa-envelope text-amber-400 mr-1.5"></i> onlineadmissions@gla.ac.in</p>
+          </address>
+        </div>
+
       </div>
 
-      <div class="footer-disc">
-        <p><strong>Disclaimer:</strong> This page provides academic information and admission counseling for students seeking degree programs offered by GLA University Online (Centre for Distance and Online Education). GLA University names, logos, and trademarks belong to their respective owners. Program delivery, learning resources, semester evaluations, and degree conferment are conducted solely by GLA University in compliance with UGC regulations. Please confirm final details during official counseling before payment.</p>
-        <p style="margin-top:0.6rem;">© 2026 Online Admissions Desk. All Rights Reserved.</p>
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+        <p>© 2026 GLA Online University. All Rights Reserved. #GharSeGlobal</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">UGC Mandatory Disclosure</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Sticky Bottom Bar -->
-  <div class="sticky-bar">
-    <span>🎓 Admissions Open 2026 — GLA Online University</span>
-    <a class="btn-mini" href="tel:9315594429">Call 9315594429</a>
+
+  <!-- APPLICATION SUCCESS NOTIFICATION MODAL -->
+  <div id="successModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl transform transition-all">
+      <div class="w-16 h-16 bg-green-100 text-brand-700 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-inner">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="text-xl font-black text-brand-900">Application Submitted!</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        Thank you for choosing GLA Online. Our academic counsellor will get in touch with you within 2 hours.
+      </p>
+      <div class="mt-4 p-3 bg-gray-50 rounded-lg text-xs text-gray-500">
+        Admission Reference ID: <strong class="text-brand-800" id="refId">GLA-2026-9821</strong>
+      </div>
+      <button onclick="toggleModal('successModal')" class="mt-6 w-full py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold rounded-lg transition">
+        Close Window
+      </button>
+    </div>
   </div>
 
-  <!-- WhatsApp Float Button -->
-  <a class="wa-float" href="https://wa.me/919315594429?text=Hi%2C%20I%20am%20inquiring%20about%20GLA%20Online%20degree%20programs." target="_blank" rel="noopener" aria-label="WhatsApp Admission Inquiry">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 29l8.1-1.57a12 12 0 0 0 3.94.66C22.68 28.09 28 22.69 28 16.05 28 9.4 22.68 3 16.04 3Zm0 22.05c-1.2 0-2.38-.32-3.4-.93l-.24-.15-4.8.93.97-4.67-.16-.25a9.9 9.9 0 0 1-1.52-5.3c0-5.5 4.47-9.97 9.98-9.97 5.5 0 9.96 4.47 9.96 9.97 0 5.5-4.47 10.37-9.96 10.37Zm5.47-7.47c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
-  </a>
+  <!-- STUDENT LOGIN MODAL -->
+  <div id="loginModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl relative">
+      <button onclick="toggleModal('loginModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-xl bg-brand-800 text-amber-400 mx-auto flex items-center justify-center text-xl mb-2">
+          <i class="fa-solid fa-user-lock"></i>
+        </div>
+        <h3 class="text-lg font-black text-brand-900">Student Portal Login</h3>
+        <p class="text-xs text-gray-500">Access your GLA Online LMS Dashboard</p>
+      </div>
+      <form onsubmit="event.preventDefault(); toggleModal('loginModal'); showSuccessToast('Logged in successfully!');" class="space-y-3">
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">Student Enrollment No / Email</label>
+          <input type="text" required placeholder="e.g. 24GLA1098" class="w-full text-xs px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-700 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">Password</label>
+          <input type="password" required placeholder="••••••••" class="w-full text-xs px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-700 focus:outline-none">
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs rounded-lg transition mt-2">
+          Secure Login
+        </button>
+      </form>
+    </div>
+  </div>
 
-  <!-- Lead Form Script -->
+  <!-- JAVASCRIPT CONTROLLERS -->
   <script>
-    document.getElementById('glaOnlineForm').addEventListener('submit', function(e) {
-      const name = document.getElementById('uName').value;
-      const phone = document.getElementById('uPhone').value;
-      const course = document.getElementById('uCourse').value;
+    // -------------------------------------------------------------
+    // CAROUSEL LOGIC FOR SECTION 1 (Contains the 4 Slides)
+    // -------------------------------------------------------------
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('#carouselDots button');
+    let carouselInterval;
 
-      const waMsg = encodeURIComponent(`Hi, I submitted an admission enquiry for GLA Online.\nName: ${name}\nPhone: ${phone}\nCourse: ${course}\nPlease share fee breakdown and syllabus.`);
-      window.open(`https://wa.me/919315594429?text=${waMsg}`, '_blank');
+    function showSlide(index) {
+      if (index >= slides.length) currentSlide = 0;
+      else if (index < 0) currentSlide = slides.length - 1;
+      else currentSlide = index;
+
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlide) {
+          slide.classList.remove('opacity-0', 'pointer-events-none');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      // Update Dots
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.remove('bg-white/50');
+          dot.classList.add('bg-amber-400');
+        } else {
+          dot.classList.remove('bg-amber-400');
+          dot.classList.add('bg-white/50');
+        }
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      resetAutoPlay();
+    }
+
+    function startAutoPlay() {
+      carouselInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoPlay() {
+      clearInterval(carouselInterval);
+      startAutoPlay();
+    }
+
+    // Initialize carousel on window load
+    window.onload = function() {
+      startAutoPlay();
+    };
+
+    // Pause on hover over hero section
+    const heroSection = document.getElementById('hero-section');
+    heroSection.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+    heroSection.addEventListener('mouseleave', () => startAutoPlay());
+
+    // -------------------------------------------------------------
+    // MOBILE MENU TOGGLE
+    // -------------------------------------------------------------
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
-  </script>
 
+    // -------------------------------------------------------------
+    // PROGRAM FILTER (Section 6)
+    // -------------------------------------------------------------
+    function filterPrograms(category) {
+      const cards = document.querySelectorAll('.program-card');
+      const tabs = document.querySelectorAll('.program-tab');
+
+      // Update tabs styling
+      tabs.forEach(tab => {
+        if (tab.dataset.target === category) {
+          tab.classList.add('bg-white/20', 'border-amber-400');
+          tab.classList.remove('bg-white/5', 'border-white/10');
+        } else {
+          tab.classList.remove('bg-white/20', 'border-amber-400');
+          tab.classList.add('bg-white/5', 'border-white/10');
+        }
+      });
+
+      // Show/hide program cards
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // -------------------------------------------------------------
+    // MODAL & FORM CONTROLLERS
+    // -------------------------------------------------------------
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.classList.toggle('hidden');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      // Generate random reference code
+      document.getElementById('refId').innerText = 'GLA-2026-' + Math.floor(1000 + Math.random() * 9000);
+      toggleModal('successModal');
+      e.target.reset();
+    }
+
+    function showSuccessToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'fixed bottom-5 right-5 bg-brand-900 text-white px-5 py-3 rounded-xl shadow-2xl z-50 text-sm font-bold flex items-center gap-2 border border-emerald-400';
+      toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i> ${message}`;
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.remove();
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
