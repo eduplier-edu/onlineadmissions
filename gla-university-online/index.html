@@ -1,1143 +1,542 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GLA Noida Campus – Best Private University, Ranked #1 in UP</title>
-  <meta name="description" content="GLA University Greater Noida Campus - 1st Google Agentic AI University in North India. Industry-integrated B.Tech CSE, AIML, AI-Enabled MBA & BBA. Admissions Open 2026.">
-  <link rel="canonical" href="https://onlineadmissions.online/gla-university-online/">
 
-  <!-- Favicon identical to GLA -->
-  <link rel="icon" type="image/x-icon" href="https://www.gla.ac.in/favicon.ico">
-  <link rel="shortcut icon" href="https://www.gla.ac.in/favicon.ico">
-
-  <!-- Google Fonts matching the Noida site -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <title>GLA University Greater Noida | Admissions & Guidance</title>
+  <meta name="description"
+        content="Explore GLA Greater Noida programs, admission information, eligibility and fee guidance.">
+  <!-- Replace with an authorized favicon -->
+  <link rel="icon" href="/assets/authorized-favicon.ico">
 
   <style>
     :root {
-      --gla-crimson: #9B1B22;
-      --gla-crimson-hover: #7F141A;
-      --gla-navy: #0B1C33;
-      --gla-navy-dark: #071324;
-      --gla-blue: #1A73E8;
-      --gla-gold: #F5A623;
-      --gla-gold-soft: #FFF8EB;
-      --text-dark: #1E293B;
-      --text-muted: #52647C;
-      --bg-slate: #F8FAFC;
-      --white: #FFFFFF;
-      --border: #E2E8F0;
-      --radius: 12px;
-      --shadow-sm: 0 4px 12px rgba(11, 28, 51, 0.05);
-      --shadow-md: 0 14px 34px -10px rgba(11, 28, 51, 0.12);
+      --navy: #092b50;
+      --blue: #164b82;
+      --gold: #f2bd36;
+      --light: #f5f8fc;
+      --text: #172b42;
+      --muted: #65758a;
+      --white: #fff;
+      --radius: 18px;
+      --shadow: 0 12px 35px rgba(9,43,80,.09);
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: var(--text-dark);
-      background-color: var(--bg-slate);
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
     }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1160px, 92%); margin: auto; }
 
-    h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; color: var(--gla-navy); line-height: 1.2; margin: 0; }
-    p { margin: 0; }
-    a { text-decoration: none; color: inherit; }
-    .wrap { width: min(1280px, 100% - 2.5rem); margin-inline: auto; }
-
-    /* Top Strip */
-    .top-strip {
-      background: var(--gla-navy-dark);
-      color: #E2E8F0;
-      font-size: 0.85rem;
-      padding: 0.45rem 0;
-      border-bottom: 2px solid var(--gla-crimson);
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 9px 0;
+      font-size: 13px;
     }
-    .top-strip .wrap {
+    .topbar .container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      gap: 12px;
       flex-wrap: wrap;
-      gap: 0.5rem;
     }
-    .top-strip a { color: var(--gla-gold); font-weight: 700; }
 
-    /* Header matching noida.gla.ac.in */
-    .header {
-      background: var(--white);
+    header {
+      background: white;
       position: sticky;
       top: 0;
-      z-index: 100;
-      box-shadow: var(--shadow-sm);
+      z-index: 10;
+      border-bottom: 1px solid #e7edf4;
     }
-    .header .wrap {
+    .nav {
+      min-height: 82px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      min-height: 80px;
-      gap: 1rem;
+      justify-content: space-between;
+      gap: 24px;
     }
     .brand {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .brand img { max-height: 54px; width: auto; }
+    .navlinks {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
-    }
-    .brand img {
-      height: 52px;
-      width: auto;
-      display: block;
-    }
-    .brand-caption {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-      border-left: 2px solid var(--border);
-      padding-left: 0.85rem;
-    }
-    .brand-caption strong {
-      font-size: 1.15rem;
-      font-family: 'Outfit', sans-serif;
-      color: var(--gla-crimson);
-      letter-spacing: -0.02em;
-    }
-    .brand-caption span {
-      font-size: 0.74rem;
-      font-weight: 700;
-      color: var(--gla-navy);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 1.4rem;
-    }
-    .nav a {
-      font-size: 0.92rem;
+      gap: 22px;
+      font-size: 14px;
       font-weight: 600;
-      color: var(--text-muted);
-      transition: color 0.2s;
     }
-    .nav a:hover { color: var(--gla-crimson); }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-    }
-    .phone-link {
-      font-size: 0.92rem;
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 7px;
+      padding: 13px 20px;
       font-weight: 700;
-      color: var(--gla-navy);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      cursor: pointer;
+      background: var(--gold);
+      color: var(--navy);
     }
-    .btn-apply {
-      background: var(--gla-crimson);
-      color: var(--white);
-      padding: 0.65rem 1.4rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn-apply:hover {
-      background: var(--gla-crimson-hover);
-      transform: translateY(-2px);
-    }
+    .btn-blue { background: var(--navy); color: white; }
 
-    /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #071324 0%, #0B1C33 55%, #8A151C 100%);
-      color: var(--white);
-      padding: clamp(3rem, 6vw, 4.8rem) 0;
-      position: relative;
+      background: linear-gradient(120deg, #edf4fc, #fff 56%, #e5edf7);
+      padding: 60px 0;
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.85fr;
-      gap: 3rem;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 42px;
       align-items: center;
     }
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 1.25rem;
-    }
-    .tag {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--gla-gold);
-    }
-    .hero h1 {
-      color: var(--white);
-      font-size: clamp(2.3rem, 4.4vw, 3.5rem);
-      margin-bottom: 1.2rem;
-    }
-    .hero h1 span { color: var(--gla-gold); }
-    .hero p.lead {
-      font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.88);
-      margin-bottom: 2rem;
-      max-width: 38em;
-    }
-
-    /* Quick Hero Metrics */
-    .hero-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-    .h-pill { display: flex; flex-direction: column; }
-    .h-pill strong { font-size: 1.6rem; font-family: 'Outfit', sans-serif; color: var(--gla-gold); }
-    .h-pill span { font-size: 0.82rem; color: rgba(255, 255, 255, 0.8); }
-
-    /* Admission Query Card */
-    .form-card {
-      background: var(--white);
-      color: var(--text-dark);
-      border-radius: 18px;
-      padding: 2.2rem 2rem;
-      box-shadow: var(--shadow-md);
-      border-top: 5px solid var(--gla-crimson);
-    }
-    .form-card h3 { font-size: 1.45rem; margin-bottom: 0.2rem; }
-    .form-card p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.3rem; }
-    .form-group { margin-bottom: 0.85rem; }
-    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--gla-navy); margin-bottom: 0.3rem; }
-    .form-group input, .form-group select {
-      width: 100%;
-      padding: 0.72rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.92rem;
-      font-family: inherit;
-      outline: none;
-    }
-    .form-group input:focus, .form-group select:focus { border-color: var(--gla-crimson); }
-    .btn-submit {
-      width: 100%;
-      background: var(--gla-crimson);
-      color: var(--white);
-      border: none;
-      padding: 0.88rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 0.6rem;
-      transition: background 0.2s;
-    }
-    .btn-submit:hover { background: var(--gla-crimson-hover); }
-
-    /* Legacy Statistics */
-    .legacy {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: clamp(3.5rem, 5vw, 4.5rem) 0;
-    }
-    .sec-head {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 3rem;
-    }
-    .sec-head span {
-      font-size: 0.84rem;
+    .eyebrow {
+      color: var(--blue);
       font-weight: 800;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gla-crimson);
+      font-size: 12px;
     }
-    .sec-head h2 { font-size: clamp(2rem, 3.4vw, 2.7rem); margin-top: 0.3rem; }
-    .sec-head p { margin-top: 0.75rem; color: var(--text-muted); font-size: 1.05rem; }
-
-    .legacy-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1.25rem;
-      text-align: center;
+    h1 {
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.12;
+      margin: 14px 0 20px;
+      color: var(--navy);
+      letter-spacing: -1.5px;
     }
-    .leg-card {
-      background: var(--bg-slate);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.8rem 1rem;
+    .hero p { color: var(--muted); font-size: 17px; }
+    .hero-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 24px;
+      background: #dbe5f0;
+      box-shadow: var(--shadow);
     }
-    .leg-card strong {
-      font-size: 2.2rem;
-      font-family: 'Outfit', sans-serif;
-      color: var(--gla-crimson);
-      display: block;
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-    .leg-card span { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
-
-    /* Ranking Accreditations */
-    .rank-bar {
-      margin-top: 3rem;
+    .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 12px;
+      margin: 28px 0;
     }
-    .r-item {
-      background: var(--gla-gold-soft);
-      border: 1px solid #FFE0A3;
-      border-radius: var(--radius);
-      padding: 1.5rem;
+    .stat {
+      background: white;
+      padding: 16px;
+      border: 1px solid #e4eaf2;
+      border-radius: 12px;
+    }
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: 24px;
+    }
+    .stat span { font-size: 12px; color: var(--muted); }
+
+    section { padding: 76px 0; }
+    .soft { background: var(--light); }
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 38px;
       text-align: center;
     }
-    .r-item strong { font-size: 2rem; color: #8C4E00; font-family: 'Outfit', sans-serif; display: block; }
-    .r-item b { display: block; font-size: 1rem; color: var(--gla-navy); margin-top: 0.2rem; }
-    .r-item span { font-size: 0.85rem; color: var(--text-muted); }
-
-    /* 5-Year Vision */
-    .vision-band {
-      background: var(--gla-navy);
-      color: var(--white);
-      padding: 4rem 0;
+    h2 {
+      color: var(--navy);
+      font-size: clamp(28px, 3vw, 40px);
+      line-height: 1.2;
+      margin: 10px 0;
     }
-    .vision-grid {
+    .section-heading p { color: var(--muted); }
+
+    .form-card {
+      background: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .form-card h2 { font-size: 26px; }
+    .field-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 2.5rem;
+      gap: 14px;
     }
-    .vision-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius);
-      padding: 2.2rem;
-      border-left: 5px solid var(--gla-gold);
+    input, select {
+      width: 100%;
+      min-width: 0;
+      padding: 13px;
+      border: 1px solid #d9e1ec;
+      border-radius: 7px;
+      background: white;
+      font: inherit;
     }
-    .vision-card h3 { font-size: 1.15rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
-    .vision-card .salary {
-      font-size: 2.8rem;
-      font-family: 'Outfit', sans-serif;
-      color: var(--gla-gold);
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 0.6rem;
-    }
-    .vision-card p { font-size: 0.92rem; color: rgba(255,255,255,0.8); }
+    .form-card .btn { width: 100%; margin-top: 15px; }
+    .fineprint { font-size: 11px; color: var(--muted); }
 
-    /* Comparison Table: How We're Different */
-    .compare-section {
-      padding: clamp(3.5rem, 6vw, 5rem) 0;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
-    .diff-table-wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
+    .card {
+      background: white;
+      border: 1px solid #e7edf4;
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow);
     }
-    .diff-table {
+    .card img {
       width: 100%;
-      border-collapse: collapse;
-      text-align: left;
+      height: 190px;
+      object-fit: cover;
+      background: #dbe5f0;
     }
-    .diff-table th {
-      background: var(--gla-navy);
-      color: var(--white);
-      padding: 1.1rem 1.4rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-    }
-    .diff-table td {
-      padding: 1rem 1.4rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.93rem;
-    }
-    .diff-table tr:last-child td { border-bottom: none; }
-    .diff-table .col-gla {
-      color: var(--gla-crimson);
-      font-weight: 700;
-      background: #FFFBFB;
-    }
-    .diff-table .col-typical {
-      color: var(--text-muted);
-    }
-
-    /* Google Agentic AI University Section */
-    .google-ai-section {
-      background: linear-gradient(135deg, #091A30 0%, #103463 100%);
-      color: var(--white);
-      padding: 4.5rem 0;
-      border-block: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .ai-badge {
+    .card-body { padding: 22px; }
+    .card h3 { margin: 0 0 8px; color: var(--navy); }
+    .card p { color: var(--muted); font-size: 14px; }
+    .tag {
       display: inline-block;
-      background: #1A73E8;
-      color: var(--white);
-      font-weight: 800;
-      font-size: 0.8rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-      letter-spacing: 0.05em;
+      padding: 5px 10px;
+      background: #fff3d1;
+      color: #624600;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
     }
-    .ai-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.8rem;
-    }
-    .ai-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius);
-      padding: 1.8rem;
-    }
-    .ai-card h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 0.6rem; }
-    .ai-card p { color: rgba(255, 255, 255, 0.82); font-size: 0.9rem; }
 
-    /* Academic Programs (Noida Campus Specific) */
-    .programs-section {
-      padding: clamp(3.5rem, 6vw, 5rem) 0;
-      background: var(--white);
-    }
-    .prog-grid {
+    .feature-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
-    .prog-item {
-      background: var(--bg-slate);
-      border: 1px solid var(--border);
+    .feature {
+      padding: 26px;
+      background: white;
       border-radius: var(--radius);
-      padding: 1.8rem;
+      border: 1px solid #e5ebf3;
+    }
+    .feature .symbol { font-size: 28px; }
+    .feature h3 { color: var(--navy); }
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      padding: 48px;
+      border-radius: 24px;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s, border-color 0.2s;
+      align-items: center;
+      gap: 24px;
     }
-    .prog-item:hover {
-      transform: translateY(-4px);
-      border-color: var(--gla-crimson);
-    }
-    .prog-tag {
-      font-size: 0.75rem;
-      font-weight: 800;
-      background: #FFE8E9;
-      color: var(--gla-crimson);
-      padding: 0.25rem 0.65rem;
-      border-radius: 6px;
-      display: inline-block;
-      margin-bottom: 0.8rem;
-    }
-    .prog-item h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .prog-item p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.3rem; }
-    .prog-features {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1.5rem;
-      display: grid;
-      gap: 0.5rem;
-      font-size: 0.88rem;
-    }
-    .prog-features li { display: flex; align-items: center; gap: 0.5rem; color: var(--gla-navy); font-weight: 600; }
-    .prog-features li::before { content: "✔"; color: var(--gla-crimson); font-size: 0.85rem; }
-    .btn-prog {
-      width: 100%;
-      text-align: center;
-      background: var(--gla-navy);
-      color: var(--white);
-      padding: 0.75rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      transition: background 0.2s;
-    }
-    .prog-item:hover .btn-prog { background: var(--gla-crimson); }
+    .cta h2 { color: white; }
+    .cta p { color: #d6e2f0; }
 
-    /* Placement Legacy Band */
-    .placement-section {
-      padding: 4.5rem 0;
-      background: var(--bg-slate);
-      border-top: 1px solid var(--border);
-    }
-    .place-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 2.8rem;
-      text-align: center;
-    }
-    .ps-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.8rem 1rem;
-    }
-    .ps-card strong {
-      font-size: 2.4rem;
-      font-family: 'Outfit', sans-serif;
-      color: var(--gla-crimson);
-      display: block;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-    .ps-card span { font-size: 0.88rem; font-weight: 700; color: var(--gla-navy); }
-
-    .recruiter-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .rec-badge {
-      background: var(--white);
-      border: 1px solid var(--border);
-      padding: 0.7rem 1.6rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--gla-navy);
-      box-shadow: var(--shadow-sm);
-    }
-
-    /* Bottom CTA Strip */
-    .cta-banner {
-      background: linear-gradient(135deg, var(--gla-navy) 0%, var(--gla-crimson) 100%);
-      color: var(--white);
-      padding: 4.5rem 0;
-      text-align: center;
-    }
-    .cta-banner h2 { color: var(--white); font-size: 2.4rem; margin-bottom: 0.8rem; }
-    .cta-banner p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 2rem; max-width: 620px; margin-inline: auto; }
-    .cta-btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .btn-gold {
-      background: var(--gla-gold);
-      color: var(--gla-navy);
-      font-weight: 800;
-      padding: 0.85rem 1.8rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-    }
-    .btn-outline {
-      border: 2px solid var(--white);
-      color: var(--white);
-      font-weight: 700;
-      padding: 0.85rem 1.8rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-    }
-
-    /* Footer matching noida.gla.ac.in */
-    .footer {
-      background: #061120;
-      color: #94A3B8;
-      padding: 3.5rem 0 1.5rem;
-      font-size: 0.88rem;
+    footer {
+      background: #071d35;
+      color: #dbe5f0;
+      padding: 48px 0 20px;
     }
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 2.5rem;
-      margin-bottom: 2.5rem;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 32px;
     }
-    .footer h4 { color: var(--white); font-size: 1.05rem; margin-bottom: 1rem; }
-    .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
-    .footer a:hover { color: var(--gla-gold); }
-    .footer-disc {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 1.5rem;
-      font-size: 0.8rem;
-      line-height: 1.6;
+    footer h3, footer h4 { color: white; }
+    footer a { display: block; margin: 8px 0; }
+    .disclaimer {
+      border-top: 1px solid #2c4057;
+      margin-top: 28px;
+      padding-top: 18px;
+      font-size: 12px;
     }
 
-    /* Fixed Contact Strips */
-    .sticky-bar {
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
-      z-index: 90;
-      background: var(--gla-navy);
-      color: var(--white);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.2rem;
-      padding: 0.75rem 1rem;
-      border-top: 2px solid var(--gla-crimson);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .sticky-bar a.btn-mini {
-      background: var(--gla-gold);
-      color: var(--gla-navy);
-      padding: 0.4rem 1.1rem;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 0.85rem;
-    }
-    .wa-float {
-      position: fixed;
-      right: 20px;
-      bottom: 75px;
-      z-index: 95;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: #25D366;
-      display: grid;
-      place-items: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-    .wa-float:hover { transform: scale(1.08); }
-    .wa-float svg { width: 30px; height: 30px; fill: #fff; }
-
-    @media (max-width: 1024px) {
-      .legacy-grid { grid-template-columns: repeat(3, 1fr); }
-      .place-stats { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 900px) {
+    @media (max-width: 800px) {
+      .nav { align-items: flex-start; padding: 15px 0; }
+      .navlinks { flex-wrap: wrap; gap: 12px; }
       .hero-grid { grid-template-columns: 1fr; }
-      .vision-grid { grid-template-columns: 1fr; }
-      .rank-bar { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .nav { display: none; }
+      .hero-image { height: 300px; }
+      .cards, .feature-grid { grid-template-columns: 1fr 1fr; }
+      .cta { flex-direction: column; align-items: flex-start; }
     }
-    @media (max-width: 600px) {
-      .legacy-grid { grid-template-columns: repeat(2, 1fr); }
-      .place-stats { grid-template-columns: 1fr; }
+    @media (max-width: 520px) {
+      .nav { flex-direction: column; }
+      .navlinks { font-size: 13px; }
+      .stats { grid-template-columns: 1fr; }
+      .cards, .feature-grid, .field-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      section { padding: 52px 0; }
+      .form-card { padding: 20px; }
+      .cta { padding: 28px; }
     }
   </style>
 </head>
-<body>
 
-  <!-- Top Strip -->
-  <div class="top-strip">
-    <div class="wrap">
-      <span>🎓 Admissions Open 2026 – GLA University Greater Noida Campus</span>
-      <span>Admission Helpline: <a href="tel:9315594429">📞 +91 93155 94429</a> | <a href="https://wa.me/919315594429?text=Hi%2C%20I%20am%20interested%20in%20GLA%20Noida%20Campus%20Admissions." target="_blank" rel="noopener">💬 WhatsApp</a></span>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Admissions information and course guidance</span>
+      <a href="tel:+919315594429">Call: +91 93155 94429</a>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="wrap">
-      <div class="brand">
-        <!-- Official GLA University Vector Crest/Logo Asset -->
-        <img src="https://www.gla.ac.in/images/gla-logo.png" alt="GLA University Logo" onerror="this.src='https://noida.gla.ac.in/assets/images/logo.png'">
-        <div class="brand-caption">
-          <strong>GLA UNIVERSITY</strong>
-          <span>GREATER NOIDA CAMPUS</span>
-        </div>
-      </div>
-
-      <nav class="nav">
-        <a href="#about">About GLA</a>
-        <a href="#google-ai">Google Agentic AI</a>
-        <a href="#different">How We're Different</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <!-- Use a logo you are authorized to display -->
+        <img src="/assets/authorized-university-logo.png"
+             alt="University logo">
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#about">About</a>
         <a href="#programs">Programs</a>
-        <a href="#placements">Placements</a>
+        <a href="#learning">Learning</a>
+        <a href="#careers">Careers</a>
+        <a class="btn" href="#enquiry">Enquire Now</a>
       </nav>
-
-      <div class="header-actions">
-        <a class="phone-link" href="tel:9315594429">📞 9315594429</a>
-        <a class="btn-apply" href="#apply">Apply Now</a>
-      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="hero-tags">
-          <span class="tag">Ranked #1 in UP</span>
-          <span class="tag">1st Google Agentic AI University</span>
-          <span class="tag">NAAC A+ Accredited</span>
-        </div>
-        <h1>GLA Greater Noida: <span>Industry-Integrated</span> Learning Campus</h1>
-        <p class="lead">Setting new benchmarks in education with cutting-edge curriculum, real-world industry application, guidance from top tech practitioners, and early-stage internship tracks.</p>
-
-        <div class="hero-pills">
-          <div class="h-pill">
-            <strong>₹15 LPA</strong>
-            <span>Expected First Batch Avg CTC</span>
-          </div>
-          <div class="h-pill">
-            <strong>₹30 LPA</strong>
-            <span>Targeted Avg CTC by 2029</span>
-          </div>
-          <div class="h-pill">
-            <strong>86%</strong>
-            <span>Placement Rate (Last 5 Yrs)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Admission Query Form (Mirrors noida.gla.ac.in) -->
-      <div class="form-card" id="apply">
-        <h3>Admission Query</h3>
-        <p>Fill the form below and we'll get back to you with program brochures and eligibility.</p>
-
-        <form action="#" method="POST" id="noidaForm">
-          <div class="form-group">
-            <label for="fName">Full Name</label>
-            <input type="text" id="fName" name="name" placeholder="Enter student name" required>
-          </div>
-          <div class="form-group">
-            <label for="fPhone">Mobile Number</label>
-            <input type="tel" id="fPhone" name="phone" placeholder="10-digit mobile number" required>
-          </div>
-          <div class="form-group">
-            <label for="fEmail">Email Address</label>
-            <input type="email" id="fEmail" name="email" placeholder="name@domain.com" required>
-          </div>
-          <div class="form-group">
-            <label for="fCourse">Select Course</label>
-            <select id="fCourse" name="course" required>
-              <option value="" disabled selected>Select Course</option>
-              <option value="B.Tech. CSE">B.Tech. CSE</option>
-              <option value="B.Tech. CSE-AIML">B.Tech. CSE-AIML</option>
-              <option value="B.Tech. Electronics & Computer Engineering">B.Tech. Electronics &amp; Computer Engineering</option>
-              <option value="AI-Enabled BBA">AI-Enabled BBA</option>
-              <option value="AI-Enabled MBA (Hons.)">AI-Enabled MBA (Hons.)</option>
-              <option value="MCA (AIML)">MCA (AIML)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="fState">Select State</label>
-            <select id="fState" name="state" required>
-              <option value="" disabled selected>Select State</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Uttar Pradesh">Uttar Pradesh</option>
-              <option value="Haryana">Haryana</option>
-              <option value="Rajasthan">Rajasthan</option>
-              <option value="Bihar">Bihar</option>
-              <option value="Other">Other State</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-submit">Submit Query</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Legacy Section (28 Years of Trust) -->
-  <section class="legacy" id="about">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>GLA University Heritage</span>
-        <h2>The Legacy That Builds Trust</h2>
-        <p>Established nearly three decades ago with a clear focus on quality education, discipline, and employability. Over the last 28 years, GLA has evolved into one of North India's most trusted university brands.</p>
-      </div>
-
-      <div class="legacy-grid">
-        <div class="leg-card">
-          <strong>24,000+</strong>
-          <span>Students Enrolled</span>
-        </div>
-        <div class="leg-card">
-          <strong>850+</strong>
-          <span>Experienced Faculty</span>
-        </div>
-        <div class="leg-card">
-          <strong>157+</strong>
-          <span>State-of-the-Art Labs</span>
-        </div>
-        <div class="leg-card">
-          <strong>130+</strong>
-          <span>Global Collaborations</span>
-        </div>
-        <div class="leg-card">
-          <strong>14+</strong>
-          <span>Dedicated Research Centres</span>
-        </div>
-        <div class="leg-card">
-          <strong>110+</strong>
-          <span>Programs Offered</span>
-        </div>
-      </div>
-
-      <!-- Accreditations & Badges -->
-      <div class="rank-bar">
-        <div class="r-item">
-          <strong>#A+</strong>
-          <b>NAAC A+ Accreditation</b>
-          <span>Score: 3.46 CGPA</span>
-        </div>
-        <div class="r-item">
-          <strong>#44</strong>
-          <b>THE (Asia 2026) Ranking</b>
-          <span>India - 18 | U.P. - 3 (All Private Univ)</span>
-        </div>
-        <div class="r-item">
-          <strong>#44</strong>
-          <b>Asia 2026 Private Universities</b>
-          <span>India - 44 | U.P. - 5</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5-Year Vision Band -->
-  <section class="vision-band">
-    <div class="wrap">
-      <div class="sec-head" style="margin-bottom:0;">
-        <span style="color:var(--gla-gold);">Future Career Roadmaps</span>
-        <h2 style="color:var(--white);">Our 5-Year Vision</h2>
-        <p style="color:rgba(255,255,255,0.85);">Setting new benchmarks in education with industry-focused learning and exceptional career outcomes.</p>
-      </div>
-
-      <div class="vision-grid">
-        <div class="vision-card">
-          <h3>Targeted Average Salary</h3>
-          <div class="salary">₹30 LPA</div>
-          <p>By 2029: Our comprehensive industry partnerships and cutting-edge curriculum are designed to prepare students for high-value roles in the global market.</p>
-        </div>
-        <div class="vision-card">
-          <h3>Expected Salary for First Graduating Batch</h3>
-          <div class="salary">₹15 LPA</div>
-          <p>Starting Package: Our first batch of graduates will enter the job market with practical skills and industry exposure, commanding competitive starting salaries.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How We're Different Matrix -->
-  <section class="compare-section" id="different">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>What Sets Us Apart</span>
-        <h2>How We're Different</h2>
-        <p>At GLA Greater Noida, learning goes beyond theory into live execution and career readiness from day one.</p>
-      </div>
-
-      <div class="diff-table-wrap">
-        <table class="diff-table">
-          <thead>
-            <tr>
-              <th>ASPECT</th>
-              <th>TYPICAL PRIVATE UNIVERSITIES</th>
-              <th>GLA GREATER NOIDA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Curriculum</strong></td>
-              <td class="col-typical">Academic-driven</td>
-              <td class="col-gla">Industry-driven</td>
-            </tr>
-            <tr>
-              <td><strong>Teaching</strong></td>
-              <td class="col-typical">Faculty-only</td>
-              <td class="col-gla">Faculty + Industry Professionals</td>
-            </tr>
-            <tr>
-              <td><strong>Exposure</strong></td>
-              <td class="col-typical">Guest lectures</td>
-              <td class="col-gla">Full subjects + Live projects</td>
-            </tr>
-            <tr>
-              <td><strong>Evaluation</strong></td>
-              <td class="col-typical">Standard Exams</td>
-              <td class="col-gla">Industry-based &amp; Practical</td>
-            </tr>
-            <tr>
-              <td><strong>Internships</strong></td>
-              <td class="col-typical">Late-stage (Final Year)</td>
-              <td class="col-gla">Early &amp; Frequent (From Sem 1)</td>
-            </tr>
-            <tr>
-              <td><strong>Campus Focus</strong></td>
-              <td class="col-typical">Large Infrastructure</td>
-              <td class="col-gla">Learning Outcomes</td>
-            </tr>
-            <tr>
-              <td><strong>Admissions</strong></td>
-              <td class="col-typical">Volume-driven</td>
-              <td class="col-gla">Selective (Quality over Quantity)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Google Agentic AI University Section -->
-  <section class="google-ai-section" id="google-ai">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="ai-badge">Powered by Gemini Education &amp; Google Cloud</span>
-        <h2 style="color:var(--white);">1st Google Agentic AI University in North India</h2>
-        <p style="color:rgba(255,255,255,0.85);">A collaboration-focused AI learning ecosystem that brings Gemini tools, cloud skills, smart campus capability, and hands-on agent development into the student journey.</p>
-      </div>
-
-      <div class="ai-grid">
-        <div class="ai-card">
-          <h3>Google COE</h3>
-          <p>AI agents developed using Gemini and API tools to solve enterprise and academic challenges.</p>
-        </div>
-        <div class="ai-card">
-          <h3>Google Cloud Digital Campus</h3>
-          <p>Smart campus for AI-enabled smart learning, placement analytics, and resume refinement.</p>
-        </div>
-        <div class="ai-card">
-          <h3>Compute &amp; Models</h3>
-          <p>Ultra-performant AI compute handling heavy model workloads, with access to Google's open models ecosystem.</p>
-        </div>
-        <div class="ai-card">
-          <h3>Google Developers Club</h3>
-          <p>Hackathons, open-source code contributions, industry expert sessions, and technical bootcamps.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programs Offered (Noida Campus Official List) -->
-  <section class="programs-section" id="programs">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>Programs Offered</span>
-        <h2>Industry-Aligned Degrees</h2>
-        <p>Curated programs engineered specifically for the modern tech and corporate job ecosystem.</p>
-      </div>
-
-      <div class="prog-grid">
-        
-        <!-- B.Tech CSE -->
-        <div class="prog-item">
-          <div>
-            <span class="prog-tag">4 Years • Undergraduate</span>
-            <h3>B.Tech. CSE</h3>
-            <p>Comprehensive computer science curriculum designed with global tech leaders covering system design, cloud, and core computing.</p>
-            <ul class="prog-features">
-              <li>Full subjects taken by industry practitioners</li>
-              <li>Live capstone projects &amp; hackathons</li>
-              <li>Google Cloud &amp; AI lab integrations</li>
-            </ul>
-          </div>
-          <a class="btn-prog" href="#apply">Apply / Enquire Fees</a>
-        </div>
-
-        <!-- B.Tech CSE-AIML -->
-        <div class="prog-item">
-          <div>
-            <span class="prog-tag">4 Years • Specialized</span>
-            <h3>B.Tech. CSE-AIML</h3>
-            <p>Specialization focusing on Deep Learning, Natural Language Processing, computer vision, and autonomous agent systems.</p>
-            <ul class="prog-features">
-              <li>Hands-on Gemini &amp; LLM tool training</li>
-              <li>Data-driven machine learning algorithms</li>
-              <li>Collaborative projects via Google COE</li>
-            </ul>
-          </div>
-          <a class="btn-prog" href="#apply">Apply / Enquire Fees</a>
-        </div>
-
-        <!-- B.Tech ECE -->
-        <div class="prog-item">
-          <div>
-            <span class="prog-tag">4 Years • Core Tech</span>
-            <h3>B.Tech. Electronics &amp; Computer Engineering</h3>
-            <p>Bridging hardware architecture, IoT, embedded systems, VLSI design, and modern computer systems software.</p>
-            <ul class="prog-features">
-              <li>Robotics &amp; automation lab experience</li>
-              <li>VLSI and smart embedded systems</li>
-              <li>Core &amp; software dual placement tracks</li>
-            </ul>
-          </div>
-          <a class="btn-prog" href="#apply">Apply / Enquire Fees</a>
-        </div>
-
-        <!-- AI-Enabled BBA -->
-        <div class="prog-item">
-          <div>
-            <span class="prog-tag">3 Years • Undergraduate</span>
-            <h3>AI-Enabled BBA</h3>
-            <p>Modern management fundamentals integrated with AI business tools, marketing analytics, and data-driven decision making.</p>
-            <ul class="prog-features">
-              <li>Early internships starting from Year 1</li>
-              <li>Real corporate case-based evaluation</li>
-              <li>Digital business analytics training</li>
-            </ul>
-          </div>
-          <a class="btn-prog" href="#apply">Apply / Enquire Fees</a>
-        </div>
-
-        <!-- AI-Enabled MBA (Hons.) -->
-        <div class="prog-item">
-          <div>
-            <span class="prog-tag">2 Years • Postgraduate</span>
-            <h3>AI-Enabled MBA (Hons.)</h3>
-            <p>Elite management program tailored for future executives, focusing on tech-driven strategy, operations, and leadership.</p>
-            <ul class="prog-features">
-              <li>Mentorship by Corporate Learning Council</li>
-              <li>Executive business modeling &amp; analytics</li>
-              <li>High-value lateral recruitment support</li>
-            </ul>
-          </div>
-          <a class="btn-prog" href="#apply">Apply / Enquire Fees</a>
-        </div>
-
-        <!-- MCA (AIML) -->
-        <div class="prog-item">
-          <div>
-            <span class="prog-tag">2 Years • Postgraduate</span>
-            <h3>MCA (AIML)</h3>
-            <p>Advanced master's degree focusing on enterprise AI software development, cloud infrastructure, and big data architectures.</p>
-            <ul class="prog-features">
-              <li>Full-stack and cloud deployment tracks</li>
-              <li>Applied machine learning engineering</li>
-              <li>Fast-track placements with top tech firms</li>
-            </ul>
-          </div>
-          <a class="btn-prog" href="#apply">Apply / Enquire Fees</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Placement Legacy -->
-  <section class="placement-section" id="placements">
-    <div class="wrap">
-      <div class="sec-head">
-        <span>The Core Strength of GLA</span>
-        <h2>Placement Legacy</h2>
-        <p>A proven track record with leading Fortune 500 multinationals and top Indian tech companies.</p>
-      </div>
-
-      <div class="place-stats">
-        <div class="ps-card">
-          <strong>1800+</strong>
-          <span>Recruiting Companies</span>
-        </div>
-        <div class="ps-card">
-          <strong>86%</strong>
-          <span>Avg. Placements (Last 5 Yrs)</span>
-        </div>
-        <div class="ps-card">
-          <strong>60 LPA</strong>
-          <span>Highest CTC (Microsoft)</span>
-        </div>
-        <div class="ps-card">
-          <strong>6.3 LPA</strong>
-          <span>Overall Average CTC</span>
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-bottom:1.5rem;">
-        <h4 style="font-size:1.15rem; color:var(--gla-navy);">Large-Scale &amp; Global Tech Recruiters</h4>
-      </div>
-      <div class="recruiter-grid">
-        <div class="rec-badge">Microsoft</div>
-        <div class="rec-badge">Google</div>
-        <div class="rec-badge">Amazon</div>
-        <div class="rec-badge">Adobe</div>
-        <div class="rec-badge">Capgemini (1700+ Selections)</div>
-        <div class="rec-badge">Infosys (900+ Selections)</div>
-        <div class="rec-badge">Accenture (650+ Selections)</div>
-        <div class="rec-badge">Samsung Display</div>
-        <div class="rec-badge">JPMorgan Chase</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bottom CTA -->
-  <section class="cta-banner">
-    <div class="wrap">
-      <h2>Join the Future of Industry-Integrated Education</h2>
-      <p>Admissions are open for the 2026 intake. Connect with our admission counselors to verify program eligibility and scholarship details.</p>
-      <div class="cta-btn-group">
-        <a class="btn-gold" href="tel:9315594429">📞 Call 9315594429</a>
-        <a class="btn-outline" href="https://wa.me/919315594429?text=Hi%2C%20I%20am%20interested%20in%20GLA%20Noida%20Admissions." target="_blank" rel="noopener">Chat on WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-grid">
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-          <div class="brand" style="margin-bottom:1.2rem;">
-            <img src="https://www.gla.ac.in/images/gla-logo.png" alt="GLA Logo" style="filter: brightness(0) invert(1); height:46px;">
-            <div class="brand-caption" style="border-left-color: rgba(255,255,255,0.2);">
-              <strong style="color:var(--white);">GLA UNIVERSITY</strong>
-              <span style="color:#CBD5E1;">GREATER NOIDA CAMPUS</span>
+          <span class="eyebrow">Explore your next step</span>
+          <h1>Build Skills for a Changing World</h1>
+          <p>
+            Explore academic programs, understand eligibility and fees,
+            and get guidance to make an informed education decision.
+          </p>
+          <a class="btn btn-blue" href="#programs">Explore Programs</a>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>UG & PG</strong>
+              <span>Program options</span>
+            </div>
+            <div class="stat">
+              <strong>Guidance</strong>
+              <span>Admission support</span>
+            </div>
+            <div class="stat">
+              <strong>Personalised</strong>
+              <span>Course comparison</span>
             </div>
           </div>
-          <p>Campus Address: 15A, Knowledge Park II, Greater Noida - 201310 (U.P.) INDIA.</p>
-          <p style="margin-top:0.8rem; color:var(--gla-gold); font-weight:700;">📞 Admission Helpline: 9315594429</p>
         </div>
 
         <div>
-          <h4>Programs Offered</h4>
-          <ul>
-            <li><a href="#programs">B.Tech. CSE</a></li>
-            <li><a href="#programs">B.Tech. CSE-AIML</a></li>
-            <li><a href="#programs">B.Tech. Electronics &amp; Computer Engineering</a></li>
-            <li><a href="#programs">AI-Enabled BBA</a></li>
-            <li><a href="#programs">AI-Enabled MBA (Hons.)</a></li>
-            <li><a href="#programs">MCA (AIML)</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="tel:9315594429">Call Admission Helpline</a></li>
-            <li><a href="https://wa.me/919315594429" target="_blank" rel="noopener">WhatsApp Support</a></li>
-            <li><a href="#about">About GLA Legacy</a></li>
-            <li><a href="#google-ai">Google Agentic AI Ecosystem</a></li>
-            <li><a href="#apply">Submit Admission Query</a></li>
-          </ul>
+          <!-- Replace with a licensed campus or student photograph -->
+          <img class="hero-image"
+               src="/assets/authorized-campus-image.webp"
+               alt="University learning environment">
         </div>
       </div>
+    </section>
 
-      <div class="footer-disc">
-        <p><strong>Disclaimer:</strong> This page provides informational and admission counseling guidance for prospective students seeking enrollment at GLA University Greater Noida Campus. All university names, crests, logos, and trademarks belong to their respective owners. Program curriculum, eligibility, admissions, and examinations are administered under GLA University regulations. Confirm final details with counselors before fee submissions.</p>
-        <p style="margin-top:0.6rem;">© GLA University 2026. All Rights Reserved.</p>
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Make an informed choice</span>
+          <h2>Explore Your Education Options</h2>
+          <p>
+            Compare programs, understand admission requirements and
+            learn about the learning experience before applying.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="symbol">🎓</div>
+            <h3>Program Information</h3>
+            <p>Review available courses and their academic requirements.</p>
+          </article>
+          <article class="feature">
+            <div class="symbol">📘</div>
+            <h3>Eligibility & Fees</h3>
+            <p>Check the current eligibility criteria and fee structure.</p>
+          </article>
+          <article class="feature">
+            <div class="symbol">💬</div>
+            <h3>Admission Guidance</h3>
+            <p>Get help understanding the application process.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="programs">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Find your program</span>
+          <h2>Explore Programs</h2>
+          <p>
+            Confirm program availability, mode, duration and admission
+            requirements with the university before applying.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <img src="/assets/program-engineering.webp"
+                 alt="Engineering students">
+            <div class="card-body">
+              <span class="tag">Undergraduate</span>
+              <h3>B.Tech Programs</h3>
+              <p>Explore available engineering disciplines and specialisations.</p>
+              <a class="btn btn-blue" href="#enquiry">Request Information</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="/assets/program-management.webp"
+                 alt="Business and management students">
+            <div class="card-body">
+              <span class="tag">Management</span>
+              <h3>BBA & MBA Programs</h3>
+              <p>Review management programs and their entry requirements.</p>
+              <a class="btn btn-blue" href="#enquiry">Request Information</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="/assets/program-computing.webp"
+                 alt="Student learning computer science">
+            <div class="card-body">
+              <span class="tag">Computing</span>
+              <h3>MCA & Computing Programs</h3>
+              <p>Explore computing options and relevant specialisations.</p>
+              <a class="btn btn-blue" href="#enquiry">Request Information</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Learning experience</span>
+          <h2>Education That Connects Theory With Practice</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Academic Learning</h3>
+            <p>Review curriculum details and teaching formats for your program.</p>
+          </article>
+          <article class="feature">
+            <h3>Practical Exposure</h3>
+            <p>Check whether the program includes projects, labs or internships.</p>
+          </article>
+          <article class="feature" id="careers">
+            <h3>Career Preparation</h3>
+            <p>Ask about career services and the published placement outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="enquiry">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Have questions?</span>
+          <h2>Request Admission Information</h2>
+          <p>
+            Share your details to request information about programs,
+            eligibility and fees.
+          </p>
+          <p><strong>Phone:</strong> +91 93155 94429</p>
+        </div>
+
+        <div class="form-card">
+          <h2>Admission Enquiry</h2>
+          <!-- Connect this form to your CRM/backend before publishing -->
+          <form action="/your-form-handler" method="post">
+            <div class="field-grid">
+              <input name="name" placeholder="Full name"
+                     autocomplete="name" required>
+              <input name="phone" type="tel"
+                     placeholder="Mobile number"
+                     autocomplete="tel" pattern="[0-9 +()-]{10,16}"
+                     required>
+              <input name="email" type="email"
+                     placeholder="Email address"
+                     autocomplete="email" required>
+              <select name="program" required>
+                <option value="">Select program</option>
+                <option>B.Tech</option>
+                <option>BBA</option>
+                <option>MBA</option>
+                <option>MCA</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <label class="fineprint">
+              <input type="checkbox" name="consent" required
+                     style="width:auto; margin-top:16px">
+              I agree to be contacted about my enquiry and have read
+              the privacy policy.
+            </label>
+            <button class="btn" type="submit">Submit Enquiry</button>
+          </form>
+          <p class="fineprint">
+            Your form must be connected to a secure, working backend
+            before it can collect enquiries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container cta">
+        <div>
+          <h2>Ready to Explore Your Options?</h2>
+          <p>Review the official program details before making your decision.</p>
+        </div>
+        <a class="btn" href="https://noida.gla.ac.in/"
+           target="_blank" rel="noopener">
+          Visit Official Website
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Education & Admission Guidance</h3>
+          <p>
+            Independent information and guidance for prospective students.
+            University names and trademarks belong to their respective owners.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#careers">Career Information</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+919315594429">+91 93155 94429</a>
+          <a href="https://noida.gla.ac.in/">Official University Website</a>
+        </div>
+      </div>
+      <div class="disclaimer">
+        This is an independent information and enquiry page, not the
+        university's official website. Confirm admissions, fees, eligibility
+        and program availability directly with the university.
+        Replace this text with your organisation's accurate legal details.
       </div>
     </div>
   </footer>
-
-  <!-- Sticky Bottom Bar -->
-  <div class="sticky-bar">
-    <span>🎓 Admissions Open 2026 — GLA Greater Noida Campus</span>
-    <a class="btn-mini" href="tel:9315594429">Call 9315594429</a>
-  </div>
-
-  <!-- WhatsApp Float Button -->
-  <a class="wa-float" href="https://wa.me/919315594429?text=Hi%2C%20I%20am%20inquiring%20about%20GLA%20Greater%20Noida%20Campus%20Admissions." target="_blank" rel="noopener" aria-label="WhatsApp Admission Inquiry">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 29l8.1-1.57a12 12 0 0 0 3.94.66C22.68 28.09 28 22.69 28 16.05 28 9.4 22.68 3 16.04 3Zm0 22.05c-1.2 0-2.38-.32-3.4-.93l-.24-.15-4.8.93.97-4.67-.16-.25a9.9 9.9 0 0 1-1.52-5.3c0-5.5 4.47-9.97 9.98-9.97 5.5 0 9.96 4.47 9.96 9.97 0 5.5-4.47 10.37-9.96 10.37Zm5.47-7.47c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
-  </a>
-
-  <!-- Lead Form Submission Script -->
-  <script>
-    document.getElementById('noidaForm').addEventListener('submit', function(e) {
-      const name = document.getElementById('fName').value;
-      const phone = document.getElementById('fPhone').value;
-      const course = document.getElementById('fCourse').value;
-      const state = document.getElementById('fState').value;
-
-      const waMsg = encodeURIComponent(`Hi, I submitted an admission enquiry for GLA Greater Noida Campus.\nName: ${name}\nPhone: ${phone}\nCourse: ${course}\nState: ${state}\nPlease share eligibility and fee details.`);
-      window.open(`https://wa.me/919315594429?text=${waMsg}`, '_blank');
-    });
-  </script>
-
 </body>
 </html>
