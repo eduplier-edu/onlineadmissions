@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,8 +42,9 @@
   </script>
 
   <style>
-    /* Custom Scrollbar and UI Enhancements */
-    html {
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
       scroll-behavior: smooth;
     }
     ::-webkit-scrollbar {
@@ -57,64 +58,66 @@
       border-radius: 4px;
     }
     .slide-transition {
-      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .glass-form {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       box-shadow: 0 20px 45px -10px rgba(15, 41, 30, 0.25);
-    }
-    .hero-glow {
-      box-shadow: 0 0 50px rgba(34, 197, 94, 0.2);
     }
   </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-[#fbfdfa] selection:bg-brand-600 selection:text-white">
 
-  <!-- TOP ANNOUNCEMENT BAR & INFO -->
+  <!-- ========================================================================= -->
+  <!-- HEADER & TOP BAR (Alumni Offer Removed, Right Actions & GLA Branding)      -->
+  <!-- ========================================================================= -->
   <header class="w-full sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
-    <!-- Top Gold & Green Bar -->
+    <!-- Top Bar with Email, Phone, Apply Now & Student Login strictly aligned to the right -->
     <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-xs md:text-sm py-2 px-4 sm:px-6">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-    
-
-        <!-- Contact & Portal Quick Links -->
-        <div class="flex items-center gap-4 text-xs">
-          <a href="mailto:onlineadmissions@gla.ac.in" class="hover:text-amber-300 transition-colors hidden lg:flex items-center gap-1.5">
-            <i class="fa-regular fa-envelope text-brand-200"></i> onlineadmissions@gla.ac.in
-          </a>
-          <a href="tel:+919315594429" class="bg-brand-700/60 hover:bg-brand-700 px-2.5 py-1 rounded border border-brand-500/40 font-semibold flex items-center gap-1.5 transition">
-            <i class="fa-solid fa-phone text-amber-300"></i> +91-9315594429
-          </a>
-          <!-- CTA & Mobile Menu Toggle -->
-          <a href="#hero-section" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-700 to-brand-800 text-white font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg shadow hover:shadow-lg hover:from-brand-800 hover:to-brand-900 transition">
-            <i class="fa-solid fa-paper-plane text-amber-300"></i> Apply Now</a>
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- University Tagline Left -->
+        <div class="flex items-center gap-2">
+          <span class="text-[11px] font-semibold tracking-wide text-emerald-200 hidden sm:inline">
+            <i class="fa-solid fa-graduation-cap text-amber-400 mr-1"></i> Centre for Distance and Online Education
+          </span>
         </div>
-      </div>
-    </div>
-          <button onclick="toggleModal('loginModal')" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-3 py-1 rounded transition">
+
+        <!-- Right Side: Email, Phone, Apply Now & Student Login -->
+        <div class="flex items-center gap-2 sm:gap-3 text-xs ml-auto">
+          <a href="mailto:onlineadmissions@gla.ac.in" class="hover:text-amber-300 transition-colors hidden md:flex items-center gap-1.5 text-gray-200">
+            <i class="fa-regular fa-envelope text-brand-300"></i> onlineadmissions@gla.ac.in
+          </a>
+          <a href="tel:+919315594429" class="bg-brand-700/80 hover:bg-brand-700 text-white px-3 py-1 rounded-md border border-brand-500/40 font-bold flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-phone text-amber-300 text-[11px]"></i> +91-9315594429
+          </a>
+          <a href="#hero-section" class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-extrabold text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md shadow transition">
+            Apply Now
+          </a>
+          <button onclick="toggleModal('loginModal')" class="bg-white/15 hover:bg-white/25 text-white border border-white/30 font-semibold px-3 py-1 rounded-md transition text-[11px]">
             Student Login
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Main Navigation Bar -->
+    <!-- Main Navigation Bar (Clean GLA Brand Only) -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
       <div class="flex justify-between items-center">
-        <!-- University Logo Brand -->
+        
+        <!-- Authentic GLA University Logo Branding -->
         <a href="#" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-amber-400 shadow-md border-2 border-brand-600">
+          <div class="w-12 h-12 rounded-xl bg-brand-900 border-2 border-brand-600 flex items-center justify-center text-amber-400 shadow-md">
             <i class="fa-solid fa-graduation-cap text-2xl group-hover:scale-110 transition-transform"></i>
           </div>
           <div class="flex flex-col">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5 leading-none">
               <span class="text-2xl font-black tracking-tight text-brand-900">GLA</span>
-              <span class="bg-brand-800 text-white text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">ONLINE</span>
+              <span class="bg-brand-800 text-white text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded">ONLINE</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-1.5 py-0.2 border border-emerald-200 rounded">
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-[10px] font-extrabold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 border border-emerald-300 rounded">
                 NAAC A+ GRADE ACCREDITED
               </span>
               <span class="text-xs font-semibold italic text-brand-700 hidden sm:inline">#GharSeGlobal</span>
@@ -124,18 +127,17 @@
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-gray-700">
-          <a href="#hero-section" class="hover:text-brand-700 transition">Home</a>
+          <a href="#hero-section" class="text-brand-800 font-bold hover:text-brand-600 transition">Home</a>
           <a href="#stats-section" class="hover:text-brand-700 transition">About Us</a>
           <a href="#accreditations-section" class="hover:text-brand-700 transition">Rankings</a>
           <a href="#features-section" class="hover:text-brand-700 transition">Features</a>
           <a href="#programs-section" class="hover:text-brand-700 transition">Programs</a>
           <a href="#placements-section" class="hover:text-brand-700 transition">Placements</a>
-          <a href="#contact" class="hover:text-brand-700 transition">Contact</a>
         </nav>
 
         <!-- CTA & Mobile Menu Toggle -->
         <div class="flex items-center gap-3">
-          <a href="#hero-section" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-700 to-brand-800 text-white font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg shadow hover:shadow-lg hover:from-brand-800 hover:to-brand-900 transition">
+          <a href="#hero-section" class="hidden sm:inline-flex items-center gap-2 bg-brand-800 hover:bg-brand-900 text-white font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg shadow transition">
             <i class="fa-solid fa-paper-plane text-amber-300"></i> Request Call
           </a>
           <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-brand-900 hover:bg-brand-50" aria-label="Toggle Menu">
@@ -146,14 +148,13 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3 font-semibold text-gray-700">
-      <a href="#hero-section" class="block py-1 hover:text-brand-700">Home</a>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3 font-semibold text-gray-700 shadow-lg">
+      <a href="#hero-section" class="block py-1 text-brand-800">Home</a>
       <a href="#stats-section" class="block py-1 hover:text-brand-700">About Us</a>
       <a href="#accreditations-section" class="block py-1 hover:text-brand-700">Rankings & Accreditations</a>
       <a href="#features-section" class="block py-1 hover:text-brand-700">Features</a>
       <a href="#programs-section" class="block py-1 hover:text-brand-700">Programs</a>
       <a href="#placements-section" class="block py-1 hover:text-brand-700">Placements</a>
-      <a href="#contact" class="block py-1 hover:text-brand-700">Contact Us</a>
     </div>
   </header>
 
@@ -163,22 +164,22 @@
   <!-- ========================================================================= -->
   <section id="hero-section" class="relative min-h-[640px] lg:min-h-[720px] bg-brand-deep text-white overflow-hidden flex items-center">
     
-    <!-- CAROUSEL WRAPPER (First section contains these 4 images / thematic slides) -->
+    <!-- CAROUSEL WRAPPER -->
     <div class="absolute inset-0 w-full h-full" id="heroCarousel">
 
-      <!-- SLIDE 1: Microsoft GenAI Campus & NIRF 2025 (Image 1 reference) -->
-      <div class="hero-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-700 bg-cover bg-center flex items-center"
+      <!-- SLIDE 1: Microsoft GenAI Campus & NIRF 2025 -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-100 slide-transition bg-cover bg-center flex items-center"
            style="background-image: linear-gradient(to right, rgba(15, 41, 30, 0.95) 0%, rgba(20, 83, 45, 0.85) 50%, rgba(10, 25, 18, 0.75) 100%), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80');">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs sm:text-sm font-semibold tracking-wide">
-              <i class="fa-solid fa-crown text-amber-400"></i> Institution Ranking 2025
+              <i class="fa-solid fa-crown text-amber-400"></i> Institution Ranking 2025[cite: 1]
             </div>
             <div class="space-y-2">
               <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-white tracking-tight">
-                India's <span class="text-amber-400 underline decoration-emerald-500">1<sup>st</sup></span> <br/>
+                India's <span class="text-amber-400 underline decoration-emerald-500">1<sup>st</sup></span> <br/>[cite: 1]
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200">
-                  Microsoft GenAI Campus
+                  Microsoft GenAI Campus[cite: 1]
                 </span>
               </h2>
               <p class="text-gray-200 text-base sm:text-lg max-w-xl font-medium pt-2">
@@ -189,32 +190,32 @@
             <!-- Ranking Pill Badges inside Slide 1 -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-2xl">
               <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
-                <span class="text-xs text-emerald-300 uppercase font-bold block">QS Asia 2026</span>
-                <span class="text-2xl font-black text-amber-400">#244</span>
-                <span class="text-[11px] text-gray-300 block">Southern Asia</span>
+                <span class="text-xs text-emerald-300 uppercase font-bold block">QS Asia 2026</span>[cite: 1]
+                <span class="text-2xl font-black text-amber-400">#244</span>[cite: 1]
+                <span class="text-[11px] text-gray-300 block">Southern Asia</span>[cite: 1]
               </div>
               <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
-                <span class="text-xs text-emerald-300 uppercase font-bold block">Overall Asia</span>
-                <span class="text-xl font-black text-white">#781-790</span>
-                <span class="text-[11px] text-gray-300 block">QS World</span>
+                <span class="text-xs text-emerald-300 uppercase font-bold block">Overall Asia</span>[cite: 1]
+                <span class="text-xl font-black text-white">#781-790</span>[cite: 1]
+                <span class="text-[11px] text-gray-300 block">QS World</span>[cite: 1]
               </div>
               <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
-                <span class="text-xs text-emerald-300 uppercase font-bold block">NIRF 2025</span>
-                <span class="text-2xl font-black text-amber-400">Top 125</span>
-                <span class="text-[11px] text-gray-300 block">Management</span>
+                <span class="text-xs text-emerald-300 uppercase font-bold block">NIRF 2025</span>[cite: 1]
+                <span class="text-2xl font-black text-amber-400">Top 125</span>[cite: 1]
+                <span class="text-[11px] text-gray-300 block">Management</span>[cite: 1]
               </div>
               <div class="bg-black/30 backdrop-blur border border-white/10 rounded-xl p-3 text-center">
-                <span class="text-xs text-emerald-300 uppercase font-bold block">NIRF 2025</span>
-                <span class="text-2xl font-black text-white">Top 150</span>
-                <span class="text-[11px] text-gray-300 block">University</span>
+                <span class="text-xs text-emerald-300 uppercase font-bold block">NIRF 2025</span>[cite: 1]
+                <span class="text-2xl font-black text-white">Top 150</span>[cite: 1]
+                <span class="text-[11px] text-gray-300 block">University</span>[cite: 1]
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 2: From Learning to Earning (Image 2 reference) -->
-      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-700 bg-cover bg-center flex items-center"
+      <!-- SLIDE 2: From Learning to Earning -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none slide-transition bg-cover bg-center flex items-center"
            style="background-image: linear-gradient(to right, rgba(11, 46, 74, 0.94) 0%, rgba(13, 71, 56, 0.88) 60%, rgba(5, 25, 30, 0.8) 100%), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80');">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-7 space-y-6">
@@ -222,44 +223,42 @@
               <i class="fa-solid fa-briefcase mr-1.5"></i> Career & Placement Hub
             </span>
             <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight">
-              From <span class="text-white">Learning</span> to <br/>
-              <span class="text-amber-400">Earning</span>
+              From <span class="text-white">Learning</span> to <br/>[cite: 2]
+              <span class="text-amber-400">Earning</span>[cite: 2]
             </h2>
             <p class="text-gray-200 text-lg font-medium">
-              GLA Online — Where Skills Meet Opportunities with <span class="text-amber-300 font-bold underline">100% Placement Assistance</span>!
+              GLA Online — Where Skills Meet Opportunities with <span class="text-amber-300 font-bold underline">100% Placement Assistance</span>![cite: 2]
             </p>
 
-            <!-- Cards Highlight (3k+ Partners, 51k+ Success) -->
             <div class="flex flex-wrap gap-4 pt-1">
-              <div class="bg-white text-brand-900 rounded-xl p-4 shadow-lg border-2 border-emerald-500/20 w-36 sm:w-44 transform -rotate-1 hover:rotate-0 transition">
-                <p class="text-3xl font-extrabold text-brand-800">3K+</p>
-                <p class="text-xs font-bold text-gray-600 uppercase tracking-wider mt-1">Hiring Partners</p>
+              <div class="bg-white text-brand-900 rounded-xl p-4 shadow-lg border-2 border-emerald-500/20 w-36 sm:w-44">
+                <p class="text-3xl font-extrabold text-brand-800">3K+</p>[cite: 2]
+                <p class="text-xs font-bold text-gray-600 uppercase tracking-wider mt-1">Hiring Partners</p>[cite: 2]
               </div>
-              <div class="bg-white text-brand-900 rounded-xl p-4 shadow-lg border-2 border-emerald-500/20 w-36 sm:w-44 transform rotate-2 hover:rotate-0 transition">
-                <p class="text-3xl font-extrabold text-brand-800">51K+</p>
-                <p class="text-xs font-bold text-gray-600 uppercase tracking-wider mt-1">Success Stories</p>
+              <div class="bg-white text-brand-900 rounded-xl p-4 shadow-lg border-2 border-emerald-500/20 w-36 sm:w-44">
+                <p class="text-3xl font-extrabold text-brand-800">51K+</p>[cite: 2]
+                <p class="text-xs font-bold text-gray-600 uppercase tracking-wider mt-1">Success Stories</p>[cite: 2]
               </div>
             </div>
 
-            <!-- Recruiter Logo chips -->
             <div class="pt-2">
-              <p class="text-xs font-semibold text-gray-300 uppercase tracking-widest mb-2">Our Top Recruiters:</p>
+              <p class="text-xs font-semibold text-gray-300 uppercase tracking-widest mb-2">Our Top Recruiters:</p>[cite: 2]
               <div class="flex flex-wrap gap-2 text-xs font-bold text-gray-800">
-                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Amazon</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Amazon</span>[cite: 2]
                 <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Microsoft</span>
-                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Accenture</span>
-                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Wipro</span>
-                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">IBM</span>
-                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Cognizant</span>
-                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Tata Power</span>
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Accenture</span>[cite: 2]
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Wipro</span>[cite: 2]
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">IBM</span>[cite: 2]
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Cognizant</span>[cite: 2]
+                <span class="bg-white/90 px-3 py-1 rounded shadow-sm">Tata Power</span>[cite: 2]
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 3: Become a GLAdiator (Image 3 reference) -->
-      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-700 bg-cover bg-center flex items-center"
+      <!-- SLIDE 3: Become a GLAdiator -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none slide-transition bg-cover bg-center flex items-center"
            style="background-image: linear-gradient(to right, rgba(20, 40, 30, 0.95) 0%, rgba(27, 67, 50, 0.88) 55%, rgba(10, 20, 15, 0.75) 100%), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=80');">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-7 space-y-6">
@@ -267,33 +266,32 @@
               <i class="fa-solid fa-shield-halved mr-1.5 text-amber-400"></i> Unleash Your True Potential
             </span>
             <div class="space-y-1">
-              <p class="text-xl sm:text-2xl font-light tracking-wide text-gray-200">Be extraordinary,</p>
+              <p class="text-xl sm:text-2xl font-light tracking-wide text-gray-200">Be extraordinary,</p>[cite: 3]
               <h2 class="text-4xl sm:text-6xl font-black leading-tight text-white">
-                Become a <br/>
-                <span class="text-amber-400 tracking-tight">GLAdiator!</span>
+                Become a <br/>[cite: 3]
+                <span class="text-amber-400 tracking-tight">GLAdiator!</span>[cite: 3]
               </h2>
             </div>
             <p class="text-gray-200 text-base sm:text-lg max-w-xl font-medium">
-              Learn at your convenience. Shine everywhere with GLA Online's elite mentor network, global exposure and flexible degree programs.
+              Learn at your convenience. Shine everywhere with GLA Online's elite mentor network, global exposure and flexible degree programs.[cite: 3]
             </p>
 
-            <!-- 51k+ Alumni & 50+ Faculty -->
             <div class="grid grid-cols-2 gap-4 max-w-md pt-2">
               <div class="border-l-4 border-amber-400 pl-4 py-1">
-                <span class="text-3xl sm:text-4xl font-extrabold text-amber-400">51K+</span>
-                <span class="block text-xs uppercase font-bold text-gray-300 tracking-wider">Alumni Community</span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-amber-400">51K+</span>[cite: 3]
+                <span class="block text-xs uppercase font-bold text-gray-300 tracking-wider">Alumni Community</span>[cite: 3]
               </div>
               <div class="border-l-4 border-emerald-400 pl-4 py-1">
-                <span class="text-3xl sm:text-4xl font-extrabold text-white">50+</span>
-                <span class="block text-xs uppercase font-bold text-gray-300 tracking-wider">Experienced Faculty</span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-white">50+</span>[cite: 3]
+                <span class="block text-xs uppercase font-bold text-gray-300 tracking-wider">Experienced Faculty</span>[cite: 3]
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 4: Institutional Ranking 2025 Highlight (Image 4 reference) -->
-      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-700 bg-cover bg-center flex items-center"
+      <!-- SLIDE 4: Institutional Ranking 2025 Highlight -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none slide-transition bg-cover bg-center flex items-center"
            style="background-image: linear-gradient(to right, rgba(16, 55, 38, 0.95) 0%, rgba(20, 83, 45, 0.88) 55%, rgba(10, 30, 20, 0.8) 100%), url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=80');">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-7 space-y-6">
@@ -301,8 +299,8 @@
               <i class="fa-solid fa-award mr-1"></i> Global & National Benchmark
             </span>
             <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-white">
-              NIRF & QS World <br/>
-              <span class="text-amber-400">RANKING 2025</span>
+              NIRF & QS World <br/>[cite: 4]
+              <span class="text-amber-400">RANKING 2025</span>[cite: 4]
             </h2>
             <p class="text-gray-200 text-base sm:text-lg max-w-xl font-medium">
               Ranked among India's top academic powerhouses with accredited management and engineering degrees tailored for professionals.
@@ -310,16 +308,16 @@
 
             <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg">
               <div class="bg-brand-900/80 border border-emerald-500/40 p-3 rounded-xl text-center">
-                <span class="text-amber-400 text-2xl font-black">Top 125</span>
-                <span class="text-[11px] block text-gray-200 font-semibold mt-1">Management NIRF</span>
+                <span class="text-amber-400 text-2xl font-black">Top 125</span>[cite: 4]
+                <span class="text-[11px] block text-gray-200 font-semibold mt-1">Management NIRF</span>[cite: 4]
               </div>
               <div class="bg-brand-900/80 border border-emerald-500/40 p-3 rounded-xl text-center">
-                <span class="text-white text-2xl font-black">Top 150</span>
-                <span class="text-[11px] block text-gray-200 font-semibold mt-1">University NIRF</span>
+                <span class="text-white text-2xl font-black">Top 150</span>[cite: 4]
+                <span class="text-[11px] block text-gray-200 font-semibold mt-1">University NIRF</span>[cite: 4]
               </div>
               <div class="bg-brand-900/80 border border-emerald-500/40 p-3 rounded-xl text-center">
-                <span class="text-emerald-300 text-2xl font-black">Top 200</span>
-                <span class="text-[11px] block text-gray-200 font-semibold mt-1">Engineering NIRF</span>
+                <span class="text-emerald-300 text-2xl font-black">Top 200</span>[cite: 4]
+                <span class="text-[11px] block text-gray-200 font-semibold mt-1">Engineering NIRF</span>[cite: 4]
               </div>
             </div>
           </div>
@@ -328,7 +326,7 @@
 
     </div>
 
-    <!-- FLOATING ENQUIRY FORM OVERLAY (Present right side of the first section in all 4 screenshots) -->
+    <!-- FLOATING ENQUIRY FORM OVERLAY -->
     <div class="relative z-30 max-w-7xl mx-auto w-full px-4 sm:px-6 pointer-events-none py-10">
       <div class="grid grid-cols-1 lg:grid-cols-12">
         <div class="lg:col-span-7"></div>
@@ -336,7 +334,7 @@
           <div class="glass-form rounded-2xl p-6 sm:p-7 border border-white/60 shadow-2xl">
             <div class="border-b border-gray-200 pb-3 mb-4">
               <h3 class="text-xl font-extrabold text-brand-900 flex items-center justify-between">
-                <span>Admissions Open 2025-26</span>
+                <span>Admissions Open 2026-27</span>
                 <span class="text-[10px] bg-green-100 text-green-800 font-bold px-2 py-0.5 rounded">FAST TRACK</span>
               </h3>
               <p class="text-xs text-gray-600 mt-1">Fill the form to get specialized career counselling & brochure</p>
@@ -394,7 +392,7 @@
               <div class="flex items-start gap-2 pt-1 text-xs text-gray-600">
                 <input type="checkbox" id="consent" required checked class="mt-1 rounded text-brand-700 focus:ring-brand-600">
                 <label for="consent" class="select-none leading-tight">
-                  I allow GLA Online to contact me via Call, Email, or WhatsApp regarding admissions.
+                  I allow GLA Online to contact me via Call, Email, or WhatsApp regarding admissions.[cite: 1, 2, 3, 4]
                 </label>
               </div>
 
@@ -408,7 +406,7 @@
       </div>
     </div>
 
-    <!-- Carousel Controls (Slide navigation dots & arrows) -->
+    <!-- Carousel Controls -->
     <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
       <button onclick="prevSlide()" class="text-white hover:text-amber-400 p-1 transition" aria-label="Previous Slide">
         <i class="fa-solid fa-chevron-left text-sm"></i>
@@ -427,7 +425,7 @@
 
 
   <!-- ========================================================================= -->
-  <!-- SECTION 2: GREAT LEARNING ASSURANCE & LEGACY (Corresponds to Image 5)      -->
+  <!-- SECTION 2: GREAT LEARNING ASSURANCE & LEGACY                              -->
   <!-- ========================================================================= -->
   <section id="stats-section" class="py-16 bg-[#f4f7f4] border-b border-gray-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -435,31 +433,30 @@
         <div class="inline-flex items-center gap-1.5 text-brand-800 font-extrabold text-sm uppercase tracking-widest bg-brand-100/70 px-3.5 py-1 rounded-full mb-3">
           <span class="text-brand-900 font-black">G</span>reat 
           <span class="text-brand-900 font-black">L</span>earning 
-          <span class="text-brand-900 font-black">A</span>ssurance
+          <span class="text-brand-900 font-black">A</span>ssurance[cite: 5]
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">
-          Learning Beyond Boundaries!
+          Learning Beyond Boundaries![cite: 5]
         </h2>
         <div class="w-20 h-1 bg-amber-400 mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <!-- 4 Pillars Stat Counter Grid (Exact replica of Image 5) -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-gray-300">
         <div class="px-4 py-2">
-          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">29+</p>
-          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Years of Legacy</p>
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">29+</p>[cite: 5]
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Years of Legacy</p>[cite: 5]
         </div>
         <div class="px-4 py-2 pt-6 md:pt-2">
-          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">54K+</p>
-          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Alumni</p>
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">54K+</p>[cite: 5]
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Alumni</p>[cite: 5]
         </div>
         <div class="px-4 py-2 pt-6 md:pt-2">
-          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">3K+</p>
-          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Recruiters</p>
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">3K+</p>[cite: 5]
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Recruiters</p>[cite: 5]
         </div>
         <div class="px-4 py-2 pt-6 md:pt-2">
-          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">25K+</p>
-          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Students Enrolled</p>
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-900 tracking-tight">25K+</p>[cite: 5]
+          <p class="text-sm sm:text-base font-bold text-gray-700 mt-2">Students Enrolled</p>[cite: 5]
         </div>
       </div>
     </div>
@@ -467,7 +464,7 @@
 
 
   <!-- ========================================================================= -->
-  <!-- SECTION 3: ACCREDITATIONS & RANKINGS (Corresponds to Image 6)              -->
+  <!-- SECTION 3: ACCREDITATIONS & RANKINGS                                      -->
   <!-- ========================================================================= -->
   <section id="accreditations-section" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -476,33 +473,32 @@
           Global Benchmarks
         </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-950 mt-3 tracking-tight">
-          Accreditations & Rankings
+          Accreditations & Rankings[cite: 6]
         </h2>
         <p class="text-gray-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
           Recognized by premier global and national accreditation agencies for exceptional academic standards.
         </p>
       </div>
 
-      <!-- 3 Key Ranking Cards (QS, THE, NIRF) -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- QS World University Card -->
         <div class="bg-[#fcfdfc] rounded-2xl p-8 border border-gray-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="h-14 flex items-center mb-6">
               <span class="bg-amber-100 text-amber-800 font-extrabold text-xl px-4 py-1.5 rounded-lg border border-amber-300">
-                QS
+                QS[cite: 6]
               </span>
             </div>
             <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-brand-800 transition">
-              QS World University Rankings 2026
+              QS World University Rankings 2026[cite: 6]
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
-              Ranked <strong class="text-brand-800">#244</strong> in Southern Asia <br/>
-              Ranked <strong class="text-brand-800">#781–790</strong> in Asia Overall
+              Ranked <strong class="text-brand-800">#244</strong> in Southern Asia <br/>[cite: 6]
+              Ranked <strong class="text-brand-800">#781–790</strong> in Asia Overall[cite: 6]
             </p>
           </div>
           <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
-            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">QS Asia 2026</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">QS Asia 2026</span>[cite: 6]
             <span class="text-amber-500 font-semibold text-xs flex items-center gap-1">
               Verified Rating <i class="fa-solid fa-check-circle"></i>
             </span>
@@ -514,20 +510,20 @@
           <div>
             <div class="h-14 flex items-center mb-6">
               <span class="bg-rose-100 text-rose-800 font-extrabold text-xl px-4 py-1.5 rounded-lg border border-rose-300">
-                THE
+                THE[cite: 6]
               </span>
             </div>
             <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-brand-800 transition">
-              The World University Rankings 2026
+              The World University Rankings 2026[cite: 6]
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
-              Ranked <strong class="text-brand-800">351–400</strong> in Asia <br/>
-              Ranked <strong class="text-brand-800">501–600</strong> in Engineering <br/>
-              Ranked <strong class="text-brand-800">601–800</strong> in Business and Economics
+              Ranked <strong class="text-brand-800">351–400</strong> in Asia <br/>[cite: 6]
+              Ranked <strong class="text-brand-800">501–600</strong> in Engineering <br/>[cite: 6]
+              Ranked <strong class="text-brand-800">601–800</strong> in Business and Economics[cite: 6]
             </p>
           </div>
           <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
-            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">THE World Rank</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">THE World Rank</span>[cite: 6]
             <span class="text-rose-600 font-semibold text-xs flex items-center gap-1">
               Global Standard <i class="fa-solid fa-globe"></i>
             </span>
@@ -539,15 +535,15 @@
           <div>
             <div class="h-14 flex items-center mb-6">
               <span class="bg-blue-100 text-blue-800 font-black text-xl px-4 py-1.5 rounded-lg border border-blue-300">
-                nirf
+                nirf[cite: 6]
               </span>
             </div>
             <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-brand-800 transition">
-              NIRF Ranking 2025
+              NIRF Ranking 2025[cite: 6]
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
-              Ranked in the <strong class="text-brand-800">101–125 Band</strong> among Management Institutes in India <br/>
-              Ranked in the <strong class="text-brand-800">151–200 Band</strong> Overall
+              Ranked in the <strong class="text-brand-800">101–125 Band</strong> among Management Institutes in India <br/>[cite: 6]
+              Ranked in the <strong class="text-brand-800">151–200 Band</strong> Overall[cite: 6]
             </p>
           </div>
           <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
@@ -558,46 +554,28 @@
           </div>
         </div>
       </div>
-
-      <!-- Trust Bar (UGC, AICTE, NAAC A+, NIRF) -->
-      <div class="mt-14 pt-8 border-t border-gray-200 flex flex-wrap items-center justify-around gap-6 opacity-80">
-        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
-          <i class="fa-solid fa-medal text-brand-700 text-lg"></i> NAAC 'A+' Accredited
-        </div>
-        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
-          <i class="fa-solid fa-building-columns text-brand-700 text-lg"></i> UGC Entitled Degrees
-        </div>
-        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
-          <i class="fa-solid fa-graduation-cap text-brand-700 text-lg"></i> AICTE Approved Programs
-        </div>
-        <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
-          <i class="fa-solid fa-earth-americas text-brand-700 text-lg"></i> WES Recognized Globally
-        </div>
-      </div>
     </div>
   </section>
 
 
   <!-- ========================================================================= -->
-  <!-- SECTION 4: GLA ONLINE FEATURES (Corresponds to Image 7)                   -->
+  <!-- SECTION 4: GLA ONLINE FEATURES                                            -->
   <!-- ========================================================================= -->
   <section id="features-section" class="py-20 bg-brand-forest text-white relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-14">
         <span class="text-xs font-bold text-amber-300 uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-white/20">
-          GLA Online Features
+          GLA Online Features[cite: 7]
         </span>
         <h2 class="text-3xl sm:text-5xl font-black mt-3 text-white tracking-tight">
-          Unlock Your Future with GLA Online
+          Unlock Your Future with GLA Online[cite: 7]
         </h2>
         <p class="text-emerald-100 max-w-2xl mx-auto mt-2 text-sm sm:text-base">
           Tailored learning designed to fit your busy lifestyle without compromising academic rigor.
         </p>
       </div>
 
-      <!-- Features 6 Cards Grid (Exact items from Image 7) -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
-        
         <!-- Feature 1: Cost-Effective -->
         <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
           <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80');">
@@ -606,7 +584,7 @@
           <div class="p-4 relative -mt-10">
             <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
             <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
-              Cost-Effective
+              Cost-Effective[cite: 7]
             </h4>
             <p class="text-xs text-gray-300 mt-1">Affordable fee structure with easy EMI options.</p>
           </div>
@@ -620,13 +598,13 @@
           <div class="p-4 relative -mt-10">
             <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
             <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
-              Diverse Course Options
+              Diverse Course Options[cite: 7]
             </h4>
             <p class="text-xs text-gray-300 mt-1">UG & PG domains in IT, Management & Commerce.</p>
           </div>
         </div>
 
-        <!-- Feature 3: Interactive -->
+        <!-- Feature 3: Interactive Learning -->
         <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
           <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80');">
             <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
@@ -634,13 +612,13 @@
           <div class="p-4 relative -mt-10">
             <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
             <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
-              Interactive Learning
+              Interactive Learning[cite: 7]
             </h4>
             <p class="text-xs text-gray-300 mt-1">Live weekend faculty sessions and doubt forums.</p>
           </div>
         </div>
 
-        <!-- Feature 4: Industry-Integrated Curriculum -->
+        <!-- Feature 4: Industry-Integrated -->
         <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
           <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80');">
             <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
@@ -648,7 +626,7 @@
           <div class="p-4 relative -mt-10">
             <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
             <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
-              Industry-Integrated
+              Industry-Integrated[cite: 7]
             </h4>
             <p class="text-xs text-gray-300 mt-1">Curated with Microsoft & top tech giants.</p>
           </div>
@@ -662,13 +640,13 @@
           <div class="p-4 relative -mt-10">
             <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
             <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
-              Self-Paced
+              Self-Paced[cite: 7]
             </h4>
             <p class="text-xs text-gray-300 mt-1">Learn from anywhere, anytime on your own schedule.</p>
           </div>
         </div>
 
-        <!-- Feature 6: Assured Career Transformation -->
+        <!-- Feature 6: Career Transformation -->
         <div class="group relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/20 shadow-lg hover:-translate-y-1.5 transition-all duration-300">
           <div class="h-44 sm:h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');">
             <div class="w-full h-full bg-gradient-to-t from-brand-deep via-brand-deep/40 to-transparent"></div>
@@ -676,82 +654,60 @@
           <div class="p-4 relative -mt-10">
             <div class="w-8 h-1 bg-amber-400 mb-2 rounded"></div>
             <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition">
-              Career Transformation
+              Career Transformation[cite: 7]
             </h4>
             <p class="text-xs text-gray-300 mt-1">Mock interviews, resume clinics & placement cell.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================= -->
-  <!-- SECTION 5: LEARNING STATS TILES (Corresponds to Image 8)                  -->
+  <!-- SECTION 5: LEARNING STATS TILES                                           -->
   <!-- ========================================================================= -->
   <section class="py-16 bg-[#eef3ee]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <!-- 4 Green Stat Blocks with Yellow/Gold numbers (Exact replica of Image 8) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Tile 1 -->
-        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
-          <p class="text-5xl font-black text-amber-400 tracking-tight">6K+</p>
-          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
-            Hours of Learning Materials
-          </p>
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">6K+</p>[cite: 8]
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">Hours of Learning Materials</p>[cite: 8]
         </div>
-
-        <!-- Tile 2 -->
-        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
-          <p class="text-5xl font-black text-amber-400 tracking-tight">24/7</p>
-          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
-            Study Materials Access
-          </p>
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">24/7</p>[cite: 8]
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">Study Materials Access</p>[cite: 8]
         </div>
-
-        <!-- Tile 3 -->
-        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
-          <p class="text-5xl font-black text-amber-400 tracking-tight">25K+</p>
-          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
-            Active Learners
-          </p>
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">25K+</p>[cite: 8]
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">Active Learners</p>[cite: 8]
         </div>
-
-        <!-- Tile 4 -->
-        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
-          <p class="text-5xl font-black text-amber-400 tracking-tight">800+</p>
-          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">
-            Real-World Projects
-          </p>
+        <div class="bg-brand-800 text-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition duration-300 border-2 border-brand-700 flex flex-col justify-center items-center">
+          <p class="text-5xl font-black text-amber-400 tracking-tight">800+</p>[cite: 8]
+          <p class="text-base font-bold text-gray-100 mt-3 leading-snug">Real-World Projects</p>[cite: 8]
         </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================= -->
-  <!-- SECTION 6: PROGRAMS OFFERED (Corresponds to Image 9)                      -->
+  <!-- SECTION 6: PROGRAMS OFFERED                                               -->
   <!-- ========================================================================= -->
   <section id="programs-section" class="py-20 bg-brand-forest text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
-        <!-- Section Header Column -->
         <div class="lg:col-span-5 space-y-4">
           <span class="text-amber-400 text-xs font-black uppercase tracking-widest block">
-            PROGRAMS
+            PROGRAMS[cite: 9]
           </span>
           <h2 class="text-3xl sm:text-5xl font-black leading-tight text-white">
-            There’s a Path for Everyone, <span class="text-amber-400">Explore Yours</span>
+            There’s a Path for Everyone, <span class="text-amber-400">Explore Yours</span>[cite: 9]
           </h2>
           <p class="text-gray-300 text-sm sm:text-base">
             UGC-entitled degrees with world-class faculty support, live interactive sessions, and direct placement opportunities.
           </p>
 
-          <!-- Category Selectors (PG / UG toggles) -->
           <div class="space-y-3 pt-4">
             <button onclick="filterPrograms('all')" class="program-tab w-full flex items-center justify-between p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition text-left active-tab" data-target="all">
               <div>
@@ -762,14 +718,14 @@
             </button>
             <button onclick="filterPrograms('pg')" class="program-tab w-full flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 transition text-left" data-target="pg">
               <div>
-                <span class="text-base font-bold block text-white">Postgraduate Programs</span>
+                <span class="text-base font-bold block text-white">Postgraduate Programs</span>[cite: 9]
                 <span class="text-xs text-gray-300">MBA, MCA (2 Years)</span>
               </div>
               <i class="fa-solid fa-plus text-amber-400"></i>
             </button>
             <button onclick="filterPrograms('ug')" class="program-tab w-full flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 transition text-left" data-target="ug">
               <div>
-                <span class="text-base font-bold block text-white">Undergraduate Programs</span>
+                <span class="text-base font-bold block text-white">Undergraduate Programs</span>[cite: 9]
                 <span class="text-xs text-gray-300">BBA, BCA, B.Com (Hons.) (3 Years)</span>
               </div>
               <i class="fa-solid fa-plus text-amber-400"></i>
@@ -777,10 +733,8 @@
           </div>
         </div>
 
-        <!-- Program Cards Grid (Exact programs from Image 9) -->
         <div class="lg:col-span-7">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5" id="programCardsContainer">
-            
             <!-- Program 1: BBA -->
             <div class="program-card ug relative rounded-2xl overflow-hidden bg-brand-deep border border-emerald-500/30 group hover:shadow-2xl transition duration-300">
               <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80');">
@@ -788,8 +742,8 @@
                 <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">UG • 3 Years</span>
               </div>
               <div class="p-5">
-                <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>
-                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Business Administration (BBA)</h4>
+                <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>[cite: 9]
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Business Administration (BBA)</h4>[cite: 9]
                 <p class="text-xs text-gray-300 mt-2 line-clamp-2">Master foundational business strategies, analytics, and leadership in modern commerce.</p>
                 <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
                   <span class="text-xs font-semibold text-emerald-300">Eligibility: 10+2 Passed</span>
@@ -805,8 +759,8 @@
                 <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">PG • 2 Years</span>
               </div>
               <div class="p-5">
-                <p class="text-xs text-amber-400 font-bold uppercase">Master of</p>
-                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Computer Applications (MCA)</h4>
+                <p class="text-xs text-amber-400 font-bold uppercase">Master of</p>[cite: 9]
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Computer Applications (MCA)</h4>[cite: 9]
                 <p class="text-xs text-gray-300 mt-2 line-clamp-2">Specializations in AI, Cloud Computing, Full-Stack Development and Big Data.</p>
                 <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
                   <span class="text-xs font-semibold text-emerald-300">Eligibility: BCA / Graduation</span>
@@ -822,8 +776,8 @@
                 <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">PG • 2 Years</span>
               </div>
               <div class="p-5">
-                <p class="text-xs text-amber-400 font-bold uppercase">Master of</p>
-                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Business Administration (MBA)</h4>
+                <p class="text-xs text-amber-400 font-bold uppercase">Master of</p>[cite: 9]
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Business Administration (MBA)</h4>[cite: 9]
                 <p class="text-xs text-gray-300 mt-2 line-clamp-2">Dual specializations in Marketing, Finance, HR, Operations, and Business Analytics.</p>
                 <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
                   <span class="text-xs font-semibold text-emerald-300">Eligibility: Graduation (50%)</span>
@@ -839,8 +793,8 @@
                 <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">UG • 3 Years</span>
               </div>
               <div class="p-5">
-                <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>
-                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Computer Applications (BCA)</h4>
+                <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>[cite: 9]
+                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Computer Applications (BCA)</h4>[cite: 9]
                 <p class="text-xs text-gray-300 mt-2 line-clamp-2">Develop practical coding, software engineering, and web development skills.</p>
                 <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
                   <span class="text-xs font-semibold text-emerald-300">Eligibility: 10+2 with Maths</span>
@@ -857,8 +811,8 @@
               </div>
               <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>
-                  <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Commerce (Hons.) (B.Com)</h4>
+                  <p class="text-xs text-amber-400 font-bold uppercase">Bachelor of</p>[cite: 9]
+                  <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition">Commerce (Hons.) (B.Com)</h4>[cite: 9]
                   <p class="text-xs text-gray-300 mt-1">Specialized finance, accounting, taxation, and international trade curriculum.</p>
                 </div>
                 <a href="#hero-section" class="bg-amber-400 hover:bg-amber-300 text-brand-950 font-extrabold text-xs px-5 py-2.5 rounded-lg whitespace-nowrap self-start sm:self-center transition shadow">
@@ -866,7 +820,6 @@
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -875,80 +828,59 @@
 
 
   <!-- ========================================================================= -->
-  <!-- SECTION 7: PLACEMENTS & SUCCESS STORIES (Corresponds to Image 10)         -->
+  <!-- SECTION 7: PLACEMENTS & SUCCESS STORIES                                   -->
   <!-- ========================================================================= -->
   <section id="placements-section" class="py-20 bg-[#f8faf8] relative overflow-hidden select-none">
     
-    <!-- Realistic Festive Confetti Scatter Background matching image_51b27b.png -->
+    <!-- Celebratory Confetti Elements -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <!-- Confetti Ribbons & Polygons -->
       <span class="absolute top-12 left-[12%] w-4 h-9 bg-rose-500 rounded-sm transform rotate-45 opacity-80 animate-pulse"></span>
       <span class="absolute top-28 left-[6%] w-7 h-2 bg-pink-500 transform -rotate-12 opacity-70"></span>
       <span class="absolute top-44 left-[15%] w-3 h-8 bg-sky-400 rounded-full transform rotate-12 opacity-75"></span>
       <span class="absolute top-16 left-[25%] w-5 h-6 bg-amber-400 transform -rotate-45 opacity-80"></span>
       <span class="absolute top-40 left-[29%] w-7 h-8 bg-purple-700 rounded-sm transform rotate-12 opacity-85"></span>
-      
-      <!-- Center Ribbon Curves -->
-      <span class="absolute top-36 left-[10%] w-16 h-8 border-t-4 border-l-4 border-rose-500 rounded-tl-full transform -rotate-12 opacity-80"></span>
-      <span class="absolute top-24 left-[34%] w-10 h-6 border-b-4 border-sky-400 rounded-bl-full transform rotate-45 opacity-70"></span>
-      
-      <!-- Right Side Confetti Scatter -->
       <span class="absolute top-14 right-[32%] w-3 h-7 bg-teal-400 transform rotate-12 opacity-70"></span>
       <span class="absolute top-28 right-[24%] w-4 h-4 bg-amber-400 rounded-sm transform rotate-45 opacity-80"></span>
       <span class="absolute top-16 right-[15%] w-3 h-5 bg-rose-600 transform -rotate-12 opacity-85"></span>
-      <span class="absolute top-36 right-[11%] w-12 h-14 bg-gradient-to-br from-rose-500 to-amber-400 rounded-md transform rotate-12 opacity-75 blur-[1px]"></span>
       <span class="absolute top-52 right-[28%] w-8 h-4 bg-purple-600 rounded transform -rotate-45 opacity-80"></span>
       <span class="absolute top-64 right-[7%] w-14 h-24 bg-emerald-600 rounded-sm transform rotate-45 opacity-60"></span>
       <span class="absolute top-60 right-[3%] w-7 h-3 bg-sky-400 transform -rotate-45 opacity-80"></span>
-
-      <!-- Tiny dots & sparkles -->
-      <div class="absolute top-20 left-[20%] w-2 h-2 bg-pink-400 rounded-full"></div>
-      <div class="absolute top-32 left-[23%] w-1.5 h-1.5 bg-yellow-400 rounded-full"></div>
-      <div class="absolute top-48 left-[8%] w-2 h-2 bg-blue-500 rounded-full"></div>
-      <div class="absolute top-16 right-[21%] w-2.5 h-2.5 bg-amber-400 rounded-full"></div>
-      <div class="absolute top-44 right-[19%] w-2 h-2 bg-rose-500 rounded-full"></div>
-      <div class="absolute top-60 right-[22%] w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-      
-      <!-- Header exact to image -->
       <div class="text-center mb-8 sm:mb-12">
         <p class="text-base sm:text-lg font-semibold text-[#1e5631] tracking-normal mb-1">
-          Placements
+          Placements[cite: 10, 11]
         </p>
         <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#1f5f34] tracking-tight">
-          Top Companies Hiring at GLA Online
+          Top Companies Hiring at GLA Online[cite: 10, 11]
         </h2>
       </div>
 
       <!-- Center Hero Area: Student in Suit + Arc with 6 Recruiter Nodes -->
       <div class="relative max-w-4xl mx-auto min-h-[460px] sm:min-h-[500px] flex items-end justify-center mb-8">
-        
-        <!-- Dashed Arc Vector connecting nodes (Visible on desktop and tablet) -->
         <svg class="absolute inset-0 w-full h-full pointer-events-none hidden md:block" viewBox="0 0 800 460" fill="none">
-          <!-- Outer semi-circle dashed connector matching image -->
           <path d="M 180 320 C 180 120, 620 120, 620 320" stroke="#d5ded7" stroke-width="2" stroke-dasharray="6 6" />
         </svg>
 
-        <!-- Node 1: IBM (Bottom Left) -->
+        <!-- Node 1: IBM -->
         <div class="hidden md:flex absolute left-[15%] bottom-28 w-20 h-20 rounded-full bg-white shadow-xl items-center justify-center p-3 border border-gray-100 hover:scale-110 transition duration-300 z-20">
-          <span class="text-blue-900 font-black tracking-widest text-lg font-serif">IBM</span>
+          <span class="text-blue-900 font-black tracking-widest text-lg font-serif">IBM</span>[cite: 10, 11]
         </div>
 
-        <!-- Node 2: Facebook / Meta (Mid Left) -->
+        <!-- Node 2: Facebook -->
         <div class="hidden md:flex absolute left-[20%] top-36 w-20 h-20 rounded-full bg-white shadow-xl items-center justify-center p-3 border border-gray-100 hover:scale-110 transition duration-300 z-20">
-          <span class="text-[#1877f2] font-black text-xs sm:text-sm tracking-tight lowercase">facebook</span>
+          <span class="text-[#1877f2] font-black text-xs sm:text-sm tracking-tight lowercase">facebook</span>[cite: 10, 11]
         </div>
 
-        <!-- Node 3: Amazon (Top Left) -->
+        <!-- Node 3: Amazon -->
         <div class="hidden md:flex absolute left-[31%] top-14 w-20 h-20 rounded-full bg-white shadow-xl items-center justify-center p-3 border border-gray-100 hover:scale-110 transition duration-300 z-20">
           <span class="text-gray-900 font-extrabold text-sm relative tracking-tight">
-            amazon<span class="block text-amber-500 text-xs font-black -mt-1 leading-none">◡</span>
+            amazon<span class="block text-amber-500 text-xs font-black -mt-1 leading-none">◡</span>[cite: 10, 11]
           </span>
         </div>
 
-        <!-- Node 4: ITC Limited (Top Right) -->
+        <!-- Node 4: ITC Limited -->
         <div class="hidden md:flex absolute right-[31%] top-14 w-20 h-20 rounded-full bg-white shadow-xl items-center justify-center p-3 border border-gray-100 hover:scale-110 transition duration-300 z-20">
           <div class="flex flex-col items-center">
             <span class="text-[#164e63] font-black text-xs tracking-tighter">▲</span>
@@ -956,15 +888,15 @@
           </div>
         </div>
 
-        <!-- Node 5: BOSCH (Mid Right) -->
+        <!-- Node 5: BOSCH -->
         <div class="hidden md:flex absolute right-[20%] top-36 w-20 h-20 rounded-full bg-white shadow-xl items-center justify-center p-3 border border-gray-100 hover:scale-110 transition duration-300 z-20">
           <div class="flex items-center gap-1">
             <span class="w-3.5 h-3.5 rounded-full border-2 border-red-600 inline-block"></span>
-            <span class="text-red-600 font-extrabold text-xs tracking-wider">BOSCH</span>
+            <span class="text-red-600 font-extrabold text-xs tracking-wider">BOSCH</span>[cite: 10, 11]
           </div>
         </div>
 
-        <!-- Node 6: Microsoft (Bottom Right) -->
+        <!-- Node 6: Microsoft -->
         <div class="hidden md:flex absolute right-[15%] bottom-28 w-20 h-20 rounded-full bg-white shadow-xl items-center justify-center p-3 border border-gray-100 hover:scale-110 transition duration-300 z-20">
           <div class="flex items-center gap-1.5">
             <div class="grid grid-cols-2 gap-0.5 w-3.5 h-3.5">
@@ -973,156 +905,83 @@
               <span class="bg-[#00a4ef] w-1.5 h-1.5"></span>
               <span class="bg-[#ffb900] w-1.5 h-1.5"></span>
             </div>
-            <span class="text-gray-700 font-semibold text-[11px]">Microsoft</span>
+            <span class="text-gray-700 font-semibold text-[11px]">Microsoft</span>[cite: 10, 11]
           </div>
         </div>
 
-        <!-- Central Placed Student Cutout Portrait -->
+        <!-- Central Student Portrait Cutout -->
         <div class="relative z-10 flex flex-col items-center">
           <div class="relative w-64 sm:w-80 md:w-96 overflow-hidden pt-4">
-            <!-- Student Cutout / Photo -->
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" 
                  alt="Piyush Verma - B.Tech CSE GLAdiator Placed at Microsoft" 
                  class="w-full h-80 sm:h-96 object-cover object-top filter contrast-[1.05] drop-shadow-2xl">
             
-            <!-- Dark bottom badge overlay with student identity (Exact match to image) -->
             <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent pt-12 pb-4 text-center px-4">
               <h3 class="text-lg sm:text-2xl font-black text-white uppercase tracking-wider">
-                PIYUSH VERMA
+                PIYUSH VERMA[cite: 10, 11]
               </h3>
               <p class="text-[11px] sm:text-xs font-semibold text-gray-200 mt-0.5 tracking-wide">
-                B.Tech. CSE - Batch 2026
+                B.Tech. CSE - Batch 2026[cite: 10, 11]
               </p>
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- Mobile Badge Scroll Row (Fallback for screens where circle arc is hidden) -->
+      <!-- Mobile Recruiter Row -->
       <div class="flex md:hidden flex-wrap items-center justify-center gap-2 mb-10">
-        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-blue-900">IBM</span>
-        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-[#1877f2]">facebook</span>
-        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-gray-900">amazon</span>
+        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-blue-900">IBM</span>[cite: 10, 11]
+        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-[#1877f2]">facebook</span>[cite: 10, 11]
+        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-gray-900">amazon</span>[cite: 10, 11]
         <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-[#164e63]">ITC Limited</span>
-        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-red-600">BOSCH</span>
-        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-gray-700">Microsoft</span>
+        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-red-600">BOSCH</span>[cite: 10, 11]
+        <span class="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm text-gray-700">Microsoft</span>[cite: 10, 11]
       </div>
 
-      <!-- EXACT BOTTOM 4 SOLID FOREST GREEN STAT CARDS (Replicating image_51b27b.png) -->
+      <!-- EXACT 4 SOLID GREEN STAT CARDS -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        
-        <!-- Card 1: ₹60 LPA -->
         <div class="bg-[#3e6f46] text-white rounded-2xl p-7 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-center items-center min-h-[175px]">
           <div class="text-3xl sm:text-4xl lg:text-[44px] font-black text-[#f2c132] tracking-tight leading-none mb-3">
-            ₹60<span class="text-2xl sm:text-3xl font-extrabold ml-0.5">LPA</span>
+            ₹60<span class="text-2xl sm:text-3xl font-extrabold ml-0.5">LPA</span>[cite: 10, 11]
           </div>
           <p class="text-xs sm:text-[13px] font-semibold text-white/95 leading-snug max-w-[210px]">
-            Offered to our GLAdiator by Microsoft
+            Offered to our GLAdiator by Microsoft[cite: 10, 11]
           </p>
         </div>
 
-        <!-- Card 2: 90% -->
         <div class="bg-[#3e6f46] text-white rounded-2xl p-7 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-center items-center min-h-[175px]">
           <div class="text-4xl sm:text-5xl lg:text-[48px] font-black text-[#f2c132] tracking-tight leading-none mb-3">
-            90%
+            90%[cite: 10, 11]
           </div>
           <p class="text-xs sm:text-[13px] font-semibold text-white/95 leading-snug max-w-[210px]">
-            GLAdiators Got Placed in 2025
+            GLAdiators Got Placed in 2025[cite: 10, 11]
           </p>
         </div>
 
-        <!-- Card 3: ₹6.3 LPA -->
         <div class="bg-[#3e6f46] text-white rounded-2xl p-7 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-center items-center min-h-[175px]">
           <div class="text-3xl sm:text-4xl lg:text-[44px] font-black text-[#f2c132] tracking-tight leading-none mb-3">
-            ₹6.3<span class="text-2xl sm:text-3xl font-extrabold ml-0.5">LPA</span>
+            ₹6.3<span class="text-2xl sm:text-3xl font-extrabold ml-0.5">LPA</span>[cite: 10, 11]
           </div>
           <p class="text-xs sm:text-[13px] font-semibold text-white/95 leading-snug max-w-[210px]">
-            Average Package over last 5 Years
+            Average Package over last 5 Years[cite: 10, 11]
           </p>
         </div>
 
-        <!-- Card 4: 86% -->
         <div class="bg-[#3e6f46] text-white rounded-2xl p-7 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-center items-center min-h-[175px]">
           <div class="text-4xl sm:text-5xl lg:text-[48px] font-black text-[#f2c132] tracking-tight leading-none mb-3">
-            86%
+            86%[cite: 10, 11]
           </div>
           <p class="text-xs sm:text-[13px] font-semibold text-white/95 leading-snug max-w-[210px]">
-            Last 5-Year Average Placement
+            Last 5-Year Average Placement[cite: 10, 11]
           </p>
         </div>
-
       </div>
-
     </div>
   </section>
 
 
- 
-
-  
-  <!-- FLOATING WHATSAPP BUTTON (Correctly sized & constrained) -->
-  <a href="https://wa.me/919315594429" target="_blank" rel="noopener noreferrer" 
-     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 hover:scale-110 group focus:outline-none focus:ring-4 focus:ring-emerald-400"
-     aria-label="Chat with our Admission Counselor on WhatsApp">
-    <!-- Pulse Glow Ping Ring -->
-    <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none group-hover:hidden"></span>
-    <!-- Constrained WhatsApp SVG Icon -->
-    <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 448 512" aria-hidden="true">
-      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-    </svg>
-  </a>
-
-  <!-- APPLICATION SUCCESS NOTIFICATION MODAL -->
-  <div id="successModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl transform transition-all">
-      <div class="w-16 h-16 bg-green-100 text-brand-700 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-inner">
-        <i class="fa-solid fa-check"></i>
-      </div>
-      <h3 class="text-xl font-black text-brand-900">Application Submitted!</h3>
-      <p class="text-sm text-gray-600 mt-2">
-        Thank you for choosing GLA Online. Our academic counsellor will get in touch with you within 2 hours.
-      </p>
-      <div class="mt-4 p-3 bg-gray-50 rounded-lg text-xs text-gray-500">
-        Admission Reference ID: <strong class="text-brand-800" id="refId">GLA-2026-9821</strong>
-      </div>
-      <button onclick="toggleModal('successModal')" class="mt-6 w-full py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold rounded-lg transition">
-        Close Window
-      </button>
-    </div>
-  </div>
-
-  <!-- STUDENT LOGIN MODAL -->
-  <div id="loginModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl relative">
-      <button onclick="toggleModal('loginModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-      <div class="text-center mb-6">
-        <div class="w-12 h-12 rounded-xl bg-brand-800 text-amber-400 mx-auto flex items-center justify-center text-xl mb-2">
-          <i class="fa-solid fa-user-lock"></i>
-        </div>
-        <h3 class="text-lg font-black text-brand-900">Student Portal Login</h3>
-        <p class="text-xs text-gray-500">Access your GLA Online LMS Dashboard</p>
-      </div>
-      <form onsubmit="event.preventDefault(); toggleModal('loginModal'); showSuccessToast('Logged in successfully!');" class="space-y-3">
-        <div>
-          <label class="block text-xs font-bold text-gray-700 mb-1">Student Enrollment No / Email</label>
-          <input type="text" required placeholder="e.g. 24GLA1098" class="w-full text-xs px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-700 focus:outline-none">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-gray-700 mb-1">Password</label>
-          <input type="password" required placeholder="••••••••" class="w-full text-xs px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-700 focus:outline-none">
-        </div>
-        <button type="submit" class="w-full py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs rounded-lg transition mt-2">
-          Secure Login
-        </button>
-      </form>
-    </div>
-  </div>
-
   <!-- ========================================================================= -->
-  <!-- FINAL CTA SECTION (Styled to match Green & White theme)                  -->
+  <!-- SINGLE FINAL CALL TO ACTION SECTION                                       -->
   <!-- ========================================================================= -->
   <section class="py-16 bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-center px-4 relative overflow-hidden">
     <div class="max-w-4xl mx-auto relative z-10 space-y-4">
@@ -1144,12 +1003,14 @@
     </div>
   </section>
 
+
   <!-- ========================================================================= -->
-  <!-- FOOTER & DISCLAIMER (Properly enclosed and styled)                       -->
+  <!-- SINGLE FOOTER WITH EXACT REQUIRED DISCLAIMER                              -->
   <!-- ========================================================================= -->
-  <footer class="bg-neutral-900 text-gray-400 py-12 border-t-4 border-brand-700">
+  <footer class="bg-neutral-900 text-gray-400 py-10 border-t-4 border-brand-700">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
-      <!-- Quick Contact Row -->
+      
+      <!-- Top Branding Row -->
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pb-6 border-b border-neutral-800 text-xs">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-lg bg-brand-800 flex items-center justify-center text-amber-400 font-bold">
@@ -1170,51 +1031,97 @@
         </div>
       </div>
 
-      <!-- Disclaimer Text Box -->
+      <!-- Single Exact Required Disclaimer Card -->
       <div class="bg-neutral-950/70 p-5 rounded-xl border border-neutral-800/80 text-[11px] leading-relaxed text-gray-400">
-        <p class="mb-2">
-          <strong class="text-gray-200">Disclaimer:</strong> We act solely as an information and counseling partner and do not independently conduct university examinations or award degrees. For official admissions, students may also visit the official GLA University portal or contact the campus directly. GLA University reserves all rights regarding program eligibility, fee structures, curriculum updates, and examination conduct.
+        <p class="text-gray-300 font-semibold mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-halved text-amber-400"></i> Disclaimer & Important Information:
         </p>
         <p>
-          As an Authorized Enrollment & Information Partner of GLA Online, we display and showcase academic program details for student assistance. Admissions, degree conferring, examination scheduling, and LMS access are solely managed by GLA University.
+          OnlineAdmissions (onlineadmissions.online) is an independent education counselling and admission assistance service. We are not the official website of any university and are not owned by or affiliated with the universities named on this site, unless an authorised partnership is stated. University names, logos and trademarks belong to their respective owners and are used only to identify the programs on which we offer guidance. Programs, fees, eligibility and recognition are subject to change; please confirm final details on the official university website before applying.
         </p>
       </div>
 
-      <!-- Copyright Bar -->
-      <div class="pt-4 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-2">
-        <p>© 2026 OnlineAdmissions / GLA Online. All rights reserved.</p>
+      <!-- Single Copyright Bar -->
+      <div class="pt-2 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-2">
+        <p>© 2026 OnlineAdmissions. All rights reserved.</p>
         <div class="flex gap-4">
-          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-300 transition">Privacy Policy</a>
           <span>•</span>
-          <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+          <a href="#" class="hover:text-gray-300 transition">Terms of Service</a>
           <span>•</span>
-          <a href="#" class="hover:text-white transition">Mandatory Disclosure</a>
+          <a href="#" class="hover:text-gray-300 transition">Contact Support</a>
         </div>
       </div>
     </div>
   </footer>
 
+
   <!-- ========================================================================= -->
-  <!-- FLOATING WHATSAPP BUTTON (Properly sized & constrained)                   -->
+  <!-- SINGLE FLOATING WHATSAPP BUTTON                                           -->
   <!-- ========================================================================= -->
   <a href="https://wa.me/919315594429?text=Hello%20GLA%20Online%2C%20I%20would%20like%20to%20know%20more%20about%20admissions." 
      target="_blank" 
      rel="noopener noreferrer" 
      class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group" 
      aria-label="Chat on WhatsApp">
-    <!-- Pulse Ring Effect -->
     <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping group-hover:hidden"></span>
-    <!-- WhatsApp Icon SVG constrained to exactly 28x28px -->
     <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 448 512" aria-hidden="true">
       <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
     </svg>
   </a>
 
-  <!-- JAVASCRIPT CONTROLLERS -->
+
+  <!-- MODALS -->
+  <div id="successModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl">
+      <div class="w-16 h-16 bg-green-100 text-brand-700 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-inner">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="text-xl font-black text-brand-900">Application Submitted!</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        Thank you for choosing GLA Online. Our academic counsellor will get in touch with you within 2 hours.
+      </p>
+      <div class="mt-4 p-3 bg-gray-50 rounded-lg text-xs text-gray-500">
+        Admission Reference ID: <strong class="text-brand-800" id="refId">GLA-2026-9821</strong>
+      </div>
+      <button onclick="toggleModal('successModal')" class="mt-6 w-full py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold rounded-lg transition">
+        Close Window
+      </button>
+    </div>
+  </div>
+
+  <div id="loginModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl relative">
+      <button onclick="toggleModal('loginModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-xl bg-brand-800 text-amber-400 mx-auto flex items-center justify-center text-xl mb-2">
+          <i class="fa-solid fa-user-lock"></i>
+        </div>
+        <h3 class="text-lg font-black text-brand-900">Student Portal Login</h3>
+        <p class="text-xs text-gray-500">Access your GLA Online LMS Dashboard</p>
+      </div>
+      <form onsubmit="event.preventDefault(); toggleModal('loginModal'); showSuccessToast('Logged in successfully!');" class="space-y-3">
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">Enrollment No / Email</label>
+          <input type="text" required placeholder="e.g. 24GLA1098" class="w-full text-xs px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-700 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">Password</label>
+          <input type="password" required placeholder="••••••••" class="w-full text-xs px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-700 focus:outline-none">
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs rounded-lg transition mt-2">
+          Secure Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- SCRIPTS -->
   <script>
-    // -------------------------------------------------------------
-    // CAROUSEL LOGIC FOR SECTION 1 (Contains the 4 Slides)
-    // -------------------------------------------------------------
+    // Carousel Logic
     let currentSlide = 0;
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('#carouselDots button');
@@ -1235,7 +1142,6 @@
         }
       });
 
-      // Update Dots
       dots.forEach((dot, idx) => {
         if (idx === currentSlide) {
           dot.classList.remove('bg-white/50');
@@ -1247,55 +1153,28 @@
       });
     }
 
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
+    function nextSlide() { showSlide(currentSlide + 1); }
+    function prevSlide() { showSlide(currentSlide - 1); }
+    function goToSlide(index) { showSlide(index); resetAutoPlay(); }
+    function startAutoPlay() { carouselInterval = setInterval(nextSlide, 5000); }
+    function resetAutoPlay() { clearInterval(carouselInterval); startAutoPlay(); }
 
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
+    window.onload = function() { startAutoPlay(); };
 
-    function goToSlide(index) {
-      showSlide(index);
-      resetAutoPlay();
-    }
-
-    function startAutoPlay() {
-      carouselInterval = setInterval(nextSlide, 5000);
-    }
-
-    function resetAutoPlay() {
-      clearInterval(carouselInterval);
-      startAutoPlay();
-    }
-
-    // Initialize carousel on window load
-    window.onload = function() {
-      startAutoPlay();
-    };
-
-    // Pause on hover over hero section
     const heroSection = document.getElementById('hero-section');
     heroSection.addEventListener('mouseenter', () => clearInterval(carouselInterval));
     heroSection.addEventListener('mouseleave', () => startAutoPlay());
 
-    // -------------------------------------------------------------
-    // MOBILE MENU TOGGLE
-    // -------------------------------------------------------------
+    // Mobile Menu
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+    mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
 
-    // -------------------------------------------------------------
-    // PROGRAM FILTER (Section 6)
-    // -------------------------------------------------------------
+    // Program Filters
     function filterPrograms(category) {
       const cards = document.querySelectorAll('.program-card');
       const tabs = document.querySelectorAll('.program-tab');
 
-      // Update tabs styling
       tabs.forEach(tab => {
         if (tab.dataset.target === category) {
           tab.classList.add('bg-white/20', 'border-amber-400');
@@ -1306,7 +1185,6 @@
         }
       });
 
-      // Show/hide program cards
       cards.forEach(card => {
         if (category === 'all' || card.classList.contains(category)) {
           card.classList.remove('hidden');
@@ -1316,9 +1194,7 @@
       });
     }
 
-    // -------------------------------------------------------------
-    // MODAL & FORM CONTROLLERS
-    // -------------------------------------------------------------
+    // Modal controllers
     function toggleModal(modalId) {
       const modal = document.getElementById(modalId);
       modal.classList.toggle('hidden');
@@ -1326,7 +1202,6 @@
 
     function handleFormSubmit(e) {
       e.preventDefault();
-      // Generate random reference code
       document.getElementById('refId').innerText = 'GLA-2026-' + Math.floor(1000 + Math.random() * 9000);
       toggleModal('successModal');
       e.target.reset();
@@ -1337,9 +1212,7 @@
       toast.className = 'fixed bottom-5 right-5 bg-brand-900 text-white px-5 py-3 rounded-xl shadow-2xl z-50 text-sm font-bold flex items-center gap-2 border border-emerald-400';
       toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i> ${message}`;
       document.body.appendChild(toast);
-      setTimeout(() => {
-        toast.remove();
-      }, 3000);
+      setTimeout(() => toast.remove(), 3000);
     }
   </script>
 </body>
